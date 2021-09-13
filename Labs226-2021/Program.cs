@@ -2,11 +2,10 @@
 
 namespace Labs226_2021
 {
-    class Program
+    class Task
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
