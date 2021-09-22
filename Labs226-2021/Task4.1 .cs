@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace ConsoleApp2 { }
-class Program
+class Program6
 {
     static void Main(string[] args)
     {

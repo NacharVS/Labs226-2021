@@ -2,7 +2,7 @@
 
 namespace Labs226_2021
 {
-    class Program
+    class Program2
     {
         static void Task2(string[] args)
         {
