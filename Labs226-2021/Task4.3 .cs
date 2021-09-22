@@ -3,7 +3,7 @@
 
 class Program8
 {
-    static void Main(string[] args)
+    static void Task43(string[] args)
     {
         int a = int.Parse(Console.ReadLine());
         int b = int.Parse(Console.ReadLine());

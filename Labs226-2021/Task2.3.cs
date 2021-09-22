@@ -4,7 +4,7 @@ namespace ConsoleApp2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Task23(string[] args)
         {
             Console.WriteLine("Выберете действие + - * /");
             Console.WriteLine(" +  = 1 " +

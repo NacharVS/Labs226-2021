@@ -4,7 +4,7 @@ namespace ConsoleApp2
 {
     class Program3
     {
-        static void Main(string[] args)
+        static void Task21 (string[] args)
         {
             Console.WriteLine("Введите первое чило");
             int a = int.Parse(Console.ReadLine());

@@ -4,7 +4,7 @@ namespace Labs226_2021
 {
     class Program1
     {
-        static void Task1(string[] args)
+        static void task1(string[] args)
         {
             int a = 2;
             int b = 5;

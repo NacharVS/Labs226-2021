@@ -3,7 +3,7 @@
 namespace ConsoleApp2 { }
 class Program7
 {
-    static void Main(string[] args)
+    static void Task42(string[] args)
     {
         long a = int.Parse(Console.ReadLine());
         long b = 0;
