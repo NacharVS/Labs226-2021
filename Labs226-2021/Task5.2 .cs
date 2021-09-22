@@ -23,7 +23,7 @@ namespace ConsoleApp4
             for (int i = 0; i < array.Length; i++)
             {
                 array3[i] = array[i] * array2[i];
-                Console.WriteLine($" array3[i]");
+                Console.Write($" {array3[i]}");
             }
             
         }
