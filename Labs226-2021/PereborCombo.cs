@@ -3,7 +3,7 @@
 namespace ConsoleApp2 { }
 class Program
 {
-    static void Task31(string[] args)
+    static void PereborCombo (string[] args)
     {
         int sum = int.Parse(Console.ReadLine());
 
