@@ -6,7 +6,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            ArrayOperations.SameElements();
+            ArrayOperations.OdinakovieElementiV2array();
         }
     }
 }

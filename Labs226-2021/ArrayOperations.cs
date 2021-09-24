@@ -102,5 +102,59 @@ namespace Labs226_2021
                 Console.Write($" {array[i]}");
             }
         }
+        
+        public static void OdinakovieElementiV2array() //Код для нахождения одинаковых элементов двух массивов на одинаковых местах и для превращения их в нули
+        {
+            int[] massiv1 = new int[10];
+            int[] massiv2 = new int[10];
+
+            for (int i = 0; i < massiv1.Length; i++)
+            {
+                massiv1[i] = new Random().Next(1, 10);
+                Console.Write($" {massiv1[i]}");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < massiv2.Length; i++)
+            {
+                massiv2[i] = new Random().Next(1, 10);
+                Console.Write($" {massiv2[i]}");
+            }
+
+            for (int i = 0; i < massiv1.Length; i++)
+            {
+                
+                for (int j = i + 1; j < massiv1.Length; j++)
+                {
+                    if (massiv1[i] == massiv2[i])
+                    {
+                        massiv1[i] = 0;
+                        massiv2[i] = 0;
+                    }
+                }
+            }
+            for (int i = 0; i < massiv2.Length; i++)
+            {
+                for (int j = i + 1; j < massiv2.Length; j++)
+                {
+                    if (massiv1[i] == massiv2[i])
+                    {
+                        massiv2[i] = 0;
+                        massiv1[i] = 0;
+                    }
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Vot resultat");
+            for (int i = 0; i < massiv1.Length; i++)
+            {
+                Console.Write($" {massiv1[i]}");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < massiv2.Length; i++)
+            {
+                Console.Write($" {massiv2[i]}");
+            }
+        }
     }
 }
