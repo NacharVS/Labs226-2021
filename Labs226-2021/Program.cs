@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Labs226_2021
 {
@@ -6,7 +7,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            ArrayOperations.OdinakovieElementiV2array();
+           
         }
     }
 }
