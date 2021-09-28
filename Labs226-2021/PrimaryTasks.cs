@@ -18,8 +18,8 @@ namespace Labs226_2021
             b = a - b;
             a = a - b;
 
-            Console.WriteLine($" a - {a}");
-            Console.WriteLine($" b - {b}");
+            Console.WriteLine($" a = {a}");
+            Console.WriteLine($" b = {b}");
         }
 
         public static void First()
