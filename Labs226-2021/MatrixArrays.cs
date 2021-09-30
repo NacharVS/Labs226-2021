@@ -6,9 +6,8 @@ namespace _1
 {
     class MatrixArrays
     {
-        public static void MaxElementVStroke()
+        public static void MaxElementVStroke(int[,] array)
         {
-            int[,] array = new int[10, 10];
             int max = 0;
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -48,9 +47,8 @@ namespace _1
             }
         }
 
-        public static void ArrayDiagonal()
+        public static void ArrayDiagonal(int[,] array)
         {
-            int[,] array = new int[5, 5];
             int result = 0;
 
             for (int i = 0; i < array.GetLength(0); i++)

@@ -6,9 +6,9 @@ namespace _1
 {
     class ArraysFirst
     {
-        public static void MaxMin()
+        public static void MaxMin(int[] array)
         {
-            int[] array = new int[10];
+            
             int min = 100; int max = array[0];
 
             for (int i = 0; i < array.Length; i++)
@@ -24,10 +24,9 @@ namespace _1
             Console.WriteLine($"max = {max} min = {min}");
         }
 
-        public static void Umno()
+        public static void Umno(int[] array, int[] array2)
         {
-            int[] array = new int[10];
-            int[] array2 = new int[10];
+            
             int[] array3 = new int[10];
 
             for (int i = 0; i < array.Length; i++)
@@ -38,7 +37,7 @@ namespace _1
             }
 
             Console.WriteLine();
-`
+
             for (int i = 0; i < array2.Length; i++)
             {
                 Console.Write($" {array2[i]}");
@@ -52,9 +51,8 @@ namespace _1
             }
         }
 
-        public static void Same()
+        public static void Same(int[] array)
         {
-            int[] array = new int[10];
 
             for (int i = 0; i < array.Length; i++)
             {

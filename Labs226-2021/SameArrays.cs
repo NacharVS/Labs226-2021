@@ -6,10 +6,8 @@ namespace _1
 {
     class SameArrays
     {
-        public static void SameArr()
+        public static void SameArr(int[] array, int[] array2)
         {
-            int[] array = new int[10];
-            int[] array2 = new int[10];
 
             for (int i = 0; i < array.Length; i++)
             {
