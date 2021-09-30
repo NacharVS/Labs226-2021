@@ -3,9 +3,9 @@
 namespace ConsoleApp2 { }
 class Program
 {
-    static void PereborCombo (string[] args)
+    static void PereborCombo(int sum)
     {
-        int sum = int.Parse(Console.ReadLine());
+       
 
 
         for (int i = 0; i < 10; i++)

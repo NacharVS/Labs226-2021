@@ -3,10 +3,9 @@
 namespace ConsoleApp2 { }
 class if_Program
 {
-    static void Stepen (string[] args)
+    static void Stepen (int a, int b)
     {
-        int a = int.Parse(Console.ReadLine());
-        int b = int.Parse(Console.ReadLine());
+        
         int d = a;
         if (b > 0)
         {
@@ -18,9 +17,9 @@ class if_Program
 
 
     }
-    static void Obratnoechislo (string[] args)
+    static void Obratnoechislo(long a)
     {
-        long a = int.Parse(Console.ReadLine());
+       
         long b = 0;
         while (a > 0)
         {
@@ -34,10 +33,9 @@ class if_Program
 
 
     }
-    static void YdalenieChisla (string[] args)
+    static void YdalenieChisla (int a, int b)
     {
-        int a = int.Parse(Console.ReadLine());
-        int b = int.Parse(Console.ReadLine());
+       
         int d = 0;
         int c = 0;
         int h = 0;
@@ -57,10 +55,9 @@ class if_Program
         }
         Console.WriteLine(c);
     }
-    static void YdalenieOdenakovogochisla(string[] args)
+    static void YdalenieOdenakovogochisla(long a, long b)
     {
-        long a = int.Parse(Console.ReadLine());
-        long b = int.Parse(Console.ReadLine());
+        
         long bas = 0;
         long bes = 0;
         long h = 0;

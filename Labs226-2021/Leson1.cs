@@ -22,10 +22,9 @@ namespace Labs226_2021
             S = 4 * Pi * (r * r);
             Console.WriteLine(S);
         }
-        static void task3 (string[] args)
+        static void task3 (int a, int b)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
+           
             int c = 1;
             Double S = 0;
             Double P = 0;
@@ -40,10 +39,9 @@ namespace Labs226_2021
             Console.WriteLine(p);
             Console.WriteLine(V);
         }
-        static void task4(string[] args)
+        static void task4 (int a, int b)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
+           
             double c = 0;
             c = Math.Sqrt(a * a + b * b);
             Console.WriteLine(c);

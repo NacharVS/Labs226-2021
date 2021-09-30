@@ -4,9 +4,8 @@ namespace ConsoleApp4
 {
     class Program51
     {
-        static void MaxMinNumber()
+        static void MaxMinNumber(int[] array)
         {
-            int[] array = new int[10];
             Random rnd = new Random();
             int max = 0;
             int min = 0;
@@ -28,10 +27,9 @@ namespace ConsoleApp4
             Console.WriteLine($" max");
             Console.WriteLine($" min");
         }
-        static void SummArray()
+        static void SummArray(int[] array, int[] array2)
         {
-            int[] array = new int[10];
-            int[] array2 = new int[10];
+           
             Random rnd = new Random();
             int[] array3 = new int[10];
             int[] array4 = new int[10];
@@ -57,10 +55,9 @@ namespace ConsoleApp4
             }
 
         }
-        public static void SameElements()
+        public static void SameElements(int[] array)
         {
-            int[] array = new int[10];
-
+            
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = new Random().Next(1, 10);
@@ -89,11 +86,10 @@ namespace ConsoleApp4
 
 
         }
-        public static void ArrayLeson2()
+        public static void ArrayLeson2(int[] array, int[] array1)
         {
 
-            int[] array = new int[10];
-            int[] array1 = new int[10];
+            
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = new Random().Next(1, 10);
@@ -125,9 +121,9 @@ namespace ConsoleApp4
                 }
             }
         }
-            static void ArrayMaxin2D()
+            static void ArrayMaxin2D(int[,] array)
             {
-                int[,] array = new int[10, 10];
+                
                 for (int i = 0; i < 10; i++)
                 {
                     int max = 0;
@@ -142,9 +138,9 @@ namespace ConsoleApp4
                     Console.WriteLine($"{max}");
                 }
             }
-        static void ArraySummdiagonalOsnandPob()
+        static void ArraySummdiagonalOsnandPob(int[,] array)
         {
-            int[,] array = new int[10, 10];
+            
             int sumOsn = 0;
             int sumPob = 0;
             Random rnd = new Random();

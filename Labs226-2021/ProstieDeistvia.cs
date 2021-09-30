@@ -4,7 +4,7 @@ namespace ConsoleApp2
 {
     class Program3
     {
-        static void MaxMinNumber (string[] args)
+        static void MaxMinNumber ()
         {
             Console.WriteLine("Введите первое чило");
             int a = int.Parse(Console.ReadLine());
@@ -24,7 +24,7 @@ namespace ConsoleApp2
             else if (c < a & c > b) { Console.WriteLine("Cреднее значение"); Console.WriteLine(c); }
 
         }
-        static void BankVklad (string[] args)
+        static void BankVklad ()
         {
             Console.WriteLine("Сумма вклада");
             int a = int.Parse(Console.ReadLine());
@@ -57,7 +57,7 @@ namespace ConsoleApp2
             }
 
         }
-        static void Kalkulator (string[] args)
+        static void Kalkulator ()
         {
             Console.WriteLine("Выберете действие + - * /");
             Console.WriteLine(" +  = 1 " +
