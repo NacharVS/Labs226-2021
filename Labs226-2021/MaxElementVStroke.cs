@@ -34,14 +34,8 @@ namespace ConsoleApp3
                     }
                 }
 
-                if (i + 1 == 2)
-                {
-                    Console.WriteLine($" Максимальный элемент во {i + 1}-ой строке = {max}");
-                }
-                else
-                {
-                    Console.WriteLine($" Максимальный элемент в {i + 1}-ой строке = {max}");
-                }
+                Console.WriteLine($" Максимальный элемент {i + 1}-ой строки = {max}");
+
             }
         }
     }
