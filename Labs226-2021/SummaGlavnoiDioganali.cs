@@ -20,7 +20,7 @@ namespace ConsoleApp3
 
             for (int s = 0; s < array.GetLength(0); s++)
             {
-                result = result + array[s, s];
+                Summa = Summa + array[s, s];
 
             }
 
