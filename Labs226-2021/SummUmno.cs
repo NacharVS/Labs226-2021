@@ -4,7 +4,7 @@ namespace Задание_2
 {
     class Program
     {
-        static void Umno(int[] array, int[] array, int[] array)
+        static voidMain(int[] array, int[] array, int[] array)
         {
 
             for (int i = 0; i < array.Length; i++)

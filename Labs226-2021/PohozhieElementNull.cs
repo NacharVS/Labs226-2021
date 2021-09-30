@@ -4,7 +4,7 @@ namespace Задание_0
 {
     class Program
     {
-        static void Same(int[] array)
+        static void Main(int[] array)
         {
 
             for (int i = 0; i < array.Length; i++)

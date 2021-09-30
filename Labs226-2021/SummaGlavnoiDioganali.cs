@@ -4,7 +4,7 @@ namespace ConsoleApp3
 {
     class Program
     {
-        static void SummaGlavnoiDiagonali(int[,] array)
+        static void Main(int[,] array)
         {
             int Summa = 0;
 

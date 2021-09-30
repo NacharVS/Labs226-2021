@@ -4,7 +4,7 @@ namespace ConsoleApp3
 {
     class Program
     {
-        static void MaxElementVStroke(int[,] array)
+        static void Main(int[,] array)
         {
             int max = 0;
             for (int i = 0; i < array.GetLength(0); i++)

@@ -4,7 +4,7 @@ namespace ConsoleApp3
 {
     class Program
     {
-        static void MaxMin(int[] array)
+        static void Main(int[] array)
         {
             int min = 100; int max = array[0];
 
