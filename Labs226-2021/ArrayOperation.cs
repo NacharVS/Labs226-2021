@@ -2,7 +2,7 @@
 
 namespace ConsoleApp4
 {
-    class Program51
+    class ArrayOperation
     {
         static void MaxMinNumber(int[] array)
         {
@@ -121,12 +121,13 @@ namespace ConsoleApp4
                 }
             }
         }
-            static void ArrayMaxin2D(int[,] array)
+          public  static void ArrayMaxin2D(int[,] array)
             {
-                
-                for (int i = 0; i < 10; i++)
+            int max = 0;
+
+            for (int i = 0; i < 10; i++)
                 {
-                    int max = 0;
+                    
                     for (int j = 0; j < 10; j++)
                     {
                         array[i, j] = new Random().Next(-10, 10);

@@ -27,5 +27,23 @@ namespace Labs226_2021
                     Console.Write($" {array[i + 1]}");
             }
         }
+        public static void ArrayMaxin2D(int[,] array)
+        {
+            int max = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+
+                for (int j = 0; j < 10; j++)
+                {
+                    array[i, j] = new Random().Next(-10, 10);
+                    Console.Write($" { array[i, j]}");
+                    if (j == 0 || max < array[i, j]) max = array[i, j];
+
+                }
+                Console.WriteLine();
+                Console.WriteLine($"{max}");
+            }
+        }
     }
 }
