@@ -6,7 +6,7 @@ namespace Labs226_2021
 {
     class Matrix
     {
-        public static void MatrixOne()
+        public static void MatrixOne(int[,] array)
         {
             int[,] array = new int[8, 8];
             int max = 0;
@@ -45,7 +45,7 @@ namespace Labs226_2021
             }
         }
 
-        public static void MatrixTwo()
+        public static void MatrixTwo(int[,] array)
         {
             int a = 0;
             
