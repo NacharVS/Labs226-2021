@@ -2,7 +2,7 @@
 
 namespace ConsoleApp3
 {
-    class Program0
+    class Program087
     {
         static void Main1234(string[] args)
         {

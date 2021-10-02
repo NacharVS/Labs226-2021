@@ -4,7 +4,7 @@ using System.Text;
 
 namespace a_b
 {
-    class Program
+    class Program1
     {
         static void Mai6547(string[] args)
         {

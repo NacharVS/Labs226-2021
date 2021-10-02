@@ -2,7 +2,7 @@
 
 namespace Задача_0
 {
-    class Program
+    class Program78
     {
         static void Main12345(string[] args)
         {
