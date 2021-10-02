@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _1
+namespace D-7
 {
     class ArraysFirst
     {
