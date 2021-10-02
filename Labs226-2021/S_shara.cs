@@ -4,7 +4,7 @@ namespace ConsoleApp4
 {
     class Program1
     {
-        static void Main(string[] args)
+        static void Main123456(string[] args)
         {
             Console.WriteLine("Нахождение площади шара по R");
             Console.WriteLine("Введите значение R");

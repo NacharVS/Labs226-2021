@@ -5,7 +5,7 @@ namespace Labs226_2021
 {
     class Kod_Zamok
     {
-        static void Main(string[] args)
+        static void Main111(string[] args)
         {
             Console.WriteLine("Введи значение суммы для которой мы будем подбирать комбинацию цифр:");
             int s = int.Parse(Console.ReadLine());

@@ -4,7 +4,7 @@ namespace Задача_2
 {
     class Calculator
     {
-        static void Main(string[] args)
+        static void Main222(string[] args)
         {
             Console.WriteLine("Калькулятор.");
             Console.WriteLine("Выберете действие(+, -, /, *)");

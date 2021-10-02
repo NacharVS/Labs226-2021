@@ -4,7 +4,7 @@ namespace Задача_0
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main12345(string[] args)
         {
             Console.WriteLine("Введите число a");
             int a = int.Parse(Console.ReadLine());

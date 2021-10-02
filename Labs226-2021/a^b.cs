@@ -4,7 +4,7 @@ namespace ConsoleApp3
 {
     class Program0
     {
-        static void Main(string[] args)
+        static void Main453(string[] args)
         {
             Console.WriteLine("Введите число");
             int a = int.Parse(Console.ReadLine());
