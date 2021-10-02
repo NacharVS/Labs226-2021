@@ -7,6 +7,11 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
+            int f = int.Parse(Console.ReadLine());
+
+            int[,] array = new int[f, f];
+
+            Matrix.DiagonalMatrix(array)
             
         }
     }
