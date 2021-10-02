@@ -7,7 +7,7 @@ namespace ConsoleApp7
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main6346(string[] args)
         {
             Console.WriteLine("Кодовый замок");
             Console.WriteLine("Введите сумму значения");

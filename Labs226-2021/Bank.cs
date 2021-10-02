@@ -4,7 +4,7 @@ namespace Задача_1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main2423(string[] args)
         {
             Console.WriteLine("Добро пожаловать в наш банк, прошу ознакомиться с процентными ставками по вкладу:");
             Console.WriteLine("< 100р = 0%");

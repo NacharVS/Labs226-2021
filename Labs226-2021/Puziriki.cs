@@ -4,7 +4,7 @@ namespace ConsoleApp3
 {
     class Program0
     {
-        static void Main(string[] args)
+        static void Main112(string[] args)
         {
             int[] array = new int[10];
             for (int i = 0; i < array.Length; i++)

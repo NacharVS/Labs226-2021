@@ -6,7 +6,7 @@ namespace a_b
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Mai6547(string[] args)
         {
             Console.Write("Введите число:");
             int a = int.Parse(Console.ReadLine());
