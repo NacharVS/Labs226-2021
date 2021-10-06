@@ -2,9 +2,9 @@
 
 namespace ConsoleApp3
 {
-    class Program
+    class CiklWhile
     {
-        static void Main(string[] args)
+        static void AvStepeniB(string[] args)
         {
             Console.WriteLine("Введите число");
             int a = int.Parse(Console.ReadLine());

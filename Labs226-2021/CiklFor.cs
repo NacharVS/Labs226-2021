@@ -2,9 +2,9 @@
 
 namespace ConsoleApp1
 {
-    class Program
+    class CiklFor
     {
-        static void Main(string[] args)
+        static void KodDlyaZamka(string[] args)
         {
             Console.WriteLine("Введи значение суммы для которой мы будем подбирать комбинацию цифр:");
             int s = int.Parse(Console.ReadLine());

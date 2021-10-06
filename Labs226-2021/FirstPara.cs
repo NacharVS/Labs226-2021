@@ -2,9 +2,9 @@
 
 namespace ConsoleApp3
 {
-    class Program0
+    class FirstPara
     {
-        static void Main(string[] args)
+        static void ZamenaPeremennih(string[] args)
         {
             Console.WriteLine("Замена переменных");
 
@@ -22,6 +22,17 @@ namespace ConsoleApp3
 
             Console.WriteLine($"a ={a}; b ={b}");
 
+        }
+        static void PloshadShara(string[] args)
+        {
+            Console.WriteLine("Нахождение площади шара по R");
+            Console.WriteLine("Введите значение R");
+            Console.WriteLine("R = ");
+            int R = int.Parse(Console.ReadLine());
+            double p = Math.PI;
+            R = R * R;
+            Console.WriteLine($"S шара = {4 * p * R}");
+            int a = int.Parse(Console.ReadLine());
         }
     }
   
