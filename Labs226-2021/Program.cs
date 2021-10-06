@@ -11,7 +11,7 @@ namespace Labs226_2021
 
             int[,] array = new int[f, f];
 
-            Matrix.DiagonalMatrix(array)
+            Matrix.MatrixTwo(array);
             
         }
     }
