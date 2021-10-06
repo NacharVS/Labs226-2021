@@ -2,7 +2,7 @@
 
 namespace ConsoleApp2
 {
-    class ArrayOperations
+    class Metod
     {
         public static void ArrayGeneration(int[,] array)
         {
