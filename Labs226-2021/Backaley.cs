@@ -29,32 +29,35 @@ namespace ConsoleApp3
                 Console.WriteLine("если хотите прекратить покупки напишите 1");
                 stop = int.Parse(Console.ReadLine());
         }
-            for(int i =0; i<korzina.Length; i++)
-            {
-                Console.Write($" {korzina[i]}");
-            }
+            Console.WriteLine("Коллво/Весс товаров");
+            Console.WriteLine($"молоко - {korzina[0]} хлеб - {korzina[1]}, мороженое - {korzina[2]}, яйца - {korzina[3]} , сыр - {korzina[4]} , картофель - {korzina[5]}кг , морковь - {korzina[6]}кг, лук - {korzina[7]}кг, бананы - {korzina[8]}кг, огурец - {korzina[9]}кг");
+           
             Console.WriteLine();
             for (int i = 0; i < korzina.Length; i++)
             {
                 if (i <=4)
                 {
-                    obshaichena[i] = korzonaSchenoi[i] * korzina[i];
+                    obshaichena[i] = obshaichena[i] + korzonaSchenoi[i] * korzina[i];
                    
                 }
                 else
                 {
-                    obshaichena[i] = korzonaSchenoi[i] * (korzina[i] );
+                    obshaichena[i] = obshaichena[i] + korzonaSchenoi[i] * (korzina[i] );
                 }
-                
+               
             }
-            for (int i =0; i<obshaichena.Length; i++)
-            {
-                Console.Write($" {obshaichena[i]}");
-            }
+            Console.WriteLine();
+            Console.WriteLine("Цена каждого товара");
+            Console.WriteLine($"молоко - {obshaichena[0]}руб. , хлеб - {obshaichena[1]}руб.  , мороженое - {obshaichena[2]}руб.  , яйца - {obshaichena[3]}руб. , сыр - {obshaichena[4]}руб. , картофель - {obshaichena[5]}руб. , морковь - {obshaichena[6]}руб. , лук - {obshaichena[7]}руб. , бананы - {obshaichena[8]}руб. , огурец - {obshaichena[9]} руб." );
+          
+            
             for (int i = 0; i<obshaichena.Length; i++)
             {
                 chena = obshaichena[i]+chena;
             }
+            Console.WriteLine();
+            Console.WriteLine(" Итого:") ;
+            Console.Write($" {chena}");
         }
     }
 }
