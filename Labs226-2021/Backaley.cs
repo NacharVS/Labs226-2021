@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Labs226_2021
-{
+{ 
     class Backaley
     {
         public static void BackaleySpisok()
@@ -13,7 +13,7 @@ namespace Labs226_2021
             int stop = 0;
             int[] korzonaSchenoi = { 140, 30, 59, 40, 70, 20, 15, 25, 47, 24 };
             double[] korzina = new double[10];
-            string[] spisok = { "№0 - молоко - 140", " №1 - хлеб - 30", " №2 - мороженое - 59 ", " №3 яйца -40 ", " №4 сыр -70 ", " №5картофель - 20/кг ", " №6 морковь - 15/кг", " №7 лук - 25/кг", " №8 бананы - 47/кг", " №9 огурец - 24/кг" };
+            string[] spisok = { " №0 - молоко - 140руб.", " №1 - хлеб - 30руб.", " №2 - мороженое - 59руб. ", " №3 - яйца - 40руб. ", " №4 - сыр - 70руб. ", " №5 - картофель - 20руб./кг ", " №6 - морковь - 15руб./кг", " №7 - лук - 25руб./кг", " №8 - бананы - 47руб./кг", " №9 - огурец - 24руб./кг" };
             for (int i = 0; i < spisok.Length; i++)
             {
                 Console.WriteLine(spisok[i]);
@@ -29,16 +29,46 @@ namespace Labs226_2021
                 stop = int.Parse(Console.ReadLine());
             }
             Console.WriteLine("Коллво/Весс товаров");
-            Console.WriteLine($"молоко - {korzina[0]}");
-            Console.WriteLine($"хлеб - {korzina[1]}");
-            Console.WriteLine($"мороженое - {korzina[2]}");
-            Console.WriteLine($"яйца - {korzina[3]} ");
-            Console.WriteLine($"сыр - {korzina[4]}");
-            Console.WriteLine( $"картофель - {korzina[5]}кг ");
-            Console.WriteLine($"морковь - {korzina[6]}кг");
-            Console.WriteLine($"лук - {korzina[7]}кг");
-            Console.WriteLine($"бананы - {korzina[8]}кг");
-            Console.WriteLine($"огурец - {korzina[9]}кг");
+            if (korzina[0] != 0)
+            {
+                Console.WriteLine($"молоко - {korzina[0]} Шт");
+            }
+            if (korzina[1] != 0)
+            {
+                Console.WriteLine($"хлеб - {korzina[1]} Шт");
+            }
+            if (korzina[2] != 0)
+            {
+                Console.WriteLine($"мороженое - {korzina[2]} Шт");
+            }
+            if (korzina[3] != 0)
+            {
+                Console.WriteLine($"яйца - {korzina[3]} Шт");
+            }
+            if (korzina[4] != 0)
+            {
+                Console.WriteLine($"сыр - {korzina[4]} Шт");
+            }
+            if (korzina[5] != 0)
+            {
+                Console.WriteLine($"картофель - {korzina[5]}кг ");
+            }
+            if (korzina[6] != 0)
+            {
+                Console.WriteLine($"морковь - {korzina[6]}кг");
+            }
+            if (korzina[7] != 0)
+            {
+                Console.WriteLine($"лук - {korzina[7]}кг");
+            }
+            if (korzina[8] != 0)
+            {
+                Console.WriteLine($"бананы - {korzina[8]}кг");
+            }
+            if (korzina[9] != 0)
+            {
+                Console.WriteLine($"огурец - {korzina[9]}кг");
+            }                                                
             Console.WriteLine();
             for (int i = 0; i < korzina.Length; i++)
             {
