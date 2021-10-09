@@ -47,7 +47,7 @@ namespace Задание_0
             Console.WriteLine();
             Console.WriteLine($"max = {max} min = {min}");
         }
-        static void SummUmno(int[] array, int[] array, int[] array)
+        static void SummUmno(int[] array, int[] array2, int[] array3)
         {
 
             for (int i = 0; i < array.Length; i++)

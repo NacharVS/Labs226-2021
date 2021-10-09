@@ -37,7 +37,7 @@ namespace Заданиие_0
                 Console.WriteLine("Число процента годовых будет составлять 7");
             else if (a > 5000 && a <= 50000)
                 Console.WriteLine("Число процента годовых будет составлять 9");
-            else (a > 50000)
+            else if (a > 50000)
                 Console.WriteLine("Число процента годовых будет составлять 12");
         }
         static void Kalkulyator(string[] args)
