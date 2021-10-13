@@ -6,6 +6,30 @@ namespace Labs226_2021
 {
     class Tasks
     {
+        public static void Dividers()
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            int countOfDividers = 0;
+            if(a <= 0 && b <=0 && k <= 0)
+                Console.WriteLine("impossible to solve");
+            else
+            {
+                for (int i = a; i < b; i++)
+                {
+                    for (int j = 1; j < b; j++)
+                    {
+                        if (i % j == 0)
+                            countOfDividers += 1;
+                    }
+                    Console.WriteLine(countOfDividers);
+                }
+               
+            }
+        }
+
+
         public static void MaxSummOfDigits()
         {
             int N = int.Parse(Console.ReadLine());
