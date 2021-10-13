@@ -6,9 +6,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            Tasks.MaxSummOfDigits();
         }
     }
 }
