@@ -7,6 +7,8 @@ namespace Labs226_2021
         static void Main(string[] args)
         {
             Tasks.Dividers();
+            WhileCycle WhileCycle1 = new WhileCycle();
+            
         }
     }
 }

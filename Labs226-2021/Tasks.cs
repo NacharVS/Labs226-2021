@@ -8,11 +8,19 @@ namespace Labs226_2021
         public static void SimpleMultiplicators()
         {
             int N = int.Parse(Console.ReadLine());
+            int buff = N;
             if(N < 2 && N > int.MaxValue )
                 Console.WriteLine("impossible to solve");
             else
             {
 
+                    for (int i = 2; i <= N; i++)
+                    {
+                        if(buff / i == 0)
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }                
             }
         }
 
