@@ -1,11 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Labs226_2021
 {
     class Tasks
     {
+        public static void SimpleMultiplicators()
+        {
+            int N = int.Parse(Console.ReadLine());
+            if(N < 2 && N > int.MaxValue )
+                Console.WriteLine("impossible to solve");
+            else
+            {
+
+            }
+        }
+
         public static void Dividers()
         {
             int a = int.Parse(Console.ReadLine());
@@ -16,14 +26,16 @@ namespace Labs226_2021
                 Console.WriteLine("impossible to solve");
             else
             {
-                for (int i = a; i < b; i++)
+                for (int i = a; i <= b; i++)
                 {
-                    for (int j = 1; j < b; j++)
+                    countOfDividers = 0;
+                    for (int j = 1; j <= b; j++)
                     {
                         if (i % j == 0)
                             countOfDividers += 1;
                     }
-                    Console.WriteLine(countOfDividers);
+                    if(countOfDividers >= k)
+                    Console.Write(i + " " );
                 }
                
             }
