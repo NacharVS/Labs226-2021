@@ -10,6 +10,7 @@ namespace Labs226_2021
 
         public static void Matrix1()
         {
+            int[,] arrayRes2 = new int[10, 2];
             int[,] arrayRes = new int[10, 2];
             int max2 = 0;
             int max = 0;            
@@ -64,7 +65,8 @@ namespace Labs226_2021
             }
             Console.WriteLine();
             Console.WriteLine();
-            for (int j = 0; j < 10 ; j++)
+            Console.WriteLine("По убыванию суммы");
+            for (int j = 0; j < arrayy.GetLength(0); j++)
             { 
               for (int i = 0; i < arrayy.GetLength(0); i++)
               {
@@ -82,13 +84,30 @@ namespace Labs226_2021
                arrayy[max2, 0] = 0;
                max = 0;
                max2 = 0;
-               Console.WriteLine();
+               Console.WriteLine();           
+            }
+            Console.WriteLine("По возростанию суммы");
+            for (int j = 0; j < arrayRes2.GetLength(0); j++)
+            {
+                arrayRes2[j, 0] = arrayRes[9 - j, 0];
+                arrayRes2[j, 1] = arrayRes[9 - j, 1];
+                Console.Write($" { arrayRes2[j, 0]} ");
+                Console.Write($" { arrayRes2[j, 1]} ");
+                Console.WriteLine();
             }
             Console.WriteLine();
-            for (int j = 0; j < 10; j++)
+            Console.WriteLine("Вывод в порядке убывания");
+            for (int j = 0; j < arrayRes.GetLength(0); j++)
             {
-             Console.Write($" {  arrayRes[j, 1]}");
-            }            
+             Console.Write($" {  arrayRes[j, 1]}"); 
+            }
+           
+            Console.WriteLine();
+            Console.WriteLine("Вывод в порядке возростания");
+            for (int j = 0; j < arrayRes.GetLength(0); j++)
+            {
+                Console.Write($" {  arrayRes2[j, 1]}"); 
+            }
         }
     }
 }
