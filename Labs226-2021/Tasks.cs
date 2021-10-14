@@ -9,18 +9,24 @@ namespace Labs226_2021
         {
             int N = int.Parse(Console.ReadLine());
             int buff = N;
+            int multiplicator = 2;
             if(N < 2 && N > int.MaxValue )
                 Console.WriteLine("impossible to solve");
             else
             {
-
-                    for (int i = 2; i <= N; i++)
+                while(buff > 1)
+                {
+                    if (buff % multiplicator == 0)
                     {
-                        if(buff / i == 0)
-                        {
-                            Console.WriteLine(i);
-                        }
-                    }                
+                        Console.WriteLine(multiplicator);
+                        buff = buff / multiplicator;
+                    }
+                    else
+                    {
+                        multiplicator++;
+                    }
+                }
+                             
             }
         }
 
