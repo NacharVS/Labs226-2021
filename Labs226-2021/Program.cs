@@ -8,7 +8,7 @@ namespace Labs226_2021
         {
             int [,] array = new int[10, 10];
 
-            ArrayOperations.ArrayMaxin2D(array);
+            Matrix.Matrix1();
         }
     }
 }
