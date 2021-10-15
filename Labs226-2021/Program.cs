@@ -7,7 +7,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Bakaleya2.Pokypka();
+            SortSumId.SumId();
         }
     }
 }
