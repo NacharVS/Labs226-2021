@@ -1,0 +1,14 @@
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.AssemblyInfoInputs.cache
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.AssemblyInfo.cs
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.csproj.CoreCompileInputs.cache
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.exe
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.deps.json
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.runtimeconfig.json
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.runtimeconfig.dev.json
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.dll
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\bin\Debug\netcoreapp3.1\Massive.pdb
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.dll
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.pdb
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.genruntimeconfig.cache
+C:\Users\Булат\Desktop\Работы С#\Massive\Massive\obj\Debug\netcoreapp3.1\Massive.csproj.AssemblyReference.cache
