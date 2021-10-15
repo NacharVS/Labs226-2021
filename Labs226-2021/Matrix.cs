@@ -46,7 +46,8 @@ namespace Labs226_2021
                 }
                 Console.Write($" { sumst[i]}");
                 Console.WriteLine();
-            }                              
+            }
+            Console.WriteLine();
             for (int j = 0; j < arrayy.GetLength(0); j++)
             {
               arrayy[j, 0] = sumst[j];
@@ -66,6 +67,11 @@ namespace Labs226_2021
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("По убыванию суммы");
+            Console.WriteLine();
+            Console.Write("Sum");
+            Console.Write(" Id");
+            Console.WriteLine();
+            Console.WriteLine();
             for (int j = 0; j < arrayy.GetLength(0); j++)
             { 
               for (int i = 0; i < arrayy.GetLength(0); i++)
@@ -87,6 +93,11 @@ namespace Labs226_2021
                Console.WriteLine();           
             }
             Console.WriteLine("По возростанию суммы");
+            Console.WriteLine();
+            Console.Write("Sum");
+            Console.Write("  Id");
+            Console.WriteLine();
+            Console.WriteLine();
             for (int j = 0; j < arrayRes2.GetLength(0); j++)
             {
                 arrayRes2[j, 0] = arrayRes[9 - j, 0];
@@ -97,17 +108,21 @@ namespace Labs226_2021
             }
             Console.WriteLine();
             Console.WriteLine("Вывод в порядке убывания");
+            Console.WriteLine();
+
             for (int j = 0; j < arrayRes.GetLength(0); j++)
             {
              Console.Write($" {  arrayRes[j, 1]}"); 
             }
-           
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Вывод в порядке возростания");
+            Console.WriteLine();
             for (int j = 0; j < arrayRes.GetLength(0); j++)
             {
                 Console.Write($" {  arrayRes2[j, 1]}"); 
             }
+            Console.WriteLine();
         }
     }
 }
