@@ -23,14 +23,14 @@ namespace Labs226_2021
                 while (stop != 1)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Выберите продук : ");
-                    Console.WriteLine("укажите его кол-во или Кг");
+                    Console.WriteLine("Выберите продукт : ");
+                    Console.WriteLine("Укажите его кол-во или Кг");
                     korzina[int.Parse(Console.ReadLine())] += double.Parse(Console.ReadLine());
                     Console.WriteLine();
-                    Console.WriteLine("если хотите прекратить покупки напишите 1");
+                    Console.WriteLine("Если хотите прекратить покупки напишите 1");
                     stop = int.Parse(Console.ReadLine());
                 }
-                Console.WriteLine("Коллво/Весс товаров");
+                Console.WriteLine("Кол-во/Вес товаров");
                 if (korzina[0] != 0)
                 {
                     Console.WriteLine($"молоко - {korzina[0]} Шт");
@@ -134,11 +134,11 @@ namespace Labs226_2021
                 Console.Write($" {chena}руб.");
                 stop = 0;
                 Console.WriteLine();
-                Console.WriteLine("если хотите оплатить нажмите 1");
+                Console.WriteLine("Если хотите оплатить нажмите 1");
                 stop = int.Parse(Console.ReadLine());
             }
             Console.WriteLine();
-            Console.WriteLine("Товар Оплачен");
+            Console.WriteLine("Товар оплачен");
         }
     }
 }
