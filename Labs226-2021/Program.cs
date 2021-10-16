@@ -6,9 +6,9 @@ namespace Labs226_2021
     {
         static void Main ()
         {
-            int [,] array = new int[10, 10];
+            masss.massss();
 
-            Matrix.Matrix1();
+
         }
     }
 }

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp5
+namespace Labs226_2021
 {
     public class student
     {
-        public string Fio=("0");
-        public int rus=0;
-        public int Fiz=0;
-        public int math=0;
-        public float sr=0f;
+        public string Fio;
+        public int rus;
+        public int Fiz;
+        public int math;
+        public float sr;
         
     }
      public class masss
