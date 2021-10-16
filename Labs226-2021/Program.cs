@@ -6,7 +6,8 @@ namespace Labs226_2021
     {
         static void Main ()
         {
-            masss.massss();
+            
+            
 
 
         }
