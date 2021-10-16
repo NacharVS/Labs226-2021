@@ -4,14 +4,19 @@ using System.Text;
 
 namespace Labs226_2021
 {
-    class Matrix
+    public class Resultat
+    {
+        public int id;
+        public int sum;      
+    }
+
+    public class Matrix1
     { 
 
 
-        public static void Matrix1()
+        public static void Matrix()
         {
-            int[,] arrayRes2 = new int[10, 2];
-            int[,] arrayRes = new int[10, 2];
+            Resultat[] ress = new Resultat[10];                  
             int max2 = 0;
             int max = 0;            
             Random rnd = new Random();
@@ -19,6 +24,10 @@ namespace Labs226_2021
             int[] sumst = new int[10];
             int[,] array = new int[10, 10];
             int[,] arrayy = new int [10,2];
+            for (int i = 0; i < ress.Length; i++)
+            {
+                ress[i] = new Resultat();
+            }
             for (int i =0; i<array.GetLength(0);i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -83,10 +92,10 @@ namespace Labs226_2021
                }
                    
               }
-               arrayRes[j, 0] = max;
-               arrayRes[j, 1] = max2;              
-               Console.Write($" {  arrayRes[j, 0]}");               
-               Console.Write($" {  arrayRes[j, 1]}");
+               ress[j].sum = max;
+               ress[j].id = max2;              
+               Console.Write($" { ress[j].id}");               
+               Console.Write($" { ress[j].sum} ");
                arrayy[max2, 0] = 0;
                max = 0;
                max2 = 0;
@@ -98,29 +107,29 @@ namespace Labs226_2021
             Console.Write("  Id");
             Console.WriteLine();
             Console.WriteLine();
-            for (int j = 0; j < arrayRes2.GetLength(0); j++)
+            for (int j = 0; j < ress.Length; j++)
             {
-                arrayRes2[j, 0] = arrayRes[9 - j, 0];
-                arrayRes2[j, 1] = arrayRes[9 - j, 1];
-                Console.Write($" { arrayRes2[j, 0]} ");
-                Console.Write($" { arrayRes2[j, 1]} ");
+              
+              
+                Console.Write($" { ress[9-j].sum} ");
+                Console.Write($" { ress[9 - j].id } ");
                 Console.WriteLine();
             }
             Console.WriteLine();
-            Console.WriteLine("Вывод в порядке убывания");
+            Console.WriteLine("Вывод в порядке возростания");
             Console.WriteLine();
 
-            for (int j = 0; j < arrayRes.GetLength(0); j++)
+            for (int j = 0; j < ress.Length; j++)
             {
-             Console.Write($" {  arrayRes[j, 1]}"); 
+             Console.Write($" {  ress[9 - j].sum}"); 
             }
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Вывод в порядке возростания");
+            Console.WriteLine("Вывод в порядке убывания");
             Console.WriteLine();
-            for (int j = 0; j < arrayRes.GetLength(0); j++)
+            for (int j = 0; j < ress.Length; j++)
             {
-                Console.Write($" {  arrayRes2[j, 1]}"); 
+                Console.Write($" { ress[j].sum}"); 
             }
             Console.WriteLine();
         }
