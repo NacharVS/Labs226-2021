@@ -1,0 +1,11 @@
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\obj\Debug\netcoreapp3.1\Catalog.AssemblyInfoInputs.cache
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\obj\Debug\netcoreapp3.1\Catalog.AssemblyInfo.cs
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.exe
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.deps.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.runtimeconfig.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.runtimeconfig.dev.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.dll
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\bin\Debug\netcoreapp3.1\Catalog.pdb
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\obj\Debug\netcoreapp3.1\Catalog.dll
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\obj\Debug\netcoreapp3.1\Catalog.pdb
+C:\Users\262006\Documents\GitHub\Labs226-2021\Магазин\Catalog\Catalog\obj\Debug\netcoreapp3.1\Catalog.csprojAssemblyReference.cache

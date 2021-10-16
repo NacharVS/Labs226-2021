@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocenki", "Ocenki\Ocenki.csproj", "{CA34D31E-37E4-4336-8D19-A21076CF0313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA34D31E-37E4-4336-8D19-A21076CF0313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA34D31E-37E4-4336-8D19-A21076CF0313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA34D31E-37E4-4336-8D19-A21076CF0313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA34D31E-37E4-4336-8D19-A21076CF0313}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {428397FE-A8BB-48C7-9669-8728CCA89C7D}
+	EndGlobalSection
+EndGlobal
