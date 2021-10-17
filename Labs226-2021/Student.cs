@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Labs226_2021
 {
@@ -24,34 +22,22 @@ namespace Labs226_2021
                 students[i] = new Student();
             }
 
-            Console.WriteLine("Какой будет Средний балл ?");
+            Console.WriteLine("Какой будет СРЕДНИЙ БАЛЛ для поступления в МЦК-КТИТС ?");
             double sr = double.Parse(Console.ReadLine());
 
-            students[0].Phio = "Иван";
-            students[0].Math = 4;
-            students[0].Rus = 4;
-            students[0].Fizk = 4;
+            students[0].Phio = "Комиссаров Карл Якунович";
+            students[1].Phio = "Дорофеев Максим Денисович";
+            students[2].Phio = "Соловьёв Архип Вениаминович";
+            students[3].Phio = "Горшков Феликс Семенович";
+            students[4].Phio = "Александров Альберт Серапионович";
 
-            students[1].Phio = "Степан";
-            students[1].Math = 3;
-            students[1].Rus = 5;
-            students[1].Fizk = 4;
 
-            students[2].Phio = "Гена";
-            students[2].Math = 5;
-            students[2].Rus = 2;
-            students[2].Fizk = 4;
-
-            students[3].Phio = "Влад";
-            students[3].Math = 4;
-            students[3].Rus = 5;
-            students[3].Fizk = 4;
-
-            students[4].Phio = "Булкин";
-            students[4].Math = 3;
-            students[4].Rus = 3;
-            students[4].Fizk = 3;
-
+            for (int i = 0; i < students.Length; i++)
+            {
+                students[i].Math = new Random().Next(2, 6);
+                students[i].Fizk = new Random().Next(2, 6);
+                students[i].Rus = new Random().Next(2, 6);
+            }
 
             for (int i = 0; i < students.Length; i++)
             {
@@ -66,9 +52,8 @@ namespace Labs226_2021
                     Console.WriteLine(students[i].Phio);
                     Console.WriteLine(students[i].sred);
                 }
+                Console.WriteLine();
             }
-
         }
-
     }
 }
