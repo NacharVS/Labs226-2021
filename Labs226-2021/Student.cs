@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Labs226_2021
+
 {
     public class student
     {
@@ -12,7 +13,9 @@ namespace Labs226_2021
         public int Fiz;
         public int math;
         public float sr;
-
+        public int vozr;
+        public string data;
+        public string vakchen;
     }
     public class masss
     {
@@ -34,93 +37,40 @@ namespace Labs226_2021
 
                 students[i].Fiz = fiz;
                 students[i].math = math;
+                students[i].vozr = rnd.Next(15, 23);
             }
-            students[0].Fio = ("Alan");
-            students[1].Fio = ("Anton");
-            students[2].Fio = ("Albert");
-            students[3].Fio = ("Biburat");
-            students[4].Fio = ("Vlad");
+            int mes = rnd.Next(1, 13);
+            int den = rnd.Next(1, 31);
+            students[0].Fio = ("Alan " + $"{den}." + $"{mes}." + $"{2021 - students[0].vozr}");
+            mes = rnd.Next(1, 13);
+            den = rnd.Next(1, 31);
+            students[1].Fio = ("Anton " + $"{den}." + $"{mes}." + $"{2021 - students[1].vozr}");
+            mes = rnd.Next(1, 13);
+            den = rnd.Next(1, 31);
+            students[2].Fio = ("Albert " + $"{den}." + $"{mes}." + $"{2021 - students[2].vozr}");
+            mes = rnd.Next(1, 13);
+            den = rnd.Next(1, 31);
+            students[3].Fio = ("Biburat " + $"{den}." + $"{mes}." + $"{2021 - students[3].vozr}");
+            mes = rnd.Next(1, 13);
+            den = rnd.Next(1, 31);
+            students[4].Fio = ("Vlad " + $"{den}." + $"{mes}." + $"{2021 - students[4].vozr}");
+
             for (int i = 0; i < students.Length; i++)
             {
-                Console.WriteLine("Оценки " + $"{ students[i].Fio }");
-                Console.WriteLine();
-                Console.Write("Русский " + $"{students[i].rus}" + " Физика " + $" { students[i].Fiz} " + " Математика " + $"{ students[i].math } ");
-                Console.WriteLine();
-                students[i].sr = (students[i].rus + students[i].Fiz + students[i].math) / 3f;
-                Console.WriteLine();
-                Console.Write("Средний балл = ");
-                Console.Write(students[i].sr = (students[i].rus + students[i].Fiz + students[i].math) / 3f);
-                Console.WriteLine();
-                Console.WriteLine();
-            }
-            for (int i = 0; i < students.Length; i++)
-            {
-                Console.WriteLine("Живёт ли " + $" {students[i].Fio} " +"в общежитии?") ;
-                students[i].Obsh =Console.ReadLine();
-            }
-            Console.WriteLine("Введите средний балл");
-            double ser = double.Parse(Console.ReadLine());
-            Console.WriteLine();
-            for (int i = 0; i < students.Length; i++)
-            {
-                if (students[i].sr >= ser)
+                if (students[i].vozr >= 18)
                 {
-                    Console.WriteLine();
-                    Console.Write($"{students[i].Fio }");
-                    Console.Write($" { students[i].sr }");
-                    Console.WriteLine();
-                    if (students[i].Obsh == "да")
-                    {
-                        Console.WriteLine("Из них в общежитии живут:");                      
-                        Console.Write($"{students[i].Fio }");
-                    }
+                    Console.WriteLine("Вакцинирован ли студент  " + $"{students[i].Fio}");
+                    students[i].vakchen = (Console.ReadLine());
                 }
-
             }
-        }
-
-
-
-
-
-
-    }
-    public class Jurnal
-    {
-        public static void Jurnall()
-        {
-
-            student[] students = new student[5];
-
-            for (int i = 0; i < students.Length; i++)
-            {
-                students[i] = new student();
-            }
-          
-            for (int i = 0; i < students.Length; i++)
-            {
-                Console.WriteLine("Запишите имя");
-                students[i].Fio = (Console.ReadLine());
-                Console.WriteLine("Запишите Оценку по Русскому");
-                int rus = int.Parse(Console.ReadLine());
-                Console.WriteLine("Запишите Оценку по Физике");
-                int fiz = int.Parse(Console.ReadLine());
-                Console.WriteLine("Запишите Оценку по Математике");
-                int math = int.Parse(Console.ReadLine());
-                students[i].rus = rus;
-
-                students[i].Fiz = fiz;
-                students[i].math = math;
-            }
-            
             for (int i = 0; i < students.Length; i++)
             {
                 Console.WriteLine("Оценки " + $"{ students[i].Fio }");
-                Console.WriteLine();
+
                 Console.Write("Русский " + $"{students[i].rus}" + " Физика " + $" { students[i].Fiz} " + " Математика " + $"{ students[i].math } ");
                 Console.WriteLine();
                 students[i].sr = (students[i].rus + students[i].Fiz + students[i].math) / 3f;
-                Console.WriteLine();
+
                 Console.Write("Средний балл = ");
                 Console.Write(students[i].sr = (students[i].rus + students[i].Fiz + students[i].math) / 3f);
                 Console.WriteLine();
@@ -138,26 +88,36 @@ namespace Labs226_2021
             {
                 if (students[i].sr >= ser)
                 {
-                    Console.WriteLine();
-                    Console.Write($"{students[i].Fio }");
-                    Console.Write($" { students[i].sr }");
-                    Console.WriteLine();
                     if (students[i].Obsh == "да")
                     {
-                        Console.WriteLine("Из них в общежитии живут:");
-                        Console.Write($"{students[i].Fio }");
+                        if (students[i].vozr >= 18)
+                        {
+                            Console.Write("Живет в общежитии и совершеннолетний   ");
+                            Console.Write($"{ students[i].Fio }");
+                            Console.Write($" { students[i].sr }");
+                            Console.WriteLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                            Console.Write("Живет в общежитии и несовершеннолетний ");
+                            Console.Write($"{ students[i].Fio }");
+                            Console.Write($" { students[i].sr }");
+                            Console.WriteLine();
+                        }
                     }
-                }
 
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Обезательна вакцина для:");
+            for (int i = 0; i < students.Length; i++)
+            {
+                if (students[i].vakchen != "да" && students[i].vozr >= 18)
+                {
+                    Console.WriteLine($"{students[i].Fio}");
+                }
             }
         }
     }
 }
-
-
-    
-   
-
-
-
-
