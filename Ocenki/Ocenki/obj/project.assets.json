@@ -261,11 +261,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\262006\\Desktop\\226 З.Б., Г.А\\Ocenki\\Ocenki\\Ocenki.csproj",
+      "projectUniqueName": "C:\\Users\\262006\\Documents\\GitHub\\Labs226-2021\\Ocenki\\Ocenki\\Ocenki.csproj",
       "projectName": "Ocenki",
-      "projectPath": "C:\\Users\\262006\\Desktop\\226 З.Б., Г.А\\Ocenki\\Ocenki\\Ocenki.csproj",
+      "projectPath": "C:\\Users\\262006\\Documents\\GitHub\\Labs226-2021\\Ocenki\\Ocenki\\Ocenki.csproj",
       "packagesPath": "C:\\Users\\262006\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\262006\\Desktop\\226 З.Б., Г.А\\Ocenki\\Ocenki\\obj\\",
+      "outputPath": "C:\\Users\\262006\\Documents\\GitHub\\Labs226-2021\\Ocenki\\Ocenki\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -9,3 +9,14 @@ C:\Users\262006\Desktop\226 З.Б., Г.А\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\
 C:\Users\262006\Desktop\226 З.Б., Г.А\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.pdb
 C:\Users\262006\Desktop\226 З.Б., Г.А\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.dll
 C:\Users\262006\Desktop\226 З.Б., Г.А\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.pdb
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.exe
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.deps.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.runtimeconfig.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.runtimeconfig.dev.json
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.dll
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\bin\Debug\netcoreapp3.1\Ocenki.pdb
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.csprojAssemblyReference.cache
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.AssemblyInfoInputs.cache
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.AssemblyInfo.cs
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.dll
+C:\Users\262006\Documents\GitHub\Labs226-2021\Ocenki\Ocenki\obj\Debug\netcoreapp3.1\Ocenki.pdb
