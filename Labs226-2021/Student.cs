@@ -11,7 +11,7 @@ namespace Labs226_2021
         public double sred;
         public int Obsh;
         public int age;
-        
+
     }
 
     class Massiv
@@ -27,19 +27,19 @@ namespace Labs226_2021
                 students[i] = new Student();
             }
 
-            
+
             students[0].Phio = "Комиссаров Карл Якунович";
             students[1].Phio = "Дорофеев Максим Денисович";
             students[2].Phio = "Соловьёв Архип Вениаминович";
             students[3].Phio = "Горшков Феликс Семенович";
             students[4].Phio = "Александров Альберт Серапионович";
 
-            
+
             for (int i = 0; i < students.Length; i++)
             {
-                
+
                 students[i].age = new Random().Next(16, 19);
-                
+
             }
 
 
@@ -73,7 +73,7 @@ namespace Labs226_2021
 
             for (int i = 0; i < students.Length; i++)
             {
-                
+
                 students[i].Obsh = new Random().Next(1, 3);
             }
 
@@ -177,7 +177,7 @@ namespace Labs226_2021
                             {
                                 Console.WriteLine($"{students[i].Phio} (Не живет в общежитии)");
                             }
-                            
+
                         }
                         Console.WriteLine();
                     }
