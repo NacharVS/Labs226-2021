@@ -1,0 +1,12 @@
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.AssemblyInfoInputs.cache
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.AssemblyInfo.cs
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.csproj.CoreCompileInputs.cache
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.exe
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.deps.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.runtimeconfig.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.runtimeconfig.dev.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.dll
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\bin\Debug\netcoreapp3.1\Studen.pdb
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.dll
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.pdb
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\STuDeNTS\Studen\Studen\obj\Debug\netcoreapp3.1\Studen.genruntimeconfig.cache

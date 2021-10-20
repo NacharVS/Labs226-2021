@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs226_2021
+namespace Magaz
 {
     class Kibet
     {
