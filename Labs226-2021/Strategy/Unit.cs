@@ -12,6 +12,8 @@ namespace Labs226_2021.Strategy
         public int maxdamage;
         public int speed;
         public int attackSpeed;
+        public int minheal;
+        public int maxheal;
 
         public void Attack()
         {
