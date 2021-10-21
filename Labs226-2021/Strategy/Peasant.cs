@@ -20,12 +20,12 @@ namespace Labs226_2021.Strategy
 
         public void Produce()
         {
-            Console.WriteLine($"{typeUnit} is mining...");
+            Console.WriteLine($"Peasant is mining...");
         }
 
         public void CancelAction()
         {
-            Console.WriteLine($"{typeUnit} finished mining...");
+            Console.WriteLine($"Peasant finished mining...");
         }
        
     }
