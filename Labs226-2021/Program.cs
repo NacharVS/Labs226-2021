@@ -9,15 +9,18 @@ namespace Labs226_2021
     {
         static void Main ()
         {
-            Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 30, 3);
+            Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 0, 30, 3);
+            peasant1.currenthp();
             peasant1.Attack();
             peasant1.Produce();
-            Archer archer1 = new Archer("archer1", 3, 9, 4, 25, 3);
+            Archer archer1 = new Archer("archer1", 3, 9, 4, 0, 30, 3, 2);
+            archer1.currenthp();
             archer1.Attack();
             archer1.Shooting();
-            Healer healer1 = new Healer("healer1", 0, 1, 2, 20, 1, 2, 6 );
+            Healer healer1 = new Healer("healer1", 0, 1, 2, 0, 20, 2, 6, 10);
+            healer1.currenthp();
             healer1.Attack();
-            healer1.Healing(); 
+            healer1.Healing();
         }
     }
 }
