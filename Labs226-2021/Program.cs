@@ -8,10 +8,8 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-            Massiv.Student();
-=======
-<<<<<<< HEAD
+
+
             Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 30, 3, "Bridge");
             peasant1.Attack();
             peasant1.Produce();
@@ -28,10 +26,7 @@ namespace Labs226_2021
             healer1.Moving();
             healer1.HoldPositon();
             healer1.Death();
-=======
-            Massiv.Student();
->>>>>>> ecc386553c8e18d69bbf8daf389324b94acc8e1b
->>>>>>> Stashed changes
+
         }
     }
 }
