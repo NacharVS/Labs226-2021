@@ -1,0 +1,12 @@
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.exe
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.deps.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.runtimeconfig.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.runtimeconfig.dev.json
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.dll
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\bin\Debug\netcoreapp3.1\Strategy.pdb
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.AssemblyInfoInputs.cache
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.AssemblyInfo.cs
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.csproj.CoreCompileInputs.cache
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.dll
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.pdb
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.genruntimeconfig.cache
