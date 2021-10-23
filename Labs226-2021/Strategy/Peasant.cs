@@ -20,12 +20,12 @@ namespace Labs226_2021.Strategy
 
         public void Produce()
         {
-            Console.WriteLine($"Peasant is mining...");
+            Console.WriteLine($"Peasant добывает ресурсы...");
         }
 
         public void CancelAction()
         {
-            Console.WriteLine($"Peasant finished mining...");
+            Console.WriteLine($"Peasant закончил добывать ресурсы в шахте...");
         }
        
     }

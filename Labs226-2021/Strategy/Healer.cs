@@ -19,12 +19,12 @@ namespace Labs226_2021.Strategy
 
         public void Produce()
         {
-            Console.WriteLine($"{typeUnit} is heals...");
+            Console.WriteLine($"Healer лечит себя...");
         }
 
         public void CancelAction()
         {
-            Console.WriteLine($"{typeUnit} finished heals...");
+            Console.WriteLine($"Healer закончил себя лечить...");
         }
     }
 }

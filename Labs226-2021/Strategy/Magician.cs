@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Archer : Unit
+    class Magician: Unit
     {
-
-
-        public Archer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, string located, int arrows)
+        public Magician(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, string located, int magicPoints )
         {
             base.typeUnit = type;
             base.mindamage = mindamage;
@@ -17,18 +15,21 @@ namespace Labs226_2021.Strategy
             base.health = hp;
             base.attackSpeed = aspeed;
             base.located = located;
+            
+
         }
 
         public void Produce()
         {
-            Console.WriteLine($"Archer выпускает стрелы...");
+            Console.WriteLine($"Magician");
         }
-
 
 
         public void CancelAction()
         {
-            Console.WriteLine($"Archer закончились стрелы");
+            Console.WriteLine($"Magician");
         }
+
+        
     }
 }

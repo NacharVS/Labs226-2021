@@ -12,15 +12,15 @@ namespace Labs226_2021.Strategy
         public int maxdamage;
         public int speed;
         public int attackSpeed;
-
         public string located; 
+        
        
         
 
         public void Attack()
         {
             int hit = new Random().Next(mindamage, maxdamage);
-            Console.WriteLine($"{typeUnit} delivered {hit} damage");
+            Console.WriteLine($"{typeUnit} нанёс {hit} урона");
         }
 
         public void Moving()
