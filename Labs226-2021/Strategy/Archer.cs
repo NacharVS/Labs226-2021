@@ -28,6 +28,10 @@ namespace Labs226_2021.Strategy
                 Console.WriteLine($"{typeUnit} is shooting and diliverd {shoot} damage");
                 arrows = arrows - 1;
             }
+            if (arrows == 0)
+            {
+                Console.WriteLine($"{typeUnit} arows is over. Melee attacking ");
+            }
 
         }
     }
