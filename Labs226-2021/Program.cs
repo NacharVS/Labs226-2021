@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Labs226_2021.Strategy;
+using System;
 using System.Threading;
 
 namespace Labs226_2021
@@ -7,7 +8,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Massiv.Massiv2();
+            Activate.Activ();
         }
     }
 }
