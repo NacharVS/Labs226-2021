@@ -6,11 +6,13 @@ namespace Labs226_2021.Strategy
 {
     class Archer : Unit
     {
-        public Archer(string type, int mindamage, int maxdamage, int speed, int minhp, int maxhp, int aspeed, int arr)
+        public Archer(string type, int mindamage, int maxdamage, int minshoot, int maxshoot, int speed, int minhp, int maxhp, int aspeed, int arr)
         {
             base.typeUnit = type;
             base.mindamage = mindamage;
             base.maxdamage = maxdamage;
+            base.minshoot = minshoot;
+            base.maxshoot = maxshoot;
             base.speed = speed;
             base.minhealth = minhp;
             base.maxhealth = maxhp;
@@ -20,16 +22,13 @@ namespace Labs226_2021.Strategy
 
         public void Shooting()
         {
-            if (arrows != 0)
-            { 
-                Console.WriteLine($"{typeUnit} is shooting");
-                arrows = arrows - 1;
-                Console.WriteLine();
-            }
-            else
+            while (arrows != 0)
             {
-                
+                int shoot = new Random().Next(minshoot, maxshoot);
+                Console.WriteLine($"{typeUnit} is shooting and diliverd {shoot} damage");
+                arrows = arrows - 1;
             }
-    }
+
+        }
     }
 }

@@ -21,7 +21,9 @@ namespace Labs226_2021.Strategy
         public void Healing()
         {
             int heal = new Random().Next(minheal, maxheal);
-            Console.WriteLine($"{typeUnit} delivered {heal} heal for " + $"{typeUnit}"+ $" {hp + heal} healthpoint");
+            Console.WriteLine($"{typeUnit} delivered {heal} heal for " + $"{typeUnit}"+ $" {hp += heal} healthpoint");
+            hpp += heal;
+            Console.WriteLine($"Current healthpoint {hpp}");
             Console.WriteLine();
         }
     }
