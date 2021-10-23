@@ -10,3 +10,4 @@ C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj
 C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.dll
 C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.pdb
 C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.genruntimeconfig.cache
+C:\Users\262011\Documents\GitHub\Labs226-2021\Labs226-2021\Strategy\Strategy\obj\Debug\netcoreapp3.1\Strategy.csprojAssemblyReference.cache
