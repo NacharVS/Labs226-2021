@@ -39,5 +39,16 @@ namespace Labs226_2021.Strategy
             int hit = new Random().Next(mindamage, maxdamage);
             Console.WriteLine($"{typeUnit} delivered {hit} damage");
         }
+        public void credits()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Creators: Босс качалки - Нотфуллин Альбрт, Креативный деректор - Никита Матвеев, Прораб - Лосев Кирилл");
+        }
+        public void title()
+        {
+            Console.WriteLine();
+            Console.WriteLine("RPG TXT");
+            Console.WriteLine();
+        }
     }
 }

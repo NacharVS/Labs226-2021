@@ -10,6 +10,7 @@ namespace Labs226_2021
         static void Main ()
         {
             Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 1, 30, 3);
+            peasant1.title();
             peasant1.currenthp();
             peasant1.Produce();
             peasant1.Attack();
@@ -25,6 +26,7 @@ namespace Labs226_2021
             Mage mage1 = new Mage("mage1", 2, 1, 15, 2, 100, 20, 15, 10);
             mage1.currenthp();
             mage1.Spell();
+            peasant1.credits();
         }
     }
 }
