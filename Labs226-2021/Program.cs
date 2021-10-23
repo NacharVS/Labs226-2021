@@ -11,8 +11,8 @@ namespace Labs226_2021
         {
             Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 1, 30, 3);
             peasant1.currenthp();
-            peasant1.Attack();
             peasant1.Produce();
+            peasant1.Attack();
             Archer archer1 = new Archer("archer1", 1, 2, 4, 8, 4, 1, 30, 3, 2);
             archer1.currenthp();
             archer1.Shooting();

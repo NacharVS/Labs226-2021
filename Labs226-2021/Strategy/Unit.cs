@@ -23,7 +23,7 @@ namespace Labs226_2021.Strategy
         public int staticstorm;
         public int frostbite;
         public int mp;
-        public int currenthpp;
+        public int storage;
         public int hpp;
 
 
