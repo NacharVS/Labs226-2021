@@ -140,7 +140,12 @@ namespace Strategy
                 {
                     wizzard1.FireBall();
                 }
+                else if (vibor1 == 4)
+                {
+                    wizzard1.Fight();
+                }
             }
+
 
             else
             {
@@ -164,7 +169,14 @@ namespace Strategy
         public int resours;
         public int minmagdamage;
         public int maxmagdamage;
-        
+
+        public Peasant peasant2 = new Peasant("Крестьянин", 0, 3, 10, 100, 10);
+        public Archer archer2 = new Archer("Лучник", 2, 6, 20, 120, 15);
+        public Knight knight2 = new Knight("Рыцарь", 5, 10, 8, 200, 8);
+        public Healer healer2 = new Healer("Хиллер", 0, 2, 15, 150, 20, 10, 20);
+        public Wizzard wizzard2 = new Wizzard("Маг", 0, 4, 10, 140, 20, 15, 20);
+
+
         public void Attack()
         {
             int hit = new Random().Next(mindamage, maxdamage);
@@ -210,6 +222,97 @@ namespace Strategy
             Console.WriteLine($"{typeUnit} использует Огненный шар и наносит {hit} урона");
             Console.WriteLine($"Противник горит и получает {burn} урона в секунду, в течении 5 сек.");
             Console.WriteLine($"Суммарный урон = {hit + burn * 5}");
+        }
+        public void Fight()
+        {
+            int hit = new Random().Next(mindamage, maxdamage);
+            Console.WriteLine("Выберите какого юнита хотите атаковать:");
+            Console.WriteLine($"1 - Крестьянин");
+            Console.WriteLine($"2 - Лучник");
+            Console.WriteLine($"3 - Мечник");
+            Console.WriteLine($"4 - Хиллер");
+            Console.WriteLine($"5 - Маг");
+            int targ = int.Parse(Console.ReadLine());
+            while (health <= 0 || peasant2.health <= 0 || archer2.health <= 0 || knight2.health <= 0 || healer2.health <= 0 || wizzard2.health <= 0)
+            {
+                if (health == 0)
+                {
+                    Console.WriteLine("Вы умерли.");
+                }
+                else
+                {
+                    if (targ == 1)
+                    {
+                        peasant2.health -= hit;
+                        
+                        if(peasant2.health <= 0)
+                        {
+                            Console.WriteLine("Вы убили Крестьянина");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{typeUnit} нанес {hit} урона Крестьянину");
+                            Console.WriteLine($"ХП Крестьянина = {health}");
+                        }
+                    }
+                    else if (targ == 2)
+                    {
+                        archer2.health -= hit;
+                        
+                        if (archer2.health <= 0)
+                        {
+                            Console.WriteLine("Вы убили Лучника");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{typeUnit} нанес {hit} урона Лучнику");
+                            Console.WriteLine($"ХП Лучника = {health}");
+                        }
+                    }
+                    else if (targ == 3)
+                    {
+                        knight2.health -= hit;
+                        
+                        if (knight2.health <= 0)
+                        {
+                            Console.WriteLine("Вы убили Мечника");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{typeUnit} нанес {hit} урона Мечнику");
+                            Console.WriteLine($"ХП Мечника = {health}");
+                        }
+                    }
+                    else if (targ == 1)
+                    {
+                        healer2.health -= hit;
+                        
+                        if (healer2.health <= 0)
+                        {
+                            Console.WriteLine("Вы убили Хиллера");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{typeUnit} нанес {hit} урона Хиллеру");
+                            Console.WriteLine($"ХП Хиллера = {health}");
+                        }
+                    }
+                    else if (targ == 1)
+                    {
+                        wizzard2.health -= hit;
+                        
+                        if (wizzard2.health <= 0)
+                        {
+                            Console.WriteLine("Вы убили Мага");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{typeUnit} нанес {hit} урона Магу");
+                            Console.WriteLine($"ХП Мага = {health}");
+                        }
+                    }
+                }
+            }
         }
 
     }
