@@ -25,7 +25,7 @@ namespace Labs226_2021.Strategy
         private int _mp;
         private int _storage;
         private int _hpp;
-
+        private int _hit;
         public string TypeUnit
         {
             get
@@ -37,7 +37,7 @@ namespace Labs226_2021.Strategy
                 _typeUnit = value;
             }
         }
-        
+
         public int Minhealth
         {
             get
@@ -108,8 +108,8 @@ namespace Labs226_2021.Strategy
             {
                 _maxshoot = value;
             }
-        } 
-        
+        }
+
         public int Speed
         {
             get
@@ -248,13 +248,29 @@ namespace Labs226_2021.Strategy
                     Death();
                 }
             }
+
         }
+        public int Hit
+        {
+            get
+            {
+                return _hit;
+            }
+            set
+            {
+                Hitt();
+            }
+        }
+
+
+
         public void currenthp()
         {
             _hpp = 0;
             _hp = new Random().Next(_minhealth, _maxhealth);
             Console.WriteLine($"{TypeUnit} current {_hpp += _hp} healpoint");
         }
+     
 
         public void Attack()
         {
@@ -275,6 +291,15 @@ namespace Labs226_2021.Strategy
         public void Death()
         {
             Console.WriteLine($"{TypeUnit} died");
+        }
+        public void Hitt()
+        {
+            int hit = new Random().Next(_mindamage, _maxdamage);
+            Console.WriteLine($"{_typeUnit} delivered {hit} damage");
+            Hpp = _hpp;
+            Hpp = Hpp - hit;
+            _hit = hit;
+
         }
     }
 }
