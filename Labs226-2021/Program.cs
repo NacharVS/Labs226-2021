@@ -8,9 +8,22 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Peasant peasant1 = new Peasant("peasant1", 1, 6, 3, 30, 3);
-            peasant1.Attack();
-            peasant1.Produce();
+            int num = int.Parse(Console.ReadLine());
+            int div = 2;
+            while(num > 1 || num < -1)
+            {
+                if (num % div == 0)
+                {
+                    num /= 2;
+                    Console.WriteLine(div);
+                }
+                else
+                    div++;
+            }
+
+
+
+
         }
     }
 }
