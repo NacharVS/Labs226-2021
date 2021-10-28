@@ -8,22 +8,22 @@ namespace Labs226_2021.Strategy
     {
         public Healer(string type, int mindamage, int maxdamage, int speed, int minhp, int maxhp, int aspeed, int minheal, int maxheal)
         {
-            base.typeUnit = type;
-            base.mindamage = mindamage;
-            base.maxdamage = maxdamage;
-            base.speed = speed;
-            base.minhealth = minhp;
-            base.maxhealth = maxhp;
-            base.attackSpeed = aspeed;
-            base.minheal = minheal;
-            base.maxheal = maxheal;
+            base.TypeUnit = type;
+            base.Mindamage = mindamage;
+            base.Maxdamage = maxdamage;
+            base.Speed = speed;
+            base.Minhealth = minhp;
+            base.Maxhealth = maxhp;
+            base.AttackSpeed = aspeed;
+            base.Minheal = minheal;
+            base.Maxheal = maxheal;
         }
         public void Healing()
         {
-            int heal = new Random().Next(minheal, maxheal);
-            Console.WriteLine($"{typeUnit} delivered {heal} heal for " + $"{typeUnit}"+ $" {hp += heal} healthpoint");
-            hpp += heal;
-            Console.WriteLine($"Current healthpoint {hpp}");
+            int heal = new Random().Next(Minheal, Maxheal);
+            Console.WriteLine($"{TypeUnit} delivered {heal} heal for " + $"{TypeUnit}"+ $" {Hp += heal} healthpoint");
+            Hpp += heal;
+            Console.WriteLine($"Current healthpoint {Hpp}");
             Console.WriteLine();
         }
     }

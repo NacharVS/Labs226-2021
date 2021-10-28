@@ -8,48 +8,48 @@ namespace Labs226_2021.Strategy
     {
         public Mage(string type, int speed, int minhp, int maxhp, int aspeed, int mp, int fireball, int frostbite, int staticstorm)
         {
-            base.typeUnit = type;
-            base.speed = speed;
-            base.minhealth = minhp;
-            base.maxhealth = maxhp;
-            base.attackSpeed = aspeed;
-            base.mp = mp;
-            base.fireball = fireball;
-            base.frostbite = frostbite;
-            base.staticstorm = staticstorm;
+            base.TypeUnit = type;
+            base.Speed = speed;
+            base.Minhealth = minhp;
+            base.Maxhealth = maxhp;
+            base.AttackSpeed = aspeed;
+            base.Mp = mp;
+            base.Fireball = fireball;
+            base.Frostbite = frostbite;
+            base.Staticstorm = staticstorm;
         }
         public void Spell()
         {
-            while ( mp > 5 )
+            while ( Mp > 5 )
                 {
                 int spell = new Random().Next(1, 4);
-                if (mp >= fireball)
+                if (Mp >= Fireball)
                 {
                     if (spell == 1)
                     {
-                        Console.WriteLine($"{typeUnit} cast fireball and dilivered {fireball} damage");
-                        mp -= fireball;
+                        Console.WriteLine($"{TypeUnit} cast fireball and dilivered {Fireball} damage");
+                        Mp -= Fireball;
                     }
                 }
-                if (mp >= frostbite)
+                if (Mp >= Frostbite)
                 {
                     if (spell == 2)
                     {
-                        Console.WriteLine($"{typeUnit} cast frostbite and dilivered {frostbite} damage");
-                        mp -= frostbite;
+                        Console.WriteLine($"{TypeUnit} cast frostbite and dilivered {Frostbite} damage");
+                        Mp -= Frostbite;
                     }
                 }
-                if (mp >= staticstorm)
+                if (Mp >= Staticstorm)
                 {
                     if (spell == 3)
                     {
-                        Console.WriteLine($"{typeUnit} cast staticstorm and dilivered {staticstorm} damage");
-                        mp -= staticstorm;
+                        Console.WriteLine($"{TypeUnit} cast staticstorm and dilivered {Staticstorm} damage");
+                        Mp -= Staticstorm;
                     }
                 }
             }
             
-            if (mp <= 5 )
+            if (Mp <= 5 )
             {
                
                 Console.WriteLine("Mp is over");

@@ -8,29 +8,29 @@ namespace Labs226_2021.Strategy
     {
         public Archer(string type, int mindamage, int maxdamage, int minshoot, int maxshoot, int speed, int minhp, int maxhp, int aspeed, int arr)
         {
-            base.typeUnit = type;
-            base.mindamage = mindamage;
-            base.maxdamage = maxdamage;
-            base.minshoot = minshoot;
-            base.maxshoot = maxshoot;
-            base.speed = speed;
-            base.minhealth = minhp;
-            base.maxhealth = maxhp;
-            base.attackSpeed = aspeed;
-            base.arrows = arr;
+            base.TypeUnit = type;
+            base.Mindamage = mindamage;
+            base.Maxdamage = maxdamage;
+            base.Minshoot = minshoot;
+            base.Maxshoot = maxshoot;
+            base.Speed = speed;
+            base.Minhealth = minhp;
+            base.Maxhealth = maxhp;
+            base.AttackSpeed = aspeed;
+            base.Arrows = arr;
         }
 
         public void Shooting()
         {
-            while (arrows != 0)
+            while (Arrows != 0)
             {
-                int shoot = new Random().Next(minshoot, maxshoot);
-                Console.WriteLine($"{typeUnit} is shooting and diliverd {shoot} damage");
-                arrows = arrows - 1;
+                int shoot = new Random().Next(Minshoot, Maxshoot);
+                Console.WriteLine($"{TypeUnit} is shooting and diliverd {shoot} damage");
+                Arrows = Arrows - 1;
             }
-            if (arrows == 0)
+            if (Arrows == 0)
             {
-                Console.WriteLine($"{typeUnit} arows is over. Melee attacking ");
+                Console.WriteLine($"{TypeUnit} arows is over. Melee attacking ");
             }
 
         }
