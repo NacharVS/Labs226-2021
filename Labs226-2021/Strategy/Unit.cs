@@ -4,302 +4,96 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Unit
-    {
-        private string _typeUnit;
-        private int _minhealth;
-        private int _maxhealth;
-        private int _mindamage;
-        private int _maxdamage;
-        private int _minshoot;
-        private int _maxshoot;
-        private int _speed;
-        private int _attackSpeed;
-        private int _minheal;
-        private int _maxheal;
-        private int _hp;
-        private int _arrows;
-        private int _fireball;
-        private int _staticstorm;
-        private int _frostbite;
-        private int _mp;
-        private int _storage;
-        private int _hpp;
-        private int _hit;
-        public string TypeUnit
-        {
-            get
-            {
-                return _typeUnit;
-            }
-            set
-            {
-                _typeUnit = value;
-            }
-        }
 
-        public int Minhealth
-        {
-            get
-            {
-                return _minhealth;
-            }
-            set
-            {
-                _minhealth = value;
-            }
-        }
 
-        public int Maxhealth
-        {
-            get
-            {
-                return _maxhealth;
-            }
-            set
-            {
-                _maxhealth = value;
-            }
-        }
 
-        public int Mindamage
-        {
-            get
-            {
-                return _mindamage;
-            }
-            set
-            {
-                _mindamage = value;
-            }
-        }
 
-        public int Maxdamage
+    
+    
+        public class Unit
         {
-            get
-            {
-                return _maxdamage;
-            }
-            set
-            {
-                _maxdamage = value;
-            }
-        }
+            private string _name;
+            private int _CurrentHealth;
+            private int _MaxHealth;
+            private int _MinDamage;
+            private int _MaxDamage;
+            private int _armor;
+            private int _speed;
 
-        public int Minshoot
-        {
-            get
+            public string Name
             {
-                return _minshoot;
-            }
-            set
-            {
-                _minshoot = value;
-            }
-        }
-
-        public int Maxshoot
-        {
-            get
-            {
-                return _maxshoot;
-            }
-            set
-            {
-                _maxshoot = value;
-            }
-        }
-
-        public int Speed
-        {
-            get
-            {
-                return _speed;
-            }
-            set
-            {
-                _speed = value;
-            }
-        }
-
-        public int AttackSpeed
-        {
-            get
-            {
-                return _attackSpeed;
-            }
-            set
-            {
-                _attackSpeed = value;
-            }
-        }
-        public int Minheal
-        {
-            get
-            {
-                return _minheal;
-            }
-            set
-            {
-                _minheal = value;
-            }
-        }
-        public int Maxheal
-        {
-            get
-            {
-                return _maxheal;
-            }
-            set
-            {
-                _maxheal = value;
-            }
-        }
-        public int Hp
-        {
-            get
-            {
-                return _hp;
-            }
-            set
-            {
-                _hp = value;
-            }
-        }
-        public int Arrows
-        {
-            get
-            {
-                return _arrows;
-            }
-            set
-            {
-                _arrows = value;
-            }
-        }
-        public int Fireball
-        {
-            get
-            {
-                return _fireball;
-            }
-            set
-            {
-                _fireball = value;
-            }
-        }
-        public int Staticstorm
-        {
-            get
-            {
-                return _staticstorm;
-            }
-            set
-            {
-                _staticstorm = value;
-            }
-        }
-        public int Frostbite
-        {
-            get
-            {
-                return _frostbite;
-            }
-            set
-            {
-                _frostbite = value;
-            }
-        }
-        public int Mp
-        {
-            get
-            {
-                return _mp;
-            }
-            set
-            {
-                _mp = value;
-            }
-        }
-        public int Storage
-        {
-            get
-            {
-                return _storage;
-            }
-            set
-            {
-                _storage = value;
-            }
-        }
-        public int Hpp
-        {
-            get
-            {
-                return _hpp;
-            }
-            set
-            {
-                if (value > 0)
-                    _hpp = value;
-                else
+                get
                 {
-                    _hpp = 0;
-                    Death();
+                    return _name;
+                }
+
+                set
+                {
+                    _name = value;
                 }
             }
-
-        }
-        public int Hit
-        {
-            get
+            public int Health
             {
-                return _hit;
+                get => _CurrentHealth;
+                set
+                {
+                    if (value > 0)
+                    {
+                        _CurrentHealth = value;
+                    }
+                    else
+                    {
+                        _CurrentHealth = 0;
+                        Console.WriteLine();
+                        Death();
+                    }
+                }
             }
-            set
+            internal void GetDamage(int damage)
             {
-                Hitt();
+                Health = Health - damage;
+            }
+
+            internal int InflictDamage()
+            {
+                return new Random().Next(MinDamage, MaxDamage);
+            }
+
+            public int MinDamage { get => _MinDamage; set => _MinDamage = value; }
+            public int MaxDamage { get => _MaxDamage; set => _MaxDamage = value; }
+
+            private void Death()
+            {
+                Console.WriteLine($"{_name} death");
             }
         }
-
-
-
-        public void currenthp()
+        class Warrior : Unit
         {
-            _hpp = 0;
-            _hp = new Random().Next(_minhealth, _maxhealth);
-            Console.WriteLine($"{TypeUnit} current {_hpp += _hp} healpoint");
-        }
-     
-
-        public void Attack()
-        {
-            int hit = new Random().Next(_mindamage, _maxdamage);
-            Console.WriteLine($"{_typeUnit} delivered {hit} damage");
-        }
-        public void credits()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Creators: Босс качалки - Нотфуллин Альбрт, Креативный деректор - Никита Матвеев, Прораб - Лосев Кирилл");
-        }
-        public void title()
-        {
-            Console.WriteLine();
-            Console.WriteLine("RPG TXT");
-            Console.WriteLine();
-        }
-        public void Death()
-        {
-            Console.WriteLine($"{TypeUnit} died");
-        }
-        public void Hitt()
-        {
-            int hit = new Random().Next(_mindamage, _maxdamage);
-            Console.WriteLine($"{_typeUnit} delivered {hit} damage");
-            Hpp = _hpp;
-            Hpp = Hpp - hit;
-            _hit = hit;
 
         }
-    }
+        class Archer : Unit
+        {
+            private int _CurrentArrows;
+            private int _Range;
+
+            public int CurrentArrows { get => _CurrentArrows; set => _CurrentArrows = value; }
+            public int Range { get => _Range; set => _Range = value; }
+        }
+        class Mage : Unit
+        {
+            private int _Mana;
+
+            public int Mana { get => Mana; set => Mana = value; }
+        }
+        class Healer : Unit
+        {
+            private int _Healing;
+
+            public int Healing { get => _Healing; set => _Healing = value; }
+        }
+    
 }
+
+
+    
+
