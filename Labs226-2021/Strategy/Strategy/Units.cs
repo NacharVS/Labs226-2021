@@ -8,14 +8,13 @@ namespace Labs226_2021.Strategy
     {
         public static void Main()
         {
-            Peasant peasant1 = new Peasant("Крестьянин", 0, 10, 10, 100, 250, 10);
-            Archer archer1 = new Archer("Лучник", 0, 6, 15, 30, 15, 120, 300, 25);
-            Healer healer1 = new Healer("Хиллер", 0, 15, 12, 200, 350, 1, 9, 7);
-
-            Console.WriteLine();
-            Console.WriteLine(peasant1);
-            Console.WriteLine(archer1);
-            Console.WriteLine(healer1);
+            Peasant peasant1 = new Peasant("Шахтер", 5, 15, 10, 250, 170, 2);
+            Archer archer1 = new Archer("Лучник", 0, 5, 10, 25, 20, 200, 120, 3, 2);
+            Actions.Razdachahp(peasant1, archer1);
+            Console.WriteLine(archer1.hp);
+            Actions.Fight(peasant1, archer1);
+            Actions.Fight(peasant1, archer1);
+            Actions.Fight(peasant1, archer1);
         }
     }
     public class Unit
@@ -33,6 +32,7 @@ namespace Labs226_2021.Strategy
         public int minheal;
         public int maxheal;
         public int hp;
+        public int hit;
         public int arrows;
 
         public int GetDamage
@@ -43,17 +43,8 @@ namespace Labs226_2021.Strategy
             }
             set
             {
-                int hit = new Random().Next(mindamage, maxdamage);
-                if (hit>)
                     _getDamage = value;
             }
-        }
-
-        public void Razdachahp()
-        {
-
-            hp = new Random().Next(minhealth, maxhealth);
-            Console.WriteLine($"{typeUnit}  имеет {hp} очков здоровья");
         }
         public void Death()
         {
@@ -62,6 +53,7 @@ namespace Labs226_2021.Strategy
                 Console.WriteLine($"{typeUnit} слегка умер");
         }
     }
+   
     class Healer : Unit
     {
         public Healer(string type, int mindamage, int maxdamage, int speed, int maxhealth, int minhealth, int minheal, int maxheal, int aspeed)
@@ -93,7 +85,7 @@ namespace Labs226_2021.Strategy
     }
     class Archer : Unit
     {
-        public Archer(string type, int mindamage, int maxdamage, int minArcherdamage, int maxArcherdamage, int speed, int maxhealth, int minhealth, int aspeed)
+        public Archer(string type, int mindamage, int maxdamage, int minArcherdamage, int maxArcherdamage, int speed, int maxhealth, int minhealth, int aspeed, int arrows)
         {
             base.typeUnit = type;
             base.mindamage = mindamage;
@@ -104,6 +96,7 @@ namespace Labs226_2021.Strategy
             base.minhealth = minhealth;
             base.maxhealth = maxhealth;
             base.attackSpeed = aspeed;
+            base.arrows = arrows;
         }
         public void Attack()
         {
@@ -134,21 +127,40 @@ namespace Labs226_2021.Strategy
                 base.maxhealth = maxhealth;
                 base.attackSpeed = aspeed;
             }
-            public void Attack()
-            {
-                int hit = new Random().Next(mindamage, maxdamage);
-            }
             public void Produce()
             {
                 Console.WriteLine($"{typeUnit} работает в шахте....");
             }
         }
-        class Action
+    class Actions
+    {
+        public static void Fight(Peasant peasant1, Archer archer1)
         {
-            public void Fight(Unit peasant1, Unit healer1)
+            int hit1 = new Random().Next(peasant1.mindamage, peasant1.maxdamage);
+            int Ahit2 = new Random().Next(archer1.mindamage, archer1.maxdamage);
+            int hit2 = new Random().Next(archer1.minArcherdamage, archer1.maxArcherdamage);
+            Console.WriteLine($"{peasant1.typeUnit} достал кирку и нанес {hit1} урона по {archer1.typeUnit}");
+            archer1.hp -= hit1;
+            Console.WriteLine($"У {archer1.typeUnit} осталось {archer1.hp}");
+            if (archer1.arrows != 0)
             {
-                Console.WriteLine($"Юнит {peasant1.typeUnit} ударил палкой юнита {healer1.typeUnit}");
-
+                Console.WriteLine($"{archer1.typeUnit} вынул стрелу из-за спины и, нанеся {Ahit2} урона, стрелой попал в {peasant1.typeUnit}");
+                archer1.arrows -= 1;
+                archer1.hp -= Ahit2;
             }
+            else
+            {
+                Console.WriteLine($"{archer1.typeUnit} достал клинок и перешёл в ближний бой с {peasant1.typeUnit}, тем самым нанес Ему {hit2} урона");
+                archer1.hp -= hit2;
+            }
+            Console.WriteLine($"У {peasant1.typeUnit} осталось {peasant1.hp}");
         }
+        public static void Razdachahp(Peasant p1, Archer ar1)
+        {
+            ar1.hp = new Random().Next(ar1.minhealth, ar1.maxhealth);
+            Console.WriteLine($"{ar1.typeUnit}  имеет {ar1.hp} очков здоровья");
+            p1.hp = new Random().Next(p1.minhealth, p1.maxhealth);
+            Console.WriteLine($"{p1.typeUnit}  имеет {p1.hp} очков здоровья");
+        }
+    }
 }

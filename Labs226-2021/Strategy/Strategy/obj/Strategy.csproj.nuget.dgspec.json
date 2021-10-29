@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\262011\\Documents\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj": {}
+    "C:\\Users\\User\\OneDrive\\Документы\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\262011\\Documents\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj": {
+    "C:\\Users\\User\\OneDrive\\Документы\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\262011\\Documents\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj",
+        "projectUniqueName": "C:\\Users\\User\\OneDrive\\Документы\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj",
         "projectName": "Strategy",
-        "projectPath": "C:\\Users\\262011\\Documents\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj",
-        "packagesPath": "C:\\Users\\262011\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\262011\\Documents\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\obj\\",
+        "projectPath": "C:\\Users\\User\\OneDrive\\Документы\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\Strategy.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\OneDrive\\Документы\\GitHub\\Labs226-2021\\Labs226-2021\\Strategy\\Strategy\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\262011\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
