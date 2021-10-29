@@ -17,8 +17,8 @@ namespace Labs226_2021.Strategy
             if (WarriorArcher.Health > 0)
             {
                 Console.WriteLine($"{WarriorArcher.Name} deliveri damage {Warrior.Name}у");
-                Warrior.GetDamage(WarriorArcher.InflictDamage());
-            }
+                Warrior.GetDamage(WarriorArcher.InflictDamage()); 
+            } 
             if (Warrior.Health > 0)
             {
                 Console.WriteLine($"{Warrior.Name}  deliveri damage  {WarriorArcher.Name}у");
