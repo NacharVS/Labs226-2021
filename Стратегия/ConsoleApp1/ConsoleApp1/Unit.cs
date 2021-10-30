@@ -200,7 +200,7 @@ namespace Strategy
 
         }
     }
-    public class Unit
+    internal class Unit
     {
 
         public string typeUnit;
@@ -364,7 +364,7 @@ namespace Strategy
 
     }
 
-    public class Peasant : Unit
+    internal class Peasant : Unit
     {
         public Peasant(string type, int mindamage, int maxdamage, int speed, int hp, int atspeed)
         {
@@ -378,7 +378,7 @@ namespace Strategy
         
         
     }
-    public class Archer : Unit
+    internal class Archer : Unit
     {
         public Archer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, int arrows)
         {
@@ -393,7 +393,7 @@ namespace Strategy
         
 
     }
-    public class Knight : Unit
+    internal class Knight : Unit
     {
         public Knight(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed)
         {
@@ -407,7 +407,7 @@ namespace Strategy
         
 
     }
-    public class Healer : Unit
+    internal class Healer : Unit
     {
         public Healer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, int minheal, int maxheal)
         {
@@ -423,7 +423,7 @@ namespace Strategy
         
 
     }
-    public class Wizzard : Unit
+    internal class Wizzard : Unit
     {
         public Wizzard(string type, int mindamage, int maxdamage, int speed, int hp, int atspeed, int minmag, int maxmag)
         {
