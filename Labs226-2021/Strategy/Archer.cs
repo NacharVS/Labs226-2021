@@ -18,11 +18,12 @@ namespace Labs226_2021.Strategy
         {
             while (CurrentArrows != 0)
             {
-                CurrentArrows = 5;
-                Console.WriteLine($"{Name} is shooting and diliverd  { InflictDamage() }damage");
+             
+                 Console.WriteLine($"{Name} is shooting and diliverd  { InflictDamage() }damage");
                 CurrentArrows = CurrentArrows - 1;
             }
-            if (CurrentArrows == 0)
+            
+           if (CurrentArrows == 0)
             {
                 Console.WriteLine($"{Name} arows is over. Melee attacking ");
             }
