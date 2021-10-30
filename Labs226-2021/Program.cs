@@ -10,16 +10,16 @@ namespace Labs226_2021
         static void Main ()
         {
           
-            Warrior WarriorArcher = new Warrior();
-            Warrior Warrior = new Warrior();
-            WarriorArcher.Name = "Archer"; Warrior.Name = "Warior";
+            Warrior Warrior1 = new Warrior();
+            Warrior Warrior2 = new Warrior();
+            Warrior2.Name = "Alalp"; Warrior1.Name = "Lokit";
 
-            WarriorArcher.MinDamage = 15; Warrior.MinDamage = 15; WarriorArcher.Health = 50;
-            WarriorArcher.MaxDamage = 20; Warrior.MaxDamage = 20; Warrior.Health = 50;
+            Warrior2.MinDamage = 15; Warrior1.MinDamage = 15; Warrior2.Health = 50;
+            Warrior2.MaxDamage = 20; Warrior1.MaxDamage = 20; Warrior1.Health = 50;
 
-            while (WarriorArcher.Health != 0 && Warrior.Health != 0)
+            while (Warrior2.Health != 0 && Warrior1.Health != 0)
             {
-                Actions.WarriorVSArcher(WarriorArcher, Warrior);
+                Actions.WarriorVSArcher(Warrior2, Warrior1);
             }
 
 
