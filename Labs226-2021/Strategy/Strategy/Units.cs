@@ -144,14 +144,23 @@ namespace Labs226_2021.Strategy
             Console.WriteLine($"У {archer1.typeUnit} осталось {archer1.hp}");
             if (archer1.arrows != 0)
             {
-                Console.WriteLine($"{archer1.typeUnit} вынул стрелу из-за спины и, нанеся {Ahit2} урона, стрелой попал в {peasant1.typeUnit}");
-                archer1.arrows -= 1;
-                archer1.hp -= Ahit2;
+                if (Ahit2 == 0)
+                {
+                    Console.WriteLine($"{archer1.typeUnit} вынул стрелу из-за спины и, не нанеся никакого урона стрелой, не попал в {peasant1.typeUnit}");
+                    archer1.arrows -= 1;
+                    peasant1.hp -= Ahit2;
+                }
+                else
+                {
+                    Console.WriteLine($"{archer1.typeUnit} вынул стрелу из-за спины и, нанеся {Ahit2} урона, стрелой попал в {peasant1.typeUnit}");
+                    archer1.arrows -= 1;
+                    peasant1.hp -= Ahit2;
+                }
             }
             else
             {
                 Console.WriteLine($"{archer1.typeUnit} достал клинок и перешёл в ближний бой с {peasant1.typeUnit}, тем самым нанес Ему {hit2} урона");
-                archer1.hp -= hit2;
+                peasant1.hp -= hit2;
             }
             Console.WriteLine($"У {peasant1.typeUnit} осталось {peasant1.hp}");
         }
