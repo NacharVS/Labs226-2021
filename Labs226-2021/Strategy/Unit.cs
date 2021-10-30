@@ -67,30 +67,10 @@ namespace Labs226_2021.Strategy
                 Console.WriteLine($"{_name} death");
             }
         }
-        class Peasant: Unit
-        {
-
-        }
-        class Archer : Unit
-        {
-            private int _CurrentArrows;
-            private int _Range;
-
-            public int CurrentArrows { get => _CurrentArrows; set => _CurrentArrows = value; }
-            public int Range { get => _Range; set => _Range = value; }
-        }
-        class Mage : Unit
-        {
-            private int _Mana;
-
-            public int Mana { get => Mana; set => Mana = value; }
-        }
-        class Healer : Unit
-        {
-            private int _Healing;
-
-            public int Healing { get => _Healing; set => _Healing = value; }
-        }
+        
+        
+        
+        
     
 }
 
