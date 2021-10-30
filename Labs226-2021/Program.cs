@@ -11,15 +11,16 @@ namespace Labs226_2021
         {
 
             Peasant Warrior1 = new Peasant();
-            Peasant Warrior2 = new Peasant();
+            Mage Warrior2 = new Mage();
             Warrior2.Name = "Alalp"; Warrior1.Name = "Lokit";
 
-            Warrior2.MinDamage = 5; Warrior1.MinDamage = 5; Warrior2.Health = 150;
-            Warrior2.MaxDamage = 7; Warrior1.MaxDamage = 9; Warrior1.Health = 150;
+            Warrior2.MinDamage = 5; Warrior1.MinDamage = 5; Warrior2.Health = 50;
+            Warrior2.MaxDamage = 7; Warrior1.MaxDamage = 9; Warrior1.Health = 50;
+           
 
             while (Warrior2.Health != 0 && Warrior1.Health != 0)
             {
-                Actions.WarriorVSArcher(Warrior2, Warrior1);
+                Actions.WarriorVSArcher(Warrior1, Warrior2);
             }
 
 
