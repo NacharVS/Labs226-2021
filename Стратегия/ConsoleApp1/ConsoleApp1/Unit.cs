@@ -7,7 +7,7 @@ namespace Strategy
         public static void Main()
         {
             Peasant peasant1 = new Peasant("Крестьянин",0,3,10,100,10);
-            Archer archer1 = new Archer("Лучник", 2, 6, 20, 120, 15);
+            Archer archer1 = new Archer("Лучник", 2, 6, 20, 120, 15, 10);
             Knight knight1 = new Knight("Рыцарь", 5, 10, 8, 200, 8);
             Healer healer1 = new Healer("Хиллер", 0, 2, 15, 150, 20, 10, 20);
             Wizzard wizzard1 = new Wizzard("Маг", 0, 4, 10, 140, 20, 15, 20);
@@ -23,22 +23,28 @@ namespace Strategy
 
             if (vibor == 1)
             {
+
                 Console.WriteLine("Вы выбрали Крестьянина");
                 peasant1.health = new Random().Next(peasant1.maxhealth / 2, peasant1.maxhealth);
                 Console.WriteLine($"Ваше здоровье = {peasant1.health}");
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Атаковать");
                 Console.WriteLine("2 - Добывать ресурсы");
+                Console.WriteLine("3 - Закончить действия");
                 Console.WriteLine();
+
                 int vibor1 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                if (vibor1 == 1)
+                while (vibor1 != 3)
                 {
-                    peasant1.Attack();
-                }
-                else if(vibor1 == 2)
-                {
-                    peasant1.Produce();
+                    Console.WriteLine();
+                    if (vibor1 == 1)
+                    {
+                        peasant1.Attack();
+                    }
+                    else if (vibor1 == 2)
+                    {
+                        peasant1.Produce();
+                    }
                 }
             }
 
@@ -47,25 +53,53 @@ namespace Strategy
                 Console.WriteLine("Вы выбрали Лучника");
                 archer1.health = new Random().Next(archer1.maxhealth / 2, archer1.maxhealth);
                 Console.WriteLine($"Ваше здоровье = {archer1.health}");
-                Console.WriteLine("Выберите действие: ");
-                Console.WriteLine("1 - Атаковать");
-                Console.WriteLine("2 - Добывать ресурсы");
-                Console.WriteLine("3 - Сменить лук на кинжал и атаковать(урон меньше на 50%)");
-                Console.WriteLine();
-                int vibor1 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                if (vibor1 == 1)
+                Console.WriteLine("Выберите действие:");
+                Console.WriteLine("1 - Перейти к действиям персонажа");
+                Console.WriteLine("2 - Закончить");
+                int vibor2 = int.Parse(Console.ReadLine());
+                if (vibor2 == 1)
                 {
-                    archer1.Attack();
+                    while (vibor2 != 0)
+                    {
+                        Console.WriteLine("Выберите действие: ");
+                        Console.WriteLine("1 - Атаковать");
+                        Console.WriteLine("2 - Добывать ресурсы");
+                        Console.WriteLine("0 - Закончить действия");
+                        Console.WriteLine();
+
+                        int vibor1 = int.Parse(Console.ReadLine());
+
+                        if (vibor1 == 1)
+                        {
+                            if (archer1.arrows == 0)
+                            {
+                                Console.WriteLine("Стрелы кончились, переход с лука на кинжал(урон меньше на 50%)");
+                                archer1.mindamage /= 2;
+                                archer1.maxdamage /= 2;
+                                archer1.Attack();
+                            }
+                            archer1.Attack();
+                            archer1.arrows -= 1;
+
+                        }
+                        else if (vibor1 == 2)
+                        {
+                            archer1.Produce();
+                        }
+                        else if (vibor1 == 3)
+                        {
+                            archer1.ChangeMelee();
+                            archer1.Attack();
+                        }
+                        else if (vibor1 == 0)
+                        {
+                            vibor2 = 0;
+                        }
+                    }
                 }
-                else if (vibor1 == 2)
+                else
                 {
-                    archer1.Produce();
-                }
-                else if (vibor1 == 3)
-                {
-                    archer1.ChangeMelee();
-                    archer1.Attack();
+
                 }
             }
 
@@ -77,16 +111,20 @@ namespace Strategy
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Атаковать");
                 Console.WriteLine("2 - Добывать ресурсы");
+                Console.WriteLine("3 - Закончить действия");
                 Console.WriteLine();
+
                 int vibor1 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                if (vibor1 == 1)
+                while (vibor1 != 3)
                 {
-                    knight1.Attack();
-                }
-                else if (vibor1 == 2)
-                {
-                    knight1.Produce();
+                    if (vibor1 == 1)
+                    {
+                        knight1.Attack();
+                    }
+                    else if (vibor1 == 2)
+                    {
+                        knight1.Produce();
+                    }
                 }
             }
 
@@ -99,20 +137,24 @@ namespace Strategy
                 Console.WriteLine("1 - Атаковать");
                 Console.WriteLine("2 - Добывать ресурсы");
                 Console.WriteLine("3 - Лечить себя");
+                Console.WriteLine("4 - Закончить действия");
                 Console.WriteLine();
+
                 int vibor1 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                if (vibor1 == 1)
+                while (vibor1 != 4)
                 {
-                    healer1.Attack();
-                }
-                else if (vibor1 == 2)
-                {
-                    healer1.Produce();
-                }
-                else if (vibor1 == 3)
-                {
-                    healer1.Heal();
+                    if (vibor1 == 1)
+                    {
+                        healer1.Attack();
+                    }
+                    else if (vibor1 == 2)
+                    {
+                        healer1.Produce();
+                    }
+                    else if (vibor1 == 3)
+                    {
+                        healer1.Heal();
+                    }
                 }
             }
 
@@ -125,24 +167,28 @@ namespace Strategy
                 Console.WriteLine("1 - Атаковать");
                 Console.WriteLine("2 - Добывать ресурсы");
                 Console.WriteLine("3 - Огненный шар");
+                Console.WriteLine("3 - Закончить действия");
                 Console.WriteLine();
+                
                 int vibor1 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                if (vibor1 == 1)
+                while (vibor1 != 3)
                 {
-                    wizzard1.Attack();
-                }
-                else if (vibor1 == 2)
-                {
-                    wizzard1.Produce();
-                }
-                else if (vibor1 == 3)
-                {
-                    wizzard1.FireBall();
-                }
-                else if (vibor1 == 4)
-                {
-                    wizzard1.Fight();
+                    if (vibor1 == 1)
+                    {
+                        wizzard1.Attack();
+                    }
+                    else if (vibor1 == 2)
+                    {
+                        wizzard1.Produce();
+                    }
+                    else if (vibor1 == 3)
+                    {
+                        wizzard1.FireBall();
+                    }
+                    else if (vibor1 == 4)
+                    {
+                        wizzard1.Fight();
+                    }
                 }
             }
 
@@ -169,12 +215,13 @@ namespace Strategy
         public int resours;
         public int minmagdamage;
         public int maxmagdamage;
+        public int arrows;
 
-        public Peasant peasant2 = new Peasant("Крестьянин", 0, 3, 10, 100, 10);
-        public Archer archer2 = new Archer("Лучник", 2, 6, 20, 120, 15);
-        public Knight knight2 = new Knight("Рыцарь", 5, 10, 8, 200, 8);
-        public Healer healer2 = new Healer("Хиллер", 0, 2, 15, 150, 20, 10, 20);
-        public Wizzard wizzard2 = new Wizzard("Маг", 0, 4, 10, 140, 20, 15, 20);
+        //public Peasant peasant2 = new Peasant("Крестьянин", 0, 3, 10, 100, 10);
+        //public Archer archer2 = new Archer("Лучник", 2, 6, 20, 120, 15, 10);
+        //public Knight knight2 = new Knight("Рыцарь", 5, 10, 8, 200, 8);
+        //public Healer healer2 = new Healer("Хиллер", 0, 2, 15, 150, 20, 10, 20);
+        //public Wizzard wizzard2 = new Wizzard("Маг", 0, 4, 10, 140, 20, 15, 20);
 
 
         public void Attack()
@@ -233,7 +280,7 @@ namespace Strategy
             Console.WriteLine($"4 - Хиллер");
             Console.WriteLine($"5 - Маг");
             int targ = int.Parse(Console.ReadLine());
-            while (health <= 0 || peasant2.health <= 0 || archer2.health <= 0 || knight2.health <= 0 || healer2.health <= 0 || wizzard2.health <= 0)
+            /*while (health <= 0 || peasant2.health <= 0 || archer2.health <= 0 || knight2.health <= 0 || healer2.health <= 0 || wizzard2.health <= 0)
             {
                 if (health == 0)
                 {
@@ -312,7 +359,7 @@ namespace Strategy
                         }
                     }
                 }
-            }
+            }*/
         }
 
     }
@@ -333,7 +380,7 @@ namespace Strategy
     }
     public class Archer : Unit
     {
-        public Archer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed)
+        public Archer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, int arrows)
         {
             base.typeUnit = type;
             base.mindamage = mindamage;
@@ -341,6 +388,7 @@ namespace Strategy
             base.speed = speed;
             base.maxhealth = hp;
             base.attackSpeed = aspeed;
+            base.arrows = arrows;
         }
         
 
