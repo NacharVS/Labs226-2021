@@ -4,35 +4,36 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Archer : Unit
-    {
-        public Archer(string type, int mindamage, int maxdamage, int minshoot, int maxshoot, int speed, int minhp, int maxhp, int aspeed, int arr)
-        {
-            base.TypeUnit = type;
-            base.Mindamage = mindamage;
-            base.Maxdamage = maxdamage;
-            base.Minshoot = minshoot;
-            base.Maxshoot = maxshoot;
-            base.Speed = speed;
-            base.Minhealth = minhp;
-            base.Maxhealth = maxhp;
-            base.AttackSpeed = aspeed;
-            base.Arrows = arr;
-        }
 
+
+   
+        class Archer : Unit
+        {
+            private int _CurrentArrows;
+            private int _Range;
+
+            public int CurrentArrows { get => _CurrentArrows; set => _CurrentArrows = value; }
+            public int Range { get => _Range; set => _Range = value; }
         public void Shooting()
         {
-            while (Arrows != 0)
+            while (CurrentArrows != 0)
             {
-                int shoot = new Random().Next(Minshoot, Maxshoot);
-                Console.WriteLine($"{TypeUnit} is shooting and diliverd {shoot} damage");
-                Arrows = Arrows - 1;
+                CurrentArrows = 5;
+                Console.WriteLine($"{Name} is shooting and diliverd  { InflictDamage() }damage");
+                CurrentArrows = CurrentArrows - 1;
             }
-            if (Arrows == 0)
+            if (CurrentArrows == 0)
             {
-                Console.WriteLine($"{TypeUnit} arows is over. Melee attacking ");
+                Console.WriteLine($"{Name} arows is over. Melee attacking ");
             }
 
         }
     }
+
+
+
+
+      
+   
 }
+

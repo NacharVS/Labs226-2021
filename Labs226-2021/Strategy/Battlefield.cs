@@ -4,16 +4,39 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Battlefield : Unit
+   
+
+    class Actions : Unit
+    
     {
-        public static void Battle(Unit unit, Unit unit2)
+        public static void WarriorVSArcher(Unit WarriorArcher, Unit Warrior)
         {
-            Console.WriteLine($"unit {unit.TypeUnit} hited unit {unit2.TypeUnit} ");
-            Console.WriteLine($"unit {unit2.TypeUnit} get {unit.Hit}");
-            Console.WriteLine($"unit {unit2.TypeUnit} hited unit {unit.TypeUnit} ");
-            Console.WriteLine($"unit {unit.TypeUnit} get {unit2.Hit}");
-            Console.WriteLine($"{unit2.TypeUnit} - {unit2.Hpp}");
-            Console.WriteLine($"{unit.TypeUnit} - {unit.Hpp}");
+            Console.WriteLine($"Battle {WarriorArcher.Name} and  {Warrior.Name}");
+            
+            Console.WriteLine();
+            if (WarriorArcher.Health > 0)
+            {
+                Console.WriteLine($"{WarriorArcher.Name} delivere damage {Warrior.Name}у");
+                Warrior.GetDamage(WarriorArcher.InflictDamage());
+            }
+            if (Warrior.Health > 0)
+            {
+                Console.WriteLine($"{Warrior.Name}  delivere damage  {WarriorArcher.Name}у");
+                WarriorArcher.GetDamage(Warrior.InflictDamage());
+            }
+
+            Console.WriteLine();
+
+            if (Warrior.Health > 0)
+            {
+                Console.WriteLine($"{Warrior.Name} - {Warrior.Health} Hp");
+            }
+            if (WarriorArcher.Health > 0)
+            {
+                Console.WriteLine($"{WarriorArcher.Name} - {WarriorArcher.Health} Hp");
+            }
         }
+
+
     }
 }
