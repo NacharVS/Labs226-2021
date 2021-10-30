@@ -67,7 +67,7 @@ namespace Labs226_2021.Strategy
                 Console.WriteLine($"{_name} death");
             }
         }
-        class Warrior : Unit
+        class Peasant: Unit
         {
 
         }

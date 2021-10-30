@@ -9,9 +9,9 @@ namespace Labs226_2021
     {
         static void Main ()
         {
-          
-            Warrior Warrior1 = new Warrior();
-            Warrior Warrior2 = new Warrior();
+
+            Peasant Warrior1 = new Peasant();
+            Peasant Warrior2 = new Peasant();
             Warrior2.Name = "Alalp"; Warrior1.Name = "Lokit";
 
             Warrior2.MinDamage = 15; Warrior1.MinDamage = 15; Warrior2.Health = 50;
