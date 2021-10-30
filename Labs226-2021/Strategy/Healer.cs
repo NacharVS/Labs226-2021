@@ -8,6 +8,6 @@ namespace Labs226_2021.Strategy
     {
         private int _Healing;
 
-        public int Healing { get => _Healing; set => _Healing = value; }
+        public int Healing { get => _Healing; set => value = Health + 15; }
     }
 }
