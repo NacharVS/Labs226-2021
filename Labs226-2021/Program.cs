@@ -7,24 +7,8 @@ namespace Labs226_2021
 {
     class Program
     {
-<<<<<<< HEAD
-        //static void Main ()
-        //{
 
-        //    Mage WarriorArcher = new Mage ();
-        //    Healer Warrior = new Healer();
-        //    WarriorArcher.Name = "Warrior"; Warrior.Name = "Warior";
-
-        //          Warrior.MinDamage = 15;                                                     WarriorArcher.Health = 50; 
-        //    WarriorArcher.MaxDamage = 10; WarriorArcher.MinDamage = 7; Warrior.MaxDamage = 20; Warrior.Health = 50;
-        //    Warrior.Healing = 45;
-        //    while (WarriorArcher.Health != 0 && Warrior.Health != 0)
-        //    {
-        //        Actions.WarriorVSArcher(WarriorArcher, Warrior);
-        //    }
-
-
-        //}
+ 
 
         static void Main()
         {
@@ -46,23 +30,9 @@ namespace Labs226_2021
             foreach (var item in products)
             {
                 Console.WriteLine($"{item.name}  - {item.prise} rub - {item.qouter}");
-=======
-        static void Main ()
-        {
 
-            Peasant Warrior1 = new Peasant();
-            Mage Warrior2 = new Mage();
-            Warrior2.Name = "Alalp"; Warrior1.Name = "Lokit";
-
-            Warrior2.MinDamage = 5; Warrior1.MinDamage = 5; Warrior2.Health = 50;
-            Warrior2.MaxDamage = 7; Warrior1.MaxDamage = 9; Warrior1.Health = 50;
-           
-
-            while (Warrior2.Health != 0 && Warrior1.Health != 0)
-            {
-                Actions.WarriorVSArcher(Warrior1, Warrior2);
->>>>>>> 7dc46896327904c8f11eb3eca1b17fb64a241b66
             }
+
             if (corzinaa[2].name == "0")
             {
                 foreach (var iteme in corzinaa)
