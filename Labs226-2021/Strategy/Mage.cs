@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Labs226_2021.Strategy
+<<<<<<< HEAD
 { }
 class Mag 
 {
@@ -60,4 +61,14 @@ class Mag
     //    }
 
     }
+=======
+{
+    class Mage : Unit
+    {
+        private int _Mana;
+
+        public int Mana { get => Mana; set => Mana = value; }
+    }
+}
+>>>>>>> 7dc46896327904c8f11eb3eca1b17fb64a241b66
 

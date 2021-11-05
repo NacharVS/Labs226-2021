@@ -134,6 +134,7 @@ namespace Labs226_2021.Strategy
 
                 Console.WriteLine("Mp is over");
             }
+<<<<<<< HEAD
 
         }
     }
@@ -145,6 +146,14 @@ namespace Labs226_2021.Strategy
     }
 
         
+=======
+        }
+        
+        
+        
+        
+    
+>>>>>>> 7dc46896327904c8f11eb3eca1b17fb64a241b66
 }
 
 
