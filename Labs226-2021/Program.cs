@@ -8,18 +8,21 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
-            int div = 2;
-            while(num > 1 || num < -1)
+            Product[] products = new Product[5];
+
+            products[0] = new Product("Maionez", 80, 20);
+            products[1] = new Product("Milk", 60.25, 100);
+            products[2] = new Product("Bread", 30, 40);
+            products[3] = new Product("Cheeze", 324.5, 20);
+            products[4] = new Product("Egg", 130, 50);
+
+            foreach (var item in products)
             {
-                if (num % div == 0)
-                {
-                    num /= 2;
-                    Console.WriteLine(div);
-                }
-                else
-                    div++;
+                if(item.price > 50)
+                    Console.WriteLine(item.nameOfProduct);
             }
+
+
 
 
 

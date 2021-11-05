@@ -6,19 +6,19 @@ namespace Labs226_2021.Strategy
 {
     class Peasant : Unit
     {
-        public Peasant(string type,int mindamage, int maxdamage, int speed, int hp, int aspeed) 
-        {
-            base.typeUnit = type;
-            base.mindamage = mindamage;
-            base.maxdamage = maxdamage;
-            base.speed = speed;
+        //public Peasant(string type,int mindamage, int maxdamage, int speed, int hp, int aspeed) 
+        //{
+        //    base.typeUnit = type;
+        //    base.mindamage = mindamage;
+        //    base.maxdamage = maxdamage;
+        //    base.speed = speed;
 
-            base.attackSpeed = aspeed;
-        }
+        //    base.attackSpeed = aspeed;
+        //}
 
-        public void Produce()
-        {
-            Console.WriteLine($"{typeUnit} is mining...");
-        }
+        //public void Produce()
+        //{
+        //    Console.WriteLine($"{typeUnit} is mining...");
+        //}
     }
 }
