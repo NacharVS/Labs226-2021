@@ -8,24 +8,20 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Product[] products = new Product[5];
+            BankAccount account1 = new BankAccount("Ivan", 5000);
+            BankAccount account2 = new BankAccount("Kirill", 3000);
+            BankAccount account3 = new BankAccount("Elena", 6000);
 
-            products[0] = new Product("Maionez", 80, 20);
-            products[1] = new Product("Milk", 60.25, 100);
-            products[2] = new Product("Bread", 30, 40);
-            products[3] = new Product("Cheeze", 324.5, 20);
-            products[4] = new Product("Egg", 130, 50);
-
-            foreach (var item in products)
-            {
-                if(item.price > 50)
-                    Console.WriteLine(item.nameOfProduct);
-            }
-
-
-
-
-
+            account1.ShowInfo();
+            account2.ShowInfo();
+            account3.ShowInfo();
+            BankAccount.rate = 0.004;
+            BankAccount.GetProfit(account1, 6);
+            BankAccount.GetProfit(account2, 6);
+            BankAccount.GetProfit(account3, 6);
+            account1.ShowInfo();
+            account2.ShowInfo();
+            account3.ShowInfo();
 
         }
     }
