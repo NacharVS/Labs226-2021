@@ -6,7 +6,7 @@ namespace Labs226_2021
     {
         public string name;
         public double balance;
-        private int _age;
+        public int age;
         private int _yearofBirth;
         public static double rate = 0.007;
         public static double minWidtraw = 100;
@@ -19,11 +19,10 @@ namespace Labs226_2021
 
 
 
-        public BankAccount(string name, double balance, /*int _age */ int _yearofBirth)
+        public BankAccount(string name, double balance, int _age  ,int _yearofBirth)
         {
             this.name = name;
             this.balance = balance;
-            //this.Age = _age;
             this.YearofBirth = _yearofBirth;
         }
 
@@ -40,41 +39,24 @@ namespace Labs226_2021
 
             set
             {
-              
-                if (value < 1800 && value > 2021)
-                {
-                    System.Console.WriteLine();
-                }
+
+                _yearofBirth = value;
             }
         }
 
 
-        public int Age
+        public static  void Agemetod ( int YearofBirth, int age)
         {
-            get
+            if (YearofBirth > 1800 && YearofBirth < 2021)
             {
-                return _age;
-            }
-
-            set
-            {
-                 
-                if (value >=18)
+                age = 2021 - YearofBirth;
+                if (age > 18)
                 {
-                    Age = value;
-                           
+                    Console.WriteLine("Вход разрешён");
                 }
                 else
-                {
-                    System.Console.WriteLine("Вы слишком малы");
-                }
+                    Console.WriteLine("Вам нет 18");
             }
-        }
-
-        public int void Agemetod (BankAccount account , int YearofBirth)
-        {
-            YearofBirth = int.Parse(System.Console.ReadLine());
-            account.Age = 2021 - YearofBirth;
         }
     public static void GetProfit(BankAccount acc, int month)
         {
