@@ -4,13 +4,16 @@ using System.Text;
 
 namespace Labs226_2021
 {
-    class Account
+    class Account : SberBank
     {
         static public void Sber()
         {
             SberBank account1 = new SberBank("Ivan", 5000);
             SberBank account2 = new SberBank("Kirill", 3000);
             SberBank account3 = new SberBank("Elena", 6000);
+
+
+            account1.YearOfBirth=2003;
 
             account1.ShowInfo();
             account2.ShowInfo();
