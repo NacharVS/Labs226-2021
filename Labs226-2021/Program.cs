@@ -8,10 +8,11 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            BankAccount account1 = new BankAccount("Ivan", 5000);
-            BankAccount account2 = new BankAccount("Kirill", 3000);
-            BankAccount account3 = new BankAccount("Elena", 6000);
+            BankAccount account1 = new BankAccount("Ivan", 5000,1890);
+            BankAccount account2 = new BankAccount("Kirill", 3000,1999);
+            BankAccount account3 = new BankAccount("Elena", 6000,2000);
 
+            account1.Agemetod();
             account1.ShowInfo();
             account2.ShowInfo();
             account3.ShowInfo();
