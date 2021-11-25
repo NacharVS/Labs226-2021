@@ -36,9 +36,11 @@ namespace Magaz
             if (b == 1)
                 Console.WriteLine("Pokupki");
             else if (b == 2)
+            {
                 Console.WriteLine("Спасибо что заглянули в наш магазин) Для получения заказа пришлите свой Id пользователя в комментариях к оплате. Реквизиты для оплаты продуктов:");
                 Console.WriteLine("Qiwi,Sberbank,Tinkoff:+79328482639(Рахимов Радион Батырович)");
                 Console.WriteLine($"Vasha pochta: {Pochta}? Vash adress:ulica {AdressUlica}, dom {AdressDom}, kv {AdressKv}?");
+            }
             else if (b == 3)
                 Console.WriteLine("Korzina");
         }

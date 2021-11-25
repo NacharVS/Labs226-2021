@@ -6,7 +6,7 @@ namespace Labs226_2021.Strategy
 {
     public class Main1
     {
-        public static void Main()
+        public static void Task()
         {
             Peasant peasant1 = new Peasant("Шахтер", 5, 15, 10, 250, 170, 2);
             Archer archer1 = new Archer("Лучник", 0, 5, 10, 25, 20, 200, 120, 3, 2);
