@@ -6,15 +6,41 @@ namespace Labs226_2021
 {
     class SberBank
     {
+        public int age;
+        public int yearOfBirth;
         public string name;
         public double balance;
-        
+
 
         public static double rate = 0.007;
         public static double minWidtraw = 100;
         public static double maxWidtraw = 5000;
         public static double minDeposit = 10;
         public static double comissionForTransaction = 0.02;
+
+
+        public int Age { get => age; set => age = value; }
+        public int YearOfBirth
+        {
+            get
+            {
+                return yearOfBirth;
+            }
+
+            set
+            {
+                if (value < 1900 || value >= DateTime.Now.Year)
+                {
+                    Console.WriteLine("Вы ввели неверный год рождения");
+                    Age = 0;
+                }
+                else
+                {
+                    age = DateTime.Now.Year - value;
+                    Console.WriteLine($"Ваш возраст - {age}");
+                }
+            }
+        }
 
 
 
@@ -41,13 +67,13 @@ namespace Labs226_2021
         {
             for (int i = 0; i < month; i++)
             {
-                deposit += deposit * 0.004;   
+                deposit += deposit * 0.004;
             }
             acc.balance += deposit;
 
         }
 
-        public static void Withdraw(SberBank acc ,double money)
+        public static void Withdraw(SberBank acc, double money)
         {
             if (money > minWidtraw && money < maxWidtraw)
             {
