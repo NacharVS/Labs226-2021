@@ -16,3 +16,4 @@ namespace ConsoleApp4
             int a = int.Parse(Console.ReadLine());
         }
     }
+}
