@@ -6,20 +6,29 @@ namespace Labs226_2021
 {
     class SberBank
     {
-        public int age;
-        public int yearOfBirth;
-        public string name;
-        public double balance;
+        private int age;
+        private int yearOfBirth;
+        private string name;
+        private double balance;
 
-
-        public static double rate = 0.007;
-        public static double minWidtraw = 100;
-        public static double maxWidtraw = 5000;
-        public static double minDeposit = 10;
-        public static double comissionForTransaction = 0.02;
-
+        private static double rate = 0.007;
+        private static double minWidtraw = 100;
+        private static double maxWidtraw = 5000;
+        private static double minDeposit = 100;
+        private static double comissionForTransaction = 0.02;
 
         public int Age { get => age; set => age = value; }
+        public string Name { get => name; set => name = value;}
+        public double Balance { get => balance; set => balance = value; }
+
+
+        public double Rate { get => rate; set => rate = value; }
+        public double MinWidtraw { get => minWidtraw; set => minWidtraw = value; }
+        public double MaxWidtraw { get => maxWidtraw; set => maxWidtraw = value; }
+        public double MinDeposit { get => minDeposit; set => minDeposit = value; }
+        public double ComissionForTransaction { get => comissionForTransaction; set => comissionForTransaction = value; }
+
+
         public int YearOfBirth
         {
             get
@@ -36,8 +45,8 @@ namespace Labs226_2021
                 }
                 else
                 {
-                    age = DateTime.Now.Year - value;
-                    Console.WriteLine($"Ваш возраст - {age}");
+                    Age = DateTime.Now.Year - value;
+                    Console.WriteLine($"Ваш возраст - {Age}");
                 }
             }
         }
@@ -46,53 +55,69 @@ namespace Labs226_2021
 
         public SberBank(string name, double balance)
         {
-            this.name = name;
-            this.balance = balance;
+            this.Name = name;
+            this.Balance = balance;
         }
 
         public void ShowInfo()
         {
-            System.Console.WriteLine($"{name} - {balance}");
+            System.Console.WriteLine($"{Name} - {Balance}");
         }
 
         public static void GetProfit(SberBank acc, int month)
         {
             for (int i = 0; i < month; i++)
             {
-                acc.balance += acc.balance * rate;
+                acc.Balance += acc.Balance * acc.Rate;
             }
         }
 
         public static void Deposit(double deposit, int month, SberBank acc)
         {
-            for (int i = 0; i < month; i++)
+            if (deposit > minDeposit)
             {
-                deposit += deposit * 0.004;
+                for (int i = 0; i < month; i++)
+                {
+
+                    deposit += deposit * 0.004;
+                }
+                acc.Balance += deposit;
             }
-            acc.balance += deposit;
+            else
+            {
+                Console.WriteLine("Минимальный депозит - 100");
+            }
+
 
         }
 
         public static void Withdraw(SberBank acc, double money)
         {
-            if (money > minWidtraw && money < maxWidtraw)
+            if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
             {
-                acc.balance -= money;
+                acc.Balance -= money;
+
             }
-            else
+            else if (money <= acc.MinWidtraw)
             {
-                Console.WriteLine("Недостаточно средств на балансе");
+                Console.WriteLine("Минимальный вывод - 100");
+            }
+            else if (money >= acc.MaxWidtraw)
+            {
+                Console.WriteLine("Максимальный вывод - 5000");
             }
 
 
         }
 
+
+
         public static void Transaction(SberBank accSeller, SberBank accGetter, double money)
         {
-            if (accSeller.balance > money + (money * comissionForTransaction))
+            if (accSeller.Balance > money + (money * comissionForTransaction))
             {
-                accSeller.balance -= money + money * comissionForTransaction;
-                accGetter.balance += money;
+                accSeller.Balance -= money + money * comissionForTransaction;
+                accGetter.Balance += money;
             }
             else
             {
