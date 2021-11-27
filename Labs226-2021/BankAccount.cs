@@ -26,8 +26,14 @@ namespace Labs226_2021
         }
 
         public void ShowInfo()
+
         {
+           if(Age > 0 )
             System.Console.WriteLine($"{name} - {balance} - {Age}");
+            else
+            {
+                Console.WriteLine("Заблокиравано");
+            }
         }
         public int Age
         {
@@ -38,7 +44,7 @@ namespace Labs226_2021
 
             set
             {
-                if (value > 1900 & value <= DateTime.Now.Year)
+                if (value > 1900 & value <= DateTime.Now.Year & DateTime.Now.Year - value >= 18)
                 _yearofBirth = DateTime.Now.Year - value;
                 else
                 {
@@ -47,41 +53,64 @@ namespace Labs226_2021
             }
         }
 
-    public static void GetProfit(BankAccount acc, int month)
+        public static void GetProfit(BankAccount acc, int month)
         {
-            for (int i = 0; i < month; i++)
+            
+            if (acc.Age > 0)
             {
-                acc.balance += acc.balance * rate;
-            }
-        }
-
-        public void Deposit(double money)
-        {
-            if (money < maxDeposit & money > minDeposit)
-            {
-                balance += money;
+                for (int i = 0; i < month; i++)
+                {
+                    acc.balance += acc.balance * rate;
+                }
             }
             else
             {
-                System.Console.WriteLine("Лимит по депазиту");
+                Console.WriteLine("Заблокиравано");
+            }
+
+        }
+        public void Deposit(double money)
+
+        {
+            if (Age > 0)
+            {
+                if (money < maxDeposit & money > minDeposit)
+                {
+                    balance += money;
+                }
+                else
+                {
+                    System.Console.WriteLine("Лимит по депазиту");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Заблокиравано");
             }
         }
 
         public void Withdraw(double money)
         {
-            if (money > minWidtraw)
+            if (Age > 0)
             {
-                if (money < maxWidtraw) 
-                { 
-                    if (money < balance)
+                if (money > minWidtraw)
                 {
-                    balance -= money;
-                }
+                    if (money < maxWidtraw)
+                    {
+                        if (money < balance)
+                        {
+                            balance -= money;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("Мало денег на балансе");
+                        }
+
+                    }
                     else
                     {
                         System.Console.WriteLine("Мало денег на балансе");
                     }
-
                 }
                 else
                 {
@@ -90,20 +119,27 @@ namespace Labs226_2021
             }
             else
             {
-                System.Console.WriteLine("Мало денег на балансе");
+                Console.WriteLine("Заблокиравано");
             }
         }
 
         public static void Transaction(BankAccount accSeller, BankAccount accGetter , double money)
         {
-           if (accSeller.balance > money + (money * comissionForTransaction))
+            if (accSeller.Age > 0 & accGetter.Age > 0)
             {
-                accSeller.balance -= money + money*comissionForTransaction;
-                accGetter.balance += money;
+                if (accSeller.balance > money + (money * comissionForTransaction))
+                {
+                    accSeller.balance -= money + money * comissionForTransaction;
+                    accGetter.balance += money;
+                }
+                else
+                {
+                    System.Console.WriteLine("Недостаточно средств");
+                }
             }
-           else
+            else
             {
-                System.Console.WriteLine("Недостаточно средств");
+                Console.WriteLine("Заблокиравано");
             }
         }
     }
