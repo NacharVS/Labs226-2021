@@ -48,7 +48,7 @@ namespace Labs226_2021
                 _yearofBirth = DateTime.Now.Year - value;
                 else
                 {
-                    Console.WriteLine("Введён неверный год");
+                    Console.WriteLine("Введён неверный год"+ " " + $" { name}");
                 }
             }
         }
