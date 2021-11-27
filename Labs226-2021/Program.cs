@@ -5,7 +5,7 @@ namespace Labs226_2021
 {
     class Program
     {
-        static void Main (string[] args)
+        static void Main(string[] args)
         {
             BankAccount account1 = new BankAccount("Ivan", 5000, 1890);
             BankAccount account2 = new BankAccount("Kirill", 3000, 1999);
