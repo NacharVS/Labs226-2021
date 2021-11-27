@@ -6,4 +6,8 @@
     <RootNamespace>Labs226_2021</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Bank\" />
+  </ItemGroup>
+
 </Project>
