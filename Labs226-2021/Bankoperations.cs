@@ -7,121 +7,137 @@ namespace BankOper
 {
    
     class MainAF
-    { 
-        static BankAccount[] accounts = new BankAccount[3];
-        public static void Main(string[] args)
-        {
-            accounts[0] = new BankAccount("Ivan", 5000);
-            accounts[1] = new BankAccount("Kirill", 3000);
-            accounts[2] = new BankAccount("Elena", 6000);
-        }
-
-class BankAccount
     {
-        public string name;
-        public double balance;
-
-        public static double rate = 0.007;
-        public static double minWidtraw = 100;
-        public static double maxWidtraw = 5000;
-        public static double minDeposit = 10;
-        public static double comissionForTransaction = 0.02;
-
-
-
-        public BankAccount(string name, double balance)
+        
+        class BankAccount
         {
-            this.name = name;
-            this.balance = balance;
-        }
 
-        public void ShowInfo()
-        {
-            System.Console.WriteLine($"{name} - {balance}");
-        }
+            
+            public string name;
+            public double balance;
+            private int _YearOfBirth;
+            public static double rate = 0.007;
+            public static double minWidtraw = 100;
+            public static double maxWidtraw = 5000;
+            public static double minDeposit = 10;
+            public static double maxDeposit = 10000;
 
-        public static void GetProfit(BankAccount acc, int month)
-        {
-            for (int i = 0; i < month; i++)
+
+            public static double comissionForTransaction = 0.02;
+
+
+
+            public BankAccount(string name, double balance, int YearOfBirth)
             {
-                acc.balance += acc.balance * rate;
+                this.name = name;
+                this.balance = balance;
+                this.Age = YearOfBirth;
             }
-        }
 
-        public void Deposit(double money)
-        {
-          Console.WriteLine("Введите сумму пополнения, она должна быть не меньше 100");
-            money = Convert.ToDouble(Console.ReadLine());
-            if (money >= minDeposit) 
-            {
-               balance = (balance + money);
-            }
-            else
-            {
-                Console.WriteLine("Сумма депозита слишком мала");
-            }
-        }
+            public void ShowInfo()
 
-        public void Withdraw(double money)
-        {
-            Console.WriteLine("Введите сумму списания, она должна быть не меньше 100 и не больше 5000");
-            money = Convert.ToDouble(Console.ReadLine());
-            if (money >= minWidtraw && money <= maxWidtraw && money - maxWidtraw != 0)
             {
-                balance = balance - money;
-            }
-            else
-            {
-                Console.WriteLine("Не выполнены условия списания");
-            }
-        }
-
-        public static void Transaction ()
-        {
-                Console.WriteLine("Кто отправитель");
-                string anss = Console.ReadLine();
-                BankAccount accSeller = null;
-                foreach (BankAccount i in accounts)
+                if (Age > 0)
+                    System.Console.WriteLine($"{name} - {balance} - {Age}");
+                else
                 {
-                    if (i.name == anss) 
+                    Console.WriteLine("Доступ запрещён");
+                }
+            }
+            public int Age
+            {
+                get
+                {
+                    return _YearOfBirth;
+                }
+
+                set
+                {
+                    if (value > 1900 & value <= DateTime.Now.Year & DateTime.Now.Year - value >= 18)
+                        _YearOfBirth = DateTime.Now.Year - value;
+                    else
                     {
-                        accSeller = i;
+                        Console.WriteLine("Введён неверный год " + $" { name}");
                     }
                 }
-                if (accSeller == null) 
+            }
+
+            public static void GetProfit(BankAccount acc, int month)
+            {
+
+                if (acc.Age > 0)
                 {
-                    return;
-                }
-                Console.WriteLine("Кто Получатель");
-                anss = Console.ReadLine();
-                BankAccount accGetter = null;
-                foreach (BankAccount i in accounts)
-                {
-                    if (i.name == anss)
+                    for (int i = 0; i < month; i++)
                     {
-                        accGetter = i;
-                    }
-                    if (accGetter == null) 
-                    {
-                        return;
+                        acc.balance += acc.balance * rate;
                     }
                 }
-                Console.WriteLine("Введите сумму перевода");
-                double sum = Convert.ToDouble(Console.ReadLine());
-                double comm = sum * comissionForTransaction;
-                Console.WriteLine("Комиссия будет составлять " + comm +" Рублей");
-                sum = sum - comm;
-                if (accSeller.balance - sum > 0)
+                else
                 {
-                    accGetter.balance += sum;
-                    accSeller.balance -= sum;
+                    Console.WriteLine("Доступ Запрещён");
+                }
+
+            }
+            public void Deposit(double money)
+
+            {
+                if (Age > 0)
+                {
+                    if (money < maxDeposit && money > minDeposit)
+                    {
+                        balance += money;
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("нарушены лимиты депозита");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Доступ Запрещён");
+                }
+            }
+
+            public void Withdraw(double money)
+            {
+                if (Age > 0 && money > minWidtraw && money < maxWidtraw && money < balance)
+                {
+                    balance -= money;
                 }
                 else 
                 {
-                    Console.WriteLine("Недостаточно средств для перевода");
+                    Console.WriteLine("Не выполнены условия");
+                }
+                   
+                          
+            }
+
+            public static void Transaction(BankAccount accSeller, BankAccount accGetter, double money)
+            {
+                if (accSeller.Age > 0 & accGetter.Age > 0)
+                {
+                    if (accSeller.balance > money + (money * comissionForTransaction))
+                    {
+                        accSeller.balance -= money + money * comissionForTransaction;
+                        accGetter.balance += money;
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Недостаточно средств");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Доступ Запрещён");
                 }
             }
-    }
+        }
+
+
+
+
+
+
 
     }
     
