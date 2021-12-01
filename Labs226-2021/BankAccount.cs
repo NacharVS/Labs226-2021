@@ -69,7 +69,7 @@ namespace Labs226_2021
             }
 
         }
-        public void Deposit(double money)
+        public virtual void Deposit(Client acc , double money)
 
         {
             if (Age > 0)
@@ -80,12 +80,12 @@ namespace Labs226_2021
                 }
                 else
                 {
-                    System.Console.WriteLine("Лимит по депазиту");
+                    System.Console.WriteLine("Лимит по депозиту");
                 }
             }
             else
             {
-                Console.WriteLine("Заблокиравано");
+                Console.WriteLine("Заблокировано");
             }
         }
 
