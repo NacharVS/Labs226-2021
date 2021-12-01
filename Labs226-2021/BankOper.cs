@@ -7,14 +7,18 @@ class BankOper
     {
         BankAccount account1 = new BankAccount("Ivan", 5000, 1971);
         BankAccount account2 = new BankAccount("Kirill", 3000, 1984);
+        BankAccount account3 = new BankAccount("Elena",6000, 2001 )
 
         account1.ShowInfo();
         account2.ShowInfo();
+        account3.ShowInfo();
         BankAccount.rate = 0.01;
         BankAccount.GetProfit(account1, 10);
         BankAccount.GetProfit(account2, 10);
+        BankAccount.GetProfit(account3, 10);
         account1.ShowInfo();
         account2.ShowInfo();
+        account3.ShowInfo();
         BankAccount.Withdraw(account1, 200);
         BankAccount.Transaction(account1, account2);
         account1.ShowInfo();
