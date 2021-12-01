@@ -16,8 +16,8 @@ namespace Bank
             BankAccount.GetProfit(account2, 10);
             account1.ShowInfo();
             account2.ShowInfo();
-            BankAccount.Withdraw(account1, 200);//сумма пополнения
-            BankAccount.Deposit(account2, 2000);//сумма вывода
+            BankAccount.Withdraw(account1, 200);
+            BankAccount.Deposit(account2, 2000);
             BankAccount.Transaction(account1, account2);
             account1.ShowInfo();
             account2.ShowInfo();
