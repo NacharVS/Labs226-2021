@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\262010\\.nuget\\packages\\": {},
+    "C:\\Users\\Vadim.Nacharov\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\262010\\Documents\\GitHub\\Labs226-2021\\Labs\\Labs.csproj",
+      "projectUniqueName": "C:\\Users\\Vadim.Nacharov\\Documents\\Labs226-2021\\Labs\\Labs.csproj",
       "projectName": "Labs",
-      "projectPath": "C:\\Users\\262010\\Documents\\GitHub\\Labs226-2021\\Labs\\Labs.csproj",
-      "packagesPath": "C:\\Users\\262010\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\262010\\Documents\\GitHub\\Labs226-2021\\Labs\\obj\\",
+      "projectPath": "C:\\Users\\Vadim.Nacharov\\Documents\\Labs226-2021\\Labs\\Labs.csproj",
+      "packagesPath": "C:\\Users\\Vadim.Nacharov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vadim.Nacharov\\Documents\\Labs226-2021\\Labs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\262010\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vadim.Nacharov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
