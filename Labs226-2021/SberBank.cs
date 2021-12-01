@@ -9,6 +9,7 @@ namespace Labs226_2021
         private int age;
         private int yearOfBirth;
         private string name;
+        private string surname;
         private double balance;
 
         private static double rate = 0.007;
@@ -19,6 +20,7 @@ namespace Labs226_2021
 
         public int Age { get => age; set => age = value; }
         public string Name { get => name; set => name = value; }
+        public string Surname { get => surname; set => surname = value; }
         public double Balance { get => balance; set => balance = value; }
 
 
@@ -53,10 +55,16 @@ namespace Labs226_2021
 
 
 
-        public SberBank(string name, double balance)
+        public SberBank(string name, string surname, double balance)
         {
             this.Name = name;
+            this.Surname = surname;
             this.Balance = balance;
+        }
+
+        public virtual void GoToBank()
+        {
+            Console.WriteLine($"{Name} goes to Bank");
         }
 
         public void ShowInfo()
@@ -91,10 +99,13 @@ namespace Labs226_2021
 
         }
 
-        public static void Withdraw(SberBank acc, double money)
+        public virtual void Withdraw(SberBank acc, double money)
         {
+
+
             if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
             {
+
                 acc.Balance -= money;
 
             }
@@ -110,9 +121,27 @@ namespace Labs226_2021
 
         }
 
+        public virtual void ToDeposit(SberBank acc, double money)
+        {
+            if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
+            {
+
+                acc.Balance += money;
+
+            }
+            else if (money <= acc.MinWidtraw)
+            {
+                Console.WriteLine("Минимальная сумма зачисления - 100");
+            }
+            else if (money >= acc.MaxWidtraw)
+            {
+                Console.WriteLine("Максимальная сумма зачисления  - 500000");
+            }
+        }
 
 
-        public static void Transaction(SberBank accSeller, SberBank accGetter, double money)
+
+        public virtual void Transaction(SberBank accSeller, SberBank accGetter, double money)
         {
             if (accSeller.Balance > money + (money * comissionForTransaction))
             {
@@ -126,4 +155,3 @@ namespace Labs226_2021
         }
     }
 }
-
