@@ -15,8 +15,8 @@ namespace Labs226_2021
 
             account1.ShowInfo();
             account2.ShowInfo();
-            account2.Deposit(account3 ,550);
-            account1.Deposit(account2, 1500);
+            account2.Deposit(account2 ,550);
+            account1.Deposit(account3, 1500);
         }
     }
 }
