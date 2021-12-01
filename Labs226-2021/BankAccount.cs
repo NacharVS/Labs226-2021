@@ -80,12 +80,12 @@ namespace Labs226_2021
                 }
                 else
                 {
-                    System.Console.WriteLine("Лимит по депазиту");
+                    System.Console.WriteLine("Лимит по депозиту");
                 }
             }
             else
             {
-                Console.WriteLine("Заблокиравано");
+                Console.WriteLine("Заблокировано");
             }
         }
 
