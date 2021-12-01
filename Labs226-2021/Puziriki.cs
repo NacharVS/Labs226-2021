@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp3
+namespace VFa
 {
     class Program0
     {
@@ -23,7 +23,6 @@ namespace ConsoleApp3
                         array[j] = array[j + 1];
                         array[j + 1] = buf;
                     }
-                    Thread.Sleep(500);
                 }
 
                 Console.WriteLine();

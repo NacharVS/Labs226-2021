@@ -2,7 +2,7 @@
 
 namespace ConsoleApp3
 {
-    class Program0
+    class Program3
     {
         static void Main12(string[] args)
         {
@@ -24,7 +24,7 @@ namespace ConsoleApp3
 
         }
     }
-    class Program1
+    class Program4
     {
         static void Main1(string[] args)
         {
