@@ -69,7 +69,7 @@ namespace Labs226_2021
             }
 
         }
-        public void Deposit(double money)
+        public virtual void Deposit(Client acc , double money)
 
         {
             if (Age > 0)
