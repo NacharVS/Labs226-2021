@@ -8,55 +8,40 @@ namespace Labs226_2021
     {
         static public void Sber()
         {
-            SberBank account1 = new SberBank("Ivan", 15000);
-            SberBank account2 = new SberBank("Kirill", 13000);
-            SberBank account3 = new SberBank("Elena", 16000);
+            Client account1 = new Client("Ivan", "Ivanov" , 15000);
+            Client account2 = new Client("Kirill", "Losev" , 13000);
+            Client account3 = new Client("Elena", "Elenova" , 16000);
+            Employee emp = new Employee("Timur", "Balon", 0);
+            Security sec = new Security("Dyadya Volodya", "Petrov", 10);
+            emp.GoToBank();
+            account1.GoToBank();
 
 
-            account1.YearOfBirth = 2005;
-            account2.YearOfBirth = 2004;
-            account3.YearOfBirth = 2002;
 
 
-
-            account1.ShowInfo();
-            account2.ShowInfo();
-            account3.ShowInfo();
-            Console.WriteLine();
-           
-            SberBank.GetProfit(account1, 6);
-            SberBank.GetProfit(account2, 6);
-            SberBank.GetProfit(account3, 6);
+            //account1.YearOfBirth = 2005;
+            //account2.YearOfBirth = 2004;
+            //account3.YearOfBirth = 2002;
 
             account1.ShowInfo();
-            account2.ShowInfo();
-            account3.ShowInfo();
             Console.WriteLine();
 
+            emp.Withdraw(account1, 1000);
             account1.ShowInfo();
-            SberBank.Deposit(9, 6, account1);
-            account2.ShowInfo();
-            SberBank.Deposit(2000, 6, account2);
-            account3.ShowInfo();
-            SberBank.Deposit(2000, 6, account3);
             Console.WriteLine();
 
-            account1.ShowInfo();
-            SberBank.Withdraw(account1, 99);
+            emp.ToDeposit(account2, 4000);
             account2.ShowInfo();
-            SberBank.Withdraw(account2, 10000);
-            account3.ShowInfo();
-            SberBank.Withdraw(account3, 1000);
-    
-            
             Console.WriteLine();
 
-            SberBank.Transaction(account1, account2, 5000);
-
-            account1.ShowInfo();
-            account2.ShowInfo();
+            account3.ToDeposit(account3, 2000);
             account3.ShowInfo();
             Console.WriteLine();
+
+
+            sec.Sit(sec);
+
+
 
         }
     }
