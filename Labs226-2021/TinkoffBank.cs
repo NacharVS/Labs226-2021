@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Labs226_2021
 {
-    class SberBank
+    class TinkoffBank
     {
         private int age;
         private int yearOfBirth;
@@ -53,7 +53,7 @@ namespace Labs226_2021
 
 
 
-        public SberBank(string name, double balance)
+        public TinkoffBank(string name, double balance)
         {
             this.Name = name;
             this.Balance = balance;
@@ -64,7 +64,7 @@ namespace Labs226_2021
             System.Console.WriteLine($"{Name} - {Balance}");
         }
 
-        public static void GetProfit(SberBank acc, int month)
+        public static void GetProfit(TinkoffBank acc, int month)
         {
             for (int i = 0; i < month; i++)
             {
@@ -72,7 +72,7 @@ namespace Labs226_2021
             }
         }
 
-        public static void Deposit(double deposit, int month, SberBank acc)
+        public static void Deposit(double deposit, int month, TinkoffBank acc)
         {
             if (deposit > minDeposit)
             {
@@ -91,7 +91,7 @@ namespace Labs226_2021
 
         }
 
-        public static void Withdraw(SberBank acc, double money)
+        public static void Withdraw(TinkoffBank acc, double money)
         {
             if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
             {
@@ -100,7 +100,7 @@ namespace Labs226_2021
             }
             else if (money <= acc.MinWidtraw)
             {
-                Console.WriteLine("Минимальный вывод - 100");
+                Console.WriteLine("Минимальный вывод - 10");
             }
             else if (money >= acc.MaxWidtraw)
             {
@@ -112,7 +112,7 @@ namespace Labs226_2021
 
 
 
-        public static void Transaction(SberBank accSeller, SberBank accGetter, double money)
+        public static void Transaction(TinkoffBank accSeller, TinkoffBank accGetter, double money)
         {
             if (accSeller.Balance > money + (money * comissionForTransaction))
             {

@@ -6,52 +6,52 @@ namespace Labs226_2021
 {
     class Account
     {
-        static public void Sber()
+        static public void TinkoffBank()
         {
-            SberBank account1 = new SberBank("Ivan", 15000);
-            SberBank account2 = new SberBank("Kirill", 13000);
-            SberBank account3 = new SberBank("Elena", 16000);
+            TinkoffBank account1 = new TinkoffBank("Marina", 14000);
+            TinkoffBank account2 = new TinkoffBank("Aigul", 12000);
+            TinkoffBank account3 = new TinkoffBank("Hazbik:)", 17000);
 
 
-            account1.YearOfBirth = 2005;
-            account2.YearOfBirth = 2004;
-            account3.YearOfBirth = 2002;
+            account1.YearOfBirth = 2006;
+            account2.YearOfBirth = 2005;
+            account3.YearOfBirth = 2001;
 
 
-
-            account1.ShowInfo();
-            account2.ShowInfo();
-            account3.ShowInfo();
-            Console.WriteLine();
-           
-            SberBank.GetProfit(account1, 6);
-            SberBank.GetProfit(account2, 6);
-            SberBank.GetProfit(account3, 6);
 
             account1.ShowInfo();
             account2.ShowInfo();
             account3.ShowInfo();
             Console.WriteLine();
 
+            Labs226_2021.TinkoffBank.GetProfit(account1, 6);
+            Labs226_2021.TinkoffBank.GetProfit(account2, 6);
+            Labs226_2021.TinkoffBank.GetProfit(account3, 6);
+
             account1.ShowInfo();
-            SberBank.Deposit(9, 6, account1);
             account2.ShowInfo();
-            SberBank.Deposit(2000, 6, account2);
             account3.ShowInfo();
-            SberBank.Deposit(2000, 6, account3);
             Console.WriteLine();
 
             account1.ShowInfo();
-            SberBank.Withdraw(account1, 99);
+            Labs226_2021.TinkoffBank.Deposit(9, 6, account1);
             account2.ShowInfo();
-            SberBank.Withdraw(account2, 10000);
+            Labs226_2021.TinkoffBank.Deposit(2000, 6, account2);
             account3.ShowInfo();
-            SberBank.Withdraw(account3, 1000);
+            Labs226_2021.TinkoffBank.Deposit(2000, 6, account3);
+            Console.WriteLine();
+
+            account1.ShowInfo();
+            Labs226_2021.TinkoffBank.Withdraw(account1, 99);
+            account2.ShowInfo();
+            Labs226_2021.TinkoffBank.Withdraw(account2, 10000);
+            account3.ShowInfo();
+            Labs226_2021.TinkoffBank.Withdraw(account3, 1000);
     
             
             Console.WriteLine();
 
-            SberBank.Transaction(account1, account2, 5000);
+            Labs226_2021.TinkoffBank.Transaction(account1, account2, 5000);
 
             account1.ShowInfo();
             account2.ShowInfo();
