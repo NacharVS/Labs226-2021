@@ -1,50 +1,35 @@
 ﻿namespace Labs226_2021
 {
-    class BankAccount
+    class BankAccount : IBankClient, IBankAdmin
     {
-        public string name;
-        public double balance;
+        private string _name;
+        private double _balance;
 
-        public static double rate = 0.007;
-        public static double minWidtraw = 100;
-        public static double maxWidtraw = 5000;
-        public static double minDeposit = 10;
-        public static double comissionForTransaction = 0.02;
+        private static double _rate = 0.007;
+        private static double _minWidtraw = 100;
+        private static double _maxWidtraw = 5000;
+        private static double _minDeposit = 10;
+        private static double _comissionForTransaction = 0.02;
 
-
+        public string Name { get => _name; set => throw new System.NotImplementedException(); }
+        public double Balance { get => _balance; set => throw new System.NotImplementedException(); }
+        public double Rate { get => _rate; set => _rate = value; }
 
         public BankAccount(string name, double balance)
         {
-            this.name = name;
-            this.balance = balance;
+            this._name = name;
+            this._balance = balance;
         }
 
         public void ShowInfo()
         {
-            System.Console.WriteLine($"{name} - {balance}");
+            System.Console.WriteLine($"{_name} has {_balance} rubles on balance");
         }
 
-        public static void GetProfit(BankAccount acc, int month)
+        public void ShowClientBalance(IBankClient bankAccount)
         {
-            for (int i = 0; i < month; i++)
-            {
-                acc.balance += acc.balance * rate;
-            }
+            System.Console.WriteLine($"Client: {bankAccount.Name} has {bankAccount.Balance} ");
         }
 
-        public void Deposit(double money)
-        {
-
-        }
-
-        public void Withdraw(double money)
-        {
-
-        }
-
-        public static void Transaction(BankAccount accSeller, BankAccount accGetter)
-        {
-
-        }
     }
 }
