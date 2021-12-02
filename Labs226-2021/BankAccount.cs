@@ -1,145 +1,82 @@
-﻿using System;
-
-namespace Labs226_2021
+﻿namespace Labs226_2021
 {
-    class BankAccount
+    class BankAccount : IBankClient, IBankAdmin
     {
-        public string name;
-        public double balance;
-        private int _yearofBirth;
-        public static double rate = 0.007;
-        public static double minWidtraw = 100;
-        public static double maxWidtraw = 5000;
-        public static double minDeposit = 10;
-        public static double maxDeposit = 10000;
+        private string _name;
+        private double _balance;
+        private int _id;
 
-       
-        public static double comissionForTransaction = 0.02;
+        private static double _rate = 0.007;
+        private static double _minWidtraw = 100;
+        private static double _maxWidtraw = 5000;
+        private static double _minDeposit = 10;
+        private static double _comissionForTransaction = 0.02;
 
+        public string Name { get => _name; set => throw new System.NotImplementedException(); }
+        public double Balance { get => _balance; set => _balance = value; }
+        public double Rate { get => _rate; set => _rate = value; }
+        public int Id { get => _id; set => throw new System.NotImplementedException(); }
 
-
-        public BankAccount(string name, double balance,int yearofBirth)
+        public BankAccount(string name, int id, double balance)
         {
-            this.name = name;
-            this.balance = balance;
-            this.Age = yearofBirth;
+            this._name = name;
+            this._id = id;
+            this._balance = balance;
         }
 
         public void ShowInfo()
-
         {
-           if(Age > 0 )
-            System.Console.WriteLine($"{name} - {balance} - {Age}");
-            else
-            {
-                Console.WriteLine("Заблокиравано");
-            }
-        }
-        public int Age
-        {
-            get
-            {
-                return _yearofBirth;
-            }
-
-            set
-            {
-                if (value > 1900 & value <= DateTime.Now.Year & DateTime.Now.Year - value >= 18)
-                _yearofBirth = DateTime.Now.Year - value;
-                else
-                {
-                    Console.WriteLine("Введён неверный год"+ " " + $" { name}");
-                }
-            }
+            System.Console.WriteLine($"{_name} has {_balance} rubles on balance");
         }
 
-        public static void GetProfit(BankAccount acc, int month)
+        public void ShowClientBalance(BankAccount bankAccount)
         {
-            
-            if (acc.Age > 0)
-            {
-                for (int i = 0; i < month; i++)
-                {
-                    acc.balance += acc.balance * rate;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Заблокиравано");
-            }
-
+            System.Console.WriteLine($"Client: {bankAccount.Name} has {bankAccount.Balance} ");
         }
-        public virtual void Deposit(Client acc , double money)
 
-        {
-            if (Age > 0)
+        public void Deposid(double money)
+        { 
+            if (money > _minDeposit)
             {
-                if (money < maxDeposit & money > minDeposit)
-                {
-                    balance += money;
-                }
-                else
-                {
-                    System.Console.WriteLine("Лимит по депозиту");
-                }
+                Balance += money;
+                ShowInfo();
             }
-            else
-            {
-                Console.WriteLine("Заблокировано");
-            }
+            System.Console.WriteLine("Ограничение по дипозиту");
         }
 
         public void Withdraw(double money)
         {
-            if (Age > 0)
+            if (money > _minWidtraw & money < _maxWidtraw & money < Balance)
             {
-                if (money > minWidtraw)
-                {
-                    if (money < maxWidtraw)
-                    {
-                        if (money < balance)
-                        {
-                            balance -= money;
-                        }
-                        else
-                        {
-                            System.Console.WriteLine("Мало денег на балансе");
-                        }
-
-                    }
-                    else
-                    {
-                        System.Console.WriteLine("Мало денег на балансе");
-                    }
-                }
-                else
-                {
-                    System.Console.WriteLine("Мало денег на балансе");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Заблокиравано");
+                Balance -= money;
+                ShowInfo();
             }
         }
 
-        public static void Transaction(BankAccount accSeller, BankAccount accGetter , double money)
+        public void Trade(IBankClient clitntSeller, IBankClient clientGetter, double money)
         {
-            if (accSeller.Age > 0 & accGetter.Age > 0)
+            if (clitntSeller.Balance > money * _comissionForTransaction + money)
             {
-                if (accSeller.balance > money + (money * comissionForTransaction))
-                {
-                    accSeller.balance -= money + money * comissionForTransaction;
-                    accGetter.balance += money;
-                }
-                else
-                {
-                    System.Console.WriteLine("Недостаточно средств");
-                }
+                clitntSeller.Balance -= money * _comissionForTransaction + money;
+                clientGetter.Balance += money;
+                ShowInfo();
             }
-            else
+        }
+
+        public void GetProfit(int month)
+        {
+            Balance += Balance * month;
+            ShowInfo();
+        }      
+        public void BankTrade(IBankClient id,IBankClient  id2, double money)
+        {
+            if (id.Balance > money * _comissionForTransaction + money)
             {
-                Console.WriteLine("Заблокиравано");
+                id.Balance -= money * _comissionForTransaction + money;
+                id2.Balance += money;
+                id.ShowInfo();
+                id2.ShowInfo();
+                
             }
         }
     }
