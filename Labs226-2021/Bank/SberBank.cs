@@ -4,38 +4,40 @@ using System.Text;
 
 namespace Labs226_2021.Bank
 {
-    class SberBank
+    class SberBank : IClient, IEmployee
     {
-        private int age;
-        private int yearOfBirth;
-        private string name;
-        private string surname;
-        private double balance;
+        private int _age;
+        private int _yearOfBirth;
+        private int _id;
+        private string _name;
+        private string _surname;
+        private double _balance;
 
-        private static double rate = 0.007;
-        private static double minWidtraw = 100;
-        private static double maxWidtraw = 5000;
-        private static double minDeposit = 100;
-        private static double comissionForTransaction = 0.02;
+        private static double _rate = 0.007;
+        private static double _minWidtraw = 100;
+        private static double _maxWidtraw = 5000;
+        private static double _minDeposit = 100;
+        private static double _comissionForTransaction = 0.02;
 
-        public int Age { get => age; set => age = value; }
-        public string Name { get => name; set => name = value;}
-        public string Surname { get => surname; set => surname = value; }
-        public double Balance { get => balance; set => balance = value; }
+        public int Age { get => _age; set => _age = value; }
+        public string Name { get => _name; set => _name = value;}
+        public string Surname { get => _surname; set => _surname = value; }
+        public double Balance { get => _balance; set => _balance = value; }
+        public int Id { get => _id; set => _id = value; }
 
 
-        public double Rate { get => rate; set => rate = value; }
-        public double MinWidtraw { get => minWidtraw; set => minWidtraw = value; }
-        public double MaxWidtraw { get => maxWidtraw; set => maxWidtraw = value; }
-        public double MinDeposit { get => minDeposit; set => minDeposit = value; }
-        public double ComissionForTransaction { get => comissionForTransaction; set => comissionForTransaction = value; }
+        public double Rate { get => _rate; set => _rate = value; }
+        public double MinWidtraw { get => _minWidtraw; set => _minWidtraw = value; }
+        public double MaxWidtraw { get => _maxWidtraw; set => _maxWidtraw = value; }
+        public double MinDeposit { get => _minDeposit; set => _minDeposit = value; }
+        public double ComissionForTransaction { get => _comissionForTransaction; set => _comissionForTransaction = value; }
 
 
         public int YearOfBirth
         {
             get
             {
-                return yearOfBirth;
+                return _yearOfBirth;
             }
 
             set
@@ -55,102 +57,114 @@ namespace Labs226_2021.Bank
 
 
 
-        public SberBank(string name, string surname , double balance)
+        public SberBank(string Name, double Balance, int Id)
         {
-            this.Name = name;
-            this.Surname = surname;
-            this.Balance = balance;
+            this._name = Name;
+            this._balance = Balance;
+            this._id = Id;
         }
 
-        public virtual void GoToBank()
+        public void GoToBank()
         {
             Console.WriteLine($"{Name} goes to Bank");
         }
 
-        public void ShowInfo()
+
+
+        
+
+        public void Showinfo()
         {
-            System.Console.WriteLine($"{Name} - {Balance}");
+            Console.WriteLine($"{Name} - {Balance}");
         }
 
-        public static void GetProfit(SberBank acc, int month)
+        public void Withdraw(double money)
+        {
+            if (money > MinWidtraw && money < MaxWidtraw)
+            {
+
+                Balance -= money;
+
+            }
+            else if (money <= MinWidtraw)
+            {
+                Console.WriteLine("Минимальный вывод - 100");
+            }
+            else if (money >= MaxWidtraw)
+            {
+                Console.WriteLine("Максимальный вывод - 5000");
+            }
+
+        }
+
+        public void GetProfit(int month)
         {
             for (int i = 0; i < month; i++)
             {
-                acc.Balance += acc.Balance * acc.Rate;
+                Balance += Balance * Rate;
             }
         }
 
-        public static void Deposit(double deposit, int month, SberBank acc)
+        public void Deposit(double money, int month)
         {
-            if (deposit > minDeposit)
+            if (money > _minDeposit)
             {
                 for (int i = 0; i < month; i++)
                 {
 
-                    deposit += deposit * 0.004;
+                    money += money * 0.004;
                 }
-                acc.Balance += deposit;
+                Balance += money;
             }
             else
             {
                 Console.WriteLine("Минимальный депозит - 100");
             }
-
-
         }
 
-        public virtual void Withdraw(SberBank acc, double money)
+        public void ToDeposit(double money)
         {
-
-
-            if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
+            if (money > _minWidtraw && money < _maxWidtraw)
             {
 
-                acc.Balance -= money;
+                Balance += money;
 
             }
-            else if (money <= acc.MinWidtraw)
-            {
-                Console.WriteLine("Минимальный вывод - 100");
-            }
-            else if (money >= acc.MaxWidtraw)
-            {
-                Console.WriteLine("Максимальный вывод - 5000");
-            }
-
-
-        }
-
-        public virtual void ToDeposit(SberBank acc, double money)
-        {
-            if (money > acc.MinWidtraw && money < acc.MaxWidtraw)
-            {
-
-                acc.Balance += money;
-
-            }
-            else if (money <= acc.MinWidtraw)
+            else if (money <= _minWidtraw)
             {
                 Console.WriteLine("Минимальная сумма зачисления - 100");
             }
-            else if (money >= acc.MaxWidtraw)
+            else if (money >= _maxWidtraw)
             {
                 Console.WriteLine("Максимальная сумма зачисления  - 500000");
             }
         }
 
 
-
-        public virtual void Transaction(SberBank accSeller, SberBank accGetter, double money)
+        public void Transaction(SberBank Recipient, double money)
         {
-            if (accSeller.Balance > money + (money * comissionForTransaction))
+            if (Balance > money + (money * _comissionForTransaction))
             {
-                accSeller.Balance -= money + money * comissionForTransaction;
-                accGetter.Balance += money;
+                Balance -= money + money * _comissionForTransaction;
+                Recipient.Balance += money;
             }
             else
             {
                 Console.WriteLine("Ошибка транзакции");
+            }
+        }
+
+        public void AdminTransaction(SberBank ToSend, SberBank Recipient, double money)
+        {
+            if (ToSend.Balance > money + (money * _comissionForTransaction))
+            {
+                ToSend.Balance -= money + money * _comissionForTransaction;
+                Recipient.Balance += money;
+            }
+            else
+            {
+                Console.WriteLine("Ошибка транзакции");
+                Console.WriteLine($"У клиента {ToSend.Name} недостаточно средств на балансе");
             }
         }
     }

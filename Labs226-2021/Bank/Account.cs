@@ -8,38 +8,43 @@ namespace Labs226_2021.Bank
     {
         static public void Sber()
         {
-            Client account1 = new Client("Ivan", "Ivanov" , 15000);
-            Client account2 = new Client("Kirill", "Losev" , 13000);
-            Client account3 = new Client("Elena", "Elenova" , 16000);
-            Employee emp = new Employee("Timur", "Balon", 0);
-            Security sec = new Security("Dyadya Volodya", "Petrov", 10);
-            emp.GoToBank();
-            account1.GoToBank();
+            SberBank client1 = new SberBank("Anton", 2000, 1233);
+            SberBank client2 = new SberBank("Timur", 3000, 2324);
+            SberBank client3 = new SberBank("Ildar", 5000, 4324);
+            SberBank employee1 = new SberBank("Dinar", 200, 4323);
+
+            IClient cl1 = client1;
+            IClient cl2 = client2;
+            IClient cl3 = client3;
+            IEmployee emp1 = employee1;
+
+            int[] IdClient = new int[3];
+            IdClient[0] = client1.Id;
+            IdClient[1] = client2.Id;
+            IdClient[2] = client3.Id;
+
+
+            cl1.Showinfo();
+            cl1.Withdraw(1000);
+            cl1.Showinfo();
+
+            cl1.GetProfit(6);
+            cl1.Showinfo();
+
+            cl1.Transaction(client2, 1000);
+
+            cl1.Showinfo();
+            cl2.Showinfo();
+
+            emp1.AdminTransaction(client2, client1, 2000);
+
+            cl1.Showinfo();
+            cl2.Showinfo();
 
 
 
 
-            //account1.YearOfBirth = 2005;
-            //account2.YearOfBirth = 2004;
-            //account3.YearOfBirth = 2002;
 
-            account1.ShowInfo();
-            Console.WriteLine();
-
-            emp.Withdraw(account1, 1000);
-            account1.ShowInfo();
-            Console.WriteLine();
-
-            emp.ToDeposit(account2, 4000);
-            account2.ShowInfo();
-            Console.WriteLine();
-
-            account3.ToDeposit(account3, 2000);
-            account3.ShowInfo();
-            Console.WriteLine();
-
-
-            sec.Sit(sec);
 
 
 
