@@ -7,7 +7,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Bank.Account.Sber();
+            Game.Activate.Activ();
         }
     }
 }
