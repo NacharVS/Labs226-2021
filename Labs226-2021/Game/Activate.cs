@@ -12,7 +12,7 @@ namespace Labs226_2021.Game
             Mage mag1 = new Mage(15, 20, 35, 15);
             Rogue rog1 = new Rogue(20, 30, 15, 20);
 
-            
+
 
 
             war1.ShowInfo();
