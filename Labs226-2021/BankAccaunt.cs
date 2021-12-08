@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Labs226_2021
 {
-    class BankAccount : IClient, IAdminAccount
+    class BankAccount 
     {
         private string _name;
         private double _balance;
