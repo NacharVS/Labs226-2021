@@ -13,5 +13,21 @@ namespace Labs226_2021.Game
             base.Con = con;
             base.Intl = intl;
         }
+
+
+
+
+
+
+        
+
+
+
+        
+
+
+
+
+
     }
 }

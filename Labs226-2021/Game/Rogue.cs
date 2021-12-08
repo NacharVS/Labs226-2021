@@ -13,5 +13,7 @@ namespace Labs226_2021.Game
             base.Con = con;
             base.Intl = intl;
         }
+
+        public static Rogue rog = new Rogue(20, 30, 15, 20);
     }
 }

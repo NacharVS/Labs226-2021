@@ -11,8 +11,9 @@ namespace Labs226_2021.Game
         private double _con;
         private double _intl;
 
-        public double attack;
-        public double health;
+        private double _attack;
+        private double _health;
+        private double _mana;
 
 
         public double Str { get => _str; set => _str = value; }
@@ -21,26 +22,57 @@ namespace Labs226_2021.Game
         public double Intl { get => _intl; set => _intl = value; }
 
 
-        public void Attack()
+        public double Attack 
         {
-            attack = Str * 0.2 + Dex * 0.2; 
-        }
+            get
+            {
+                return _attack;
+            }
 
-
-        public void Health()
-        {
-            health = 1.5 * Con + 0.5 * Str;
-        }
+            set
+            {
+                _attack = Str * 0.2 + Dex * 0.2;
+            }
         
-
-        public void ShowInfo()
-        {
-            Console.WriteLine(Str);
-
-            Console.WriteLine(attack);
-
-            Console.WriteLine($"{health} HP"); 
+        
         }
+
+
+        public double Health
+        {
+            get
+            {
+                return _health;
+            }
+
+            set
+            {
+                _health = 1.5 * Con + 0.5 * Str;
+            }
+
+
+        }
+
+
+        public double Mana
+        {
+            get
+            {
+                return _mana;
+            }
+
+            set
+            {
+                _mana = 2 * Intl;
+            }
+
+
+        }
+
+
+
+
+
 
     }
 }
