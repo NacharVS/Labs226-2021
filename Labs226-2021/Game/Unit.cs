@@ -16,10 +16,10 @@ namespace Labs226_2021.Game
         private double _mana;
 
 
-        public double Str { get => _str; set => _str = value; }
-        public double Dex { get => _dex; set => _dex = value; }
-        public double Con { get => _con; set => _con = value; }
-        public double Intl { get => _intl; set => _intl = value; }
+        public virtual double Str { get => _str; set => _str = value; }
+        public virtual double Dex { get => _dex; set => _dex = value; }
+        public virtual double Con { get => _con; set => _con = value; }
+        public virtual double Intl { get => _intl; set => _intl = value; }
 
 
         public double Attack 
@@ -67,6 +67,12 @@ namespace Labs226_2021.Game
             }
 
 
+        }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nВыносливость - {Con}\nИнтелект - {Intl}");
         }
 
 
