@@ -119,8 +119,7 @@ namespace Labs226_2021.Game
 
         }
 
-
-
+        
 
 
         public override void ShowInfo() {base.ShowInfo();}

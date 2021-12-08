@@ -69,6 +69,8 @@ namespace Labs226_2021.Game
 
         }
 
+
+
         public virtual void ShowInfo()
         {
             Console.WriteLine();
