@@ -358,19 +358,19 @@ namespace Labs226_2021
             get => _str;
             set
             {
-                if (value > 45 & value < 15)
+                if (value > 55 & value < 20)
                 {
                     _str = value;
                 }
                 else
-                if (value < 15)
+                if (value < 20)
                 {
-                    _str = 15;
+                    _str = 20;
 
                 }
                 else
                 {
-                    _str = 45;
+                    _str = 55;
                 }
             }
         }
@@ -379,19 +379,19 @@ namespace Labs226_2021
             get => _dex;
             set
             {
-                if (value > 70 & value < 20)
+                if (value > 250 & value < 30)
                 {
                     _dex = value;
                 }
                 else
-                if (value < 20)
+                if (value < 30)
                 {
-                    _dex = 20;
+                    _dex = 30;
 
                 }
                 else
                 {
-                    _dex = 70;
+                    _dex = 250;
                 }
             }
         }
@@ -400,19 +400,19 @@ namespace Labs226_2021
             get => _con;
             set
             {
-                if (value > 65 & value < 15)
+                if (value > 70 & value < 20)
                 {
                     _con = value;
                 }
                 else
-                if (value < 15)
+                if (value < 20)
                 {
-                    _con = 15;
+                    _con = 20;
 
                 }
                 else
                 {
-                    _con = 65;
+                    _con = 70;
                 }
             }
         }
@@ -421,19 +421,19 @@ namespace Labs226_2021
             get => _int;
             set
             {
-                if (value > 250 & value < 30)
+                if (value > 70 & value < 15)
                 {
                     _int = value;
                 }
                 else
-                if (value < 30)
+                if (value < 15)
                 {
-                    _int = 30;
+                    _int = 15;
 
                 }
                 else
                 {
-                    _int = 250;
+                    _int = 70;
                 }
             }
         }
