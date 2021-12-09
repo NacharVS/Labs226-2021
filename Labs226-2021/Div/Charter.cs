@@ -6,6 +6,9 @@ namespace Labs226_2021.Div
 {
     public class Charter
     {
+        public delegate void HPeffects(double Healing);
+        public event HPeffects HPreg;
+
         public double _str;
         public double _dex;
         public double _int;
@@ -779,8 +782,23 @@ namespace Labs226_2021.Div
         {
             Console.WriteLine($" Str - {Str} Dex - {Dex} Con - {Con} Int - {Int} DamageM - {DamagM} DamageP - {DamagP} Health - {Healing} Mana - {Mana} DefM - {DefenseM} DefP - {DefenseP} Lvl - {Lvl} CritChanceM - {CritCgantM} CritChanceP - {CritCgantP} CritdamagM - {CritdamagM} CritdamagP - {CritdamagP}");
 
+        } 
+        public double HPR
+        {
+            get { return Healing; }
+            set
+            {
+                bool HPreg = true;
+            }
         }
-      
+        static void Regen(double Healing)
+        {
+            if (HPeffects.HPreg = true)
+            {
+                Healing += Healing * 0.1;
+                Console.WriteLine($"Charr has been regenerate. Current hp {Healing}");
+            }
+        }
 
     }
 }

@@ -7,7 +7,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-         Warior warior  = new Warior();
+            Warior warior = new Warior();
             Mage mag = new Mage();
             Rogur rogor = new Rogur();
             //warior.Con = 7100;
@@ -19,7 +19,7 @@ namespace Labs226_2021
             //warior.Healing = 0;
             //warior.DefenseP = 0;
             //warior.Lvl = 0;
-            
+
             //warior.ShowInfo();
             //warior.AttackP();
             //warior.Lvlup(10);
@@ -47,7 +47,7 @@ namespace Labs226_2021
             rogor.Healing = 0;
             rogor.DefenseP = 0;
             rogor.Lvl = 0;
-            
+
             //mag.ShowInfo();
             //mag.AttackP();
             //mag.Lvlup(30);
@@ -61,7 +61,7 @@ namespace Labs226_2021
             Console.WriteLine();
             Console.WriteLine("___");
             Console.WriteLine();
-            
+
             rogor.Str = 1;
             rogor.Con = 1;
             rogor.Healing = 1;
@@ -78,6 +78,7 @@ namespace Labs226_2021
             Console.WriteLine(); Console.WriteLine();
             Console.WriteLine("___");
             Console.WriteLine();
+            rogor.HPreg += Regen;
             //rogor.AttackP();
             //rogor.Lvlup(5);
             //rogor.ShowInfo();
@@ -89,6 +90,12 @@ namespace Labs226_2021
             //rogor.Int = 10;
             //rogor.FallMan();
             //rogor.ShowInfo();
+
         }
+           static void Regen(double Healing)
+            {
+                Healing += Healing * 0.1;
+                Console.WriteLine($"Charr has been regenerate. Current hp {Healing}");
+            }
     }
 }
