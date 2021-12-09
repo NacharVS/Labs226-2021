@@ -8,10 +8,17 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            IBankClient client1 = new BankAccount("Fedor", 2000);
-            IBankAdmin admin = new BankAccount("Anton", 8.79);
+            BankAccount acc1 = new BankAccount("Ivan", 1000);
+            acc1.BalanceChangedEvent += ShowMessage;
+            acc1.Balance = 600;
+
             
 
+        }
+
+        static void ShowMessage(double balance, double old, double diff)
+        {
+            Console.WriteLine($"Balance has changed! Old Balance {old} Current balance {balance}. Difference {diff}");
         }
     }
 }
