@@ -38,7 +38,7 @@ namespace Labs226_2021.Game
         }
 
 
-        public double Health
+        public virtual double Health
         {
             get
             {
@@ -47,7 +47,16 @@ namespace Labs226_2021.Game
 
             set
             {
-                _health = 1.5 * Con + 0.5 * Str;
+                _health = 2 * Con + 0.5 * Str;
+
+                if (_health < (0.5 * _health))
+                {
+                    _str -= _str * 0.1;
+                    _dex -= _dex * 0.1;
+                    _intl -= _intl * 0.1;
+                    _con -= _con * 0.1;
+                }
+                
             }
 
 
@@ -70,11 +79,14 @@ namespace Labs226_2021.Game
         }
 
 
+        
+
+
 
         public virtual void ShowInfo()
         {
             Console.WriteLine();
-            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nВыносливость - {Con}\nИнтелект - {Intl}");
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nВыносливость - {Con}\nИнтелект - {Intl}\nHP - {Health}");
         }
 
 

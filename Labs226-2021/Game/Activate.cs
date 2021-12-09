@@ -14,8 +14,15 @@ namespace Labs226_2021.Game
             Rogue rog1 = new Rogue(20, 30, 15, 20);
 
             rog1.ShowInfo();
+
+            rog1.Health;
+
+
+
             rog1.Dex = 40;
             rog1.ShowInfo();
+
+            
 
 
         }

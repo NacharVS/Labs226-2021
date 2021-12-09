@@ -15,6 +15,8 @@ namespace Labs226_2021.Game
         }
 
 
+        
+
         public override double Str
         {
             get
@@ -118,6 +120,9 @@ namespace Labs226_2021.Game
 
 
         }
+
+        public override void ShowInfo() { base.ShowInfo(); }
+        public override double Health { get => base.Health; set => base.Health = value; }
 
     }
 }
