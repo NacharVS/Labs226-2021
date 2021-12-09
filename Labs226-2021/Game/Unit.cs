@@ -75,26 +75,7 @@ namespace Labs226_2021.Game
         }
 
 
-        //public virtual double Health
-        //{
-        //    get { return _health; }
 
-        //    set
-        //    {
-        //        _health = 2 * Con + 0.5 * Str;
-
-        //        if (_health < (0.5 * _health))
-        //        {
-        //            _str -= _str * 0.1;
-        //            _dex -= _dex * 0.1;
-        //            _intl -= _intl * 0.1;
-        //            _con -= _con * 0.1;
-        //        }
-
-        //    }
-
-
-        //}
 
         public virtual double Health()
         {
