@@ -4,18 +4,15 @@ using System.Text;
 
 namespace Labs226_2021.Game
 {
-    class Rogue: Unit 
+    class Rogue : Unit
     {
-        public Rogue(int str, int dex, int con, int intl)
+        public Rogue(double str, int dex, int con, int intl)
         {
-            base.Str = str;
-            base.Dex = dex;
-            base.Con = con;
-            base.Intl = intl;
+            str = Str;
         }
 
 
-        
+
 
         public override double Str
         {
@@ -122,7 +119,12 @@ namespace Labs226_2021.Game
         }
 
         public override void ShowInfo() { base.ShowInfo(); }
-        public override double Health { get => base.Health; set => base.Health = value; }
+        public override double Health() { return base.Health(); }
 
     }
 }
+
+
+
+
+

@@ -11,15 +11,9 @@ namespace Labs226_2021.Game
 
             Warrior war1 = new Warrior(30, 20, 10, 25);
             Mage mag1 = new Mage(15, 20, 35, 15);
-            Rogue rog1 = new Rogue(20, 30, 15, 20);
-
-            rog1.ShowInfo();
-
-            rog1.Health;
-
-
-
-            rog1.Dex = 40;
+            Rogue rog1 = new Rogue(19, 30, 15, 20);
+            rog1.Health();
+            
             rog1.ShowInfo();
 
             
