@@ -8,9 +8,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            BankAccount acc1 = new BankAccount("Ivan", 1000);
-            acc1.BalanceChangedEvent += ShowMessage;
-            acc1.Balance = 600;
+           
 
             
 
