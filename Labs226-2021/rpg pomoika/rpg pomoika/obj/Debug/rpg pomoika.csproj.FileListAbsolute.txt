@@ -1,0 +1,7 @@
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\obj\Debug\rpg pomoika.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\bin\Debug\rpg pomoika.exe.config
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\bin\Debug\rpg pomoika.exe
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\bin\Debug\rpg pomoika.pdb
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\obj\Debug\rpg pomoika.exe
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\obj\Debug\rpg pomoika.pdb
+C:\Users\andre\Documents\GitHub\Labs226-2021\Labs226-2021\rpg pomoika\rpg pomoika\obj\Debug\rpg pomoika.csproj.AssemblyReference.cache
