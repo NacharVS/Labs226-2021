@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Labs226_2021.Game
 {
-    class Warrior : Unit
+    class Archer : Unit
     {
 
-        public Warrior(string name, int str, int dex, int con, int intl)
+        public Archer(string name, int str, int dex, int con, int intl)
         {
             Name = name;
             Str = str;
@@ -16,23 +16,22 @@ namespace Labs226_2021.Game
             Intl = intl;
         }
 
-
         public override int Str
         {
             get => base.Str;
             set
             {
-                if (value >= 30 & value <= 250)
+                if (value >= 20 & value <= 55)
                 {
                     base.Str = value;
                 }
-                else if (value < 30)
+                else if (value < 20)
                 {
-                    base.Str = 30;
+                    base.Str = 20;
                 }
-                else if (value > 250)
+                else if (value > 55)
                 {
-                    base.Str = 250;
+                    base.Str = 55;
                 }
             }
         }
@@ -42,17 +41,17 @@ namespace Labs226_2021.Game
             get => base.Dex;
             set
             {
-                if (value >= 15 & value <= 80)
+                if (value >= 30 & value <= 250)
                 {
                     base.Dex = value;
                 }
-                else if (value < 15)
+                else if (value < 30)
                 {
-                    base.Dex = 15;
+                    base.Dex = 30;
                 }
-                else if (value > 80)
+                else if (value > 250)
                 {
-                    base.Dex = 80;
+                    base.Dex = 250;
                 }
             }
         }
@@ -62,17 +61,17 @@ namespace Labs226_2021.Game
             get => base.Con;
             set
             {
-                if (value >= 25 & value <= 100)
+                if (value >= 20 & value <= 70)
                 {
                     base.Con = value;
                 }
-                else if (value < 25)
+                else if (value < 20)
                 {
-                    base.Con = 25;
+                    base.Con = 20;
                 }
-                else if (value > 100)
+                else if (value > 70)
                 {
-                    base.Con = 100;
+                    base.Con = 70;
                 }
             }
         }
@@ -82,20 +81,25 @@ namespace Labs226_2021.Game
             get => base.Intl;
             set
             {
-                if (value >= 10 & value <= 50)
+                if (value >= 15 & value <= 70)
                 {
                     base.Intl = value;
                 }
-                else if (value < 10)
+                else if (value < 15)
                 {
-                    base.Intl = 10;
+                    base.Intl = 15;
                 }
-                else if (value > 50)
+                else if (value > 70)
                 {
-                    base.Intl = 50;
+                    base.Intl = 70;
                 }
             }
         }
 
     }
 }
+
+
+
+
+

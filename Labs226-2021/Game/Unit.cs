@@ -6,116 +6,153 @@ namespace Labs226_2021.Game
 {
     class Unit
     {
-        private double _str;
-        private double _dex;
-        private double _con;
-        private double _intl;
+        private int _str;
+        private int _dex;
+        private int _con;
+        private int _intl;
 
-        private double _health;
-        private double _mana;
+        private int _health;
+        private int _mana;
 
-        private double _physicalAttack;
-        private double _physicalDefence;
-        private double _magicAttack;
-        private double _magicDefence;
+        private int _physicalAttack;
+        private int _physicalDefence;
+        private int _magicAttack;
+        private int _magicDefence;
+
+        private int _pCriticalChange;
+        private int _mCriticalChange;
+        private int _pCriticalDamage;
+        private int _mCriticalDamage;
+
+        private int _currencyHealth;
+
+        private string _name;
+
+        public string Name { get => _name; set => _name = value; }
 
 
-        public virtual double Str { get => _str; set => _str = value; }
-        public virtual double Dex { get => _dex; set => _dex = value; }
-        public virtual double Con { get => _con; set => _con = value; }
-        public virtual double Intl { get => _intl; set => _intl = value; }
-
-
-        public double PhysicalAttack
+        public virtual int Str
         {
-            get { return _physicalAttack; }
+            get => _str;
+            set => _str = value;
+        }
+        public virtual int Dex { get => _dex; set => _dex = value; }
+        public virtual int Con { get => _con; set => _con = value; }
+        public virtual int Intl { get => _intl; set => _intl = value; }
 
+        public int Health
+        {
+            get
+            {
+                return _health = 2 * _con + (5 / 10) * _str;
+            }
             set
             {
-                _physicalAttack = _str * 3 + 0.5 * _dex;
-            }
+                _health = value;
 
+            }
         }
 
-
-        public double PhysicalDefence
-        {
-            get { return _physicalDefence; }
-
-            set
-            {
-                _physicalDefence = _con * 0.5 + Dex * 3;
-            }
-
-        }
-
-
-
-        public double MagicAttack
-        {
-            get { return _magicAttack; }
-
-            set
-            {
-                _magicAttack = _intl * 4;
-            }
-
-        }
-
-
-        public double MagicDefence
-        {
-            get { return _magicDefence; }
-
-            set
-            {
-                _magicDefence = _intl * 2;
-            }
-
-        }
-
-
-
-
-        public virtual double Health()
-        {
-            _health = 2 * Con + 0.5 * Str;
-
-            if (_health < (0.5 * _health))
-            {
-                _str -= _str * 0.1;
-                _dex -= _dex * 0.1;
-                _intl -= _intl * 0.1;
-                _con -= _con * 0.1;
-            }
-            return _health;
-
-
-        }
-
-
-        public double Mana
+        public int Mana
         {
             get { return _mana; }
-
             set
             {
-                _mana = 2 * _intl;
+                _mana = _intl * 3;
             }
-
-
         }
-
-
-        
-
 
 
         public virtual void ShowInfo()
         {
+            Console.WriteLine($"Имя - {_name}");
+            Console.WriteLine($"Сила - {_str}\nЛовкость - {_dex}\nТелосложение - {_con}\nИнтеллект - {_intl}\nHP - {_currencyHealth}\nMana - {_mana}");
             Console.WriteLine();
-            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nВыносливость - {Con}\nИнтелект - {Intl}\nHP - {_health}");
+            Console.WriteLine($"Физическая Атака - {_physicalAttack}\nФизическая Защита - {_physicalDefence}");
         }
+
+        public int PAttack
+        {
+            get { return _physicalAttack; }
+            set
+            {
+                _physicalAttack = _str * 3 + (5 / 10) * _dex;
+
+            }
+        }
+
+        public int PDefence
+        {
+            get { return _physicalDefence; }
+            set
+            {
+                _physicalDefence = _con * (5 / 10) + _dex * 3;
+            }
+        }
+
+        public int MAttack
+        {
+            get { return _magicAttack; }
+            set { _magicAttack = _intl * 4; }
+        }
+
+
+        public int MDefence
+        {
+            get { return _magicDefence; }
+            set
+            {
+                _magicDefence = _intl * 2;
+            }
+        }
+
+
+        public int CurrencyHealth
+        {
+            get => _currencyHealth; set
+            {
+
+                _currencyHealth = value;
+
+                if (value <= Health)
+                {
+                    if (value > 0)
+                    {
+                        _currencyHealth = value;
+                        if (value <= Health * 0.5 & value > 0)
+                        {
+
+                            Str -= Str * (1 / 10);
+                            Dex -= Dex * (1 / 10);
+                            Intl -= Intl * (1 / 10);
+                            Con -= Con * (1 / 10);
+
+
+                            Console.WriteLine($"Сила: {Str}");
+                            Console.WriteLine($"Ловкость:  {Dex}");
+                            Console.WriteLine($"Интеллект: {Intl}");
+                            Console.WriteLine($"Телосложение: {Con}");
+                        }
+                    }
+                    if (value <= 0)
+                    {
+                        _currencyHealth = 0;
+                        Console.WriteLine($"{Name} мёртв.");
+
+                    }
+                }
+                else
+                    _currencyHealth = Health;
+
+            }
+        }
+
+
+
+
+
+
+
 
 
 
