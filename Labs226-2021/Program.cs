@@ -29,20 +29,14 @@ namespace Labs226_2021
             mag.Dex = 80804;
             mag.Str = 5045;
             mag.Int = 1;
-            mag.DamagM = 0;
-            mag.Mana = 0;
-            mag.Healing = 0;
-            mag.DefenseM = 0;
-            mag.Lvl = 0;
+         
             rogor.Con = 7100;
             rogor.Dex = 80804;
             rogor.Str = 5045;
             rogor.Int = 100;
             rogor.DamagP = 0;
             rogor.Mana = 35;
-            rogor.Healing = 0;
-            rogor.DefenseP = 0;
-            rogor.Lvl = 0;
+           
 
             mag.ShowInfo();
             mag.AttackP();
