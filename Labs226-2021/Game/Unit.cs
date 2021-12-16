@@ -11,7 +11,6 @@ namespace Labs226_2021.Game
         private int _con;
         private int _intl;
 
-        private int _health;
         private int _mana;
 
         private int _physicalAttack;
@@ -24,7 +23,7 @@ namespace Labs226_2021.Game
         private int _pCriticalDamage;
         private int _mCriticalDamage;
 
-        private int _currencyHealth;
+
 
         private string _name;
 
@@ -40,18 +39,6 @@ namespace Labs226_2021.Game
         public virtual int Con { get => _con; set => _con = value; }
         public virtual int Intl { get => _intl; set => _intl = value; }
 
-        public int Health
-        {
-            get
-            {
-                return _health = 2 * _con + (5 / 10) * _str;
-            }
-            set
-            {
-                _health = value;
-
-            }
-        }
 
         public int Mana
         {
@@ -63,13 +50,13 @@ namespace Labs226_2021.Game
         }
 
 
-        public virtual void ShowInfo()
-        {
-            Console.WriteLine($"Имя - {_name}");
-            Console.WriteLine($"Сила - {_str}\nЛовкость - {_dex}\nТелосложение - {_con}\nИнтеллект - {_intl}\nHP - {_currencyHealth}\nMana - {_mana}");
-            Console.WriteLine();
-            Console.WriteLine($"Физическая Атака - {_physicalAttack}\nФизическая Защита - {_physicalDefence}");
-        }
+        //public virtual void ShowInfo()
+        //{
+        //    Console.WriteLine($"Имя - {_name}");
+        //    Console.WriteLine($"Сила - {_str}\nЛовкость - {_dex}\nТелосложение - {_con}\nИнтеллект - {_intl}\nHP - {_currencyHealth}\nMana - {_mana}");
+        //    Console.WriteLine();
+        //    Console.WriteLine($"Физическая Атака - {_physicalAttack}\nФизическая Защита - {_physicalDefence}");
+        //}
 
         public int PAttack
         {
@@ -107,45 +94,9 @@ namespace Labs226_2021.Game
         }
 
 
-        public int CurrencyHealth
-        {
-            get => _currencyHealth; set
-            {
+       
 
-                _currencyHealth = value;
-
-                if (value <= Health)
-                {
-                    if (value > 0)
-                    {
-                        _currencyHealth = value;
-                        if (value <= Health * 0.5 & value > 0)
-                        {
-
-                            Str -= Str * (1 / 10);
-                            Dex -= Dex * (1 / 10);
-                            Intl -= Intl * (1 / 10);
-                            Con -= Con * (1 / 10);
-
-
-                            Console.WriteLine($"Сила: {Str}");
-                            Console.WriteLine($"Ловкость:  {Dex}");
-                            Console.WriteLine($"Интеллект: {Intl}");
-                            Console.WriteLine($"Телосложение: {Con}");
-                        }
-                    }
-                    if (value <= 0)
-                    {
-                        _currencyHealth = 0;
-                        Console.WriteLine($"{Name} мёртв.");
-
-                    }
-                }
-                else
-                    _currencyHealth = Health;
-
-            }
-        }
+       
 
 
 

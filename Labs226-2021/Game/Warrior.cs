@@ -7,13 +7,23 @@ namespace Labs226_2021.Game
     class Warrior : Unit
     {
 
-        public Warrior(string name, int str, int dex, int con, int intl)
+        private int _health;
+        private int _currentHealth;
+
+
+
+        public int Health
         {
-            Name = name;
-            Str = str;
-            Dex = dex;
-            Con = con;
-            Intl = intl;
+            get
+            {
+                return _currentHealth = 2 * Con + (5 / 10 * Str);
+            }
+            set
+            {
+                int OldHealth = _currentHealth;
+                _currentHealth = value;
+                HealthEvent?.Invoke(OldHealth, value);
+            }
         }
 
 
@@ -96,6 +106,17 @@ namespace Labs226_2021.Game
                 }
             }
         }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine($"Имя - {Name}");
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {Health}\nMana - {Mana}");
+            Console.WriteLine();
+            Console.WriteLine($"Физическая Атака - {PAttack}\nФизическая Защита - {PDefence}");
+        }
+
+        public delegate void HealthChange(int OldHealth, int NewHealth);
+        public event HealthChange HealthEvent;
 
     }
 }
