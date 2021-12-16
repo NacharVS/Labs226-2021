@@ -1,8 +1,10 @@
 ﻿using System;
+using rpg_pomoika;
 
-public class Class1
-{
-    public class Warrior : Character
+
+
+
+    class Warrior : Program.Character
     {
         new public double Str
         {
@@ -50,3 +52,4 @@ public class Class1
             Console.WriteLine($"Юнит Warrior  нанёс урон  по манекену {DamagP}");
         }
     }
+

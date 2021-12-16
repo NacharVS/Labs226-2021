@@ -1,11 +1,12 @@
-﻿using System;
+﻿using rpg_pomoika;
+using System;
 
-public class Rogue
-{
+
+
  
 
 
-public class Rogue : Character
+public class Rogue : Program.Character
     {
         new public double Str
         {
@@ -54,4 +55,4 @@ public class Rogue : Character
             Console.WriteLine($"Юнит Rogue  нанёс урон  по манекену {DamagP}");
         }
     }
-}
+

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using rpg_pomoika;
 
 namespace rpg_pomoika
 {
 
-    class Program
+    public class Program
     {
         public class Character
         {
@@ -60,6 +61,7 @@ namespace rpg_pomoika
             }
 
             public double Int
+
             {
                 get => _int;
                 set
@@ -70,7 +72,7 @@ namespace rpg_pomoika
 
             public double Health
             {
-                get => _health;
+                get => _health = 2 * Con + 0.5 * Str;
                 set
                 {
                     _health = 2 * Con + 0.5 * Str;
@@ -127,7 +129,7 @@ namespace rpg_pomoika
                 }
                 else
                 {
-                    Console.WriteLine("Лимит по лвл");
+                    Console.WriteLine("Лимит по уровню");
                 }
             }
 
@@ -202,7 +204,7 @@ namespace rpg_pomoika
 
             public double DamagM
             {
-                get => _damag;
+                get => _damag = Int * 0.2 + Int / 10;
                 set
                 {
                     value = Int * 0.2 + Int / 10;
@@ -213,7 +215,7 @@ namespace rpg_pomoika
 
             public double DefenseM
             {
-                get => _def;
+                get => _def = Int * 0.3;
                 set
                 {
                     value = Int * 0.3;
@@ -223,7 +225,7 @@ namespace rpg_pomoika
 
             public double DamagP
             {
-                get => _damag;
+                get => _damag = Str * 0.2 + Dex * 0.2;
                 set
                 {
                     value = Str * 0.2 + Dex * 0.2;
@@ -234,7 +236,7 @@ namespace rpg_pomoika
 
             public double DefenseP
             {
-                get => _def;
+                get => _def = Dex * 0.1 + Con * 0.2;
                 set
                 {
                     value = Dex * 0.1 + Con * 0.2;
@@ -244,7 +246,7 @@ namespace rpg_pomoika
 
             public double CritdamagP
             {
-                get => _critdamag;
+                get => _critdamag = DamagP * (2 + Dex * 0.05);
                 set
                 {
                     _critdamag = DamagP * (2 + Dex * 0.05);
@@ -253,7 +255,7 @@ namespace rpg_pomoika
 
             public double CritdamagM
             {
-                get => _critdamag;
+                get => _critdamag = DamagM * (2 + Int * 0.15);
                 set
                 {
                     _critdamag = DamagM * (2 + Int * 0.15);
@@ -262,7 +264,7 @@ namespace rpg_pomoika
 
             public double CritCgantM
             {
-                get => _critChanse;
+                get => _critChanse = 20 + Int * 0.1;
                 set
                 {
                     _critChanse = 20 + Int * 0.1;
@@ -271,7 +273,7 @@ namespace rpg_pomoika
 
             public double CritCgantP
             {
-                get => _critChanse;
+                get => _critChanse = 20 + Dex * 0.3;
                 set
                 {
                     _critChanse = 20 + Dex * 0.3;
@@ -303,153 +305,7 @@ namespace rpg_pomoika
             }
         }
 
-        public class Warrior : Character
-        {
-            new public double Str
-            {
-                get => _str;
-                set
-                {
-                    _str = ToBound(value, 30, 250);
-                }
-            }
-
-            new public double Dex
-            {
-                get => _dex;
-                set
-                {
-                    _dex = ToBound(value, 20, 80);
-                }
-            }
-
-            new public double Con
-            {
-                get => _con;
-                set
-                {
-                    _con = ToBound(value, 25, 100);
-                }
-            }
-
-            new public double Int
-            {
-                get => _int;
-                set
-                {
-                    _int = ToBound(value, 10, 50);
-                }
-            }
-
-            new public void AttackM()
-            {
-                Console.WriteLine($"Юнит Warrior  нанёс урон  по манекену {DamagM}");
-            }
-
-            new public void AttackP()
-            {
-                Console.WriteLine($"Юнит Warrior  нанёс урон  по манекену {DamagP}");
-            }
-        }
-
-        public class Mage : Character
-        {
-            new public double Str
-            {
-                get => _str;
-                set
-                {
-                    _str = ToBound(value, 15, 45);
-                }
-            }
-
-            new public double Dex
-            {
-                get => _dex;
-                set
-                {
-                    _dex = ToBound(value, 20, 80);
-                }
-            }
-
-            new public double Con
-            {
-                get => _con;
-                set
-                {
-                    _con = ToBound(value, 15, 70);
-                }
-            }
-
-            new public double Int
-            {
-                get => _int;
-                set
-                {
-                    _int = ToBound(value, 35,250);
-                }
-            }
-
-            new public void AttackM()
-            {
-                Console.WriteLine($"Юнит Mage  нанёс урон  по манекену {DamagM}");
-            }
-
-            new public void AttackP()
-            {
-                Console.WriteLine($"Юнит Mage  нанёс урон  по манекену {DamagP}");
-            }
-        }
-
-        public class Rogue : Character
-        {
-            new public double Str
-            {
-                get => _str;
-                set
-                {
-                    _str = ToBound(value, 20, 55);
-                }
-            }
-
-            new public double Dex
-            {
-                get => _dex;
-                set
-                {
-                    _dex = ToBound(value, 30, 250);
-                }
-            }
-
-            new public double Con
-            {
-                get => _con;
-                set
-                {
-                    _con = ToBound(value, 20, 80);
-                }
-            }
-
-            new public double Int
-            {
-                get => _int;
-                set
-                {
-                    _int = ToBound(value, 15, 70);
-                }
-            }
-
-            new public void AttackM()
-            {
-
-                Console.WriteLine($"Юнит Rogue  нанёс урон  по манекену {DamagM}");
-            }
-            new public void AttackP()
-            {
-
-                Console.WriteLine($"Юнит Rogue  нанёс урон  по манекену {DamagP}");
-            }
-        }
+        
 
 
         static void Main(string[] args)
