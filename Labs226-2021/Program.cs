@@ -14,11 +14,7 @@ namespace Labs226_2021
             warior.Dex = 80804;
             warior.Str = 5045;
             warior.Int = 20;
-            warior.DamagP = 0;
-            warior.Mana = 0;
-            warior.Healing = 0;
-            warior.DefenseP = 0;
-            warior.Lvl = 0;
+          
 
             warior.ShowInfo();
             warior.AttackP();

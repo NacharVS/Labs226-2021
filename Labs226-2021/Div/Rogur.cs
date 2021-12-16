@@ -10,7 +10,7 @@ namespace Labs226_2021.Div
     {
         public double CritdamagP
         {
-            get => _critdamag;
+            get => _critdamag = DamagP * (2 + Dex * 0.05);
             set
             {
                 _critdamag = DamagP * (2 + Dex * 0.05);
@@ -18,7 +18,7 @@ namespace Labs226_2021.Div
         }
         public double CritdamagM
         {
-            get => _critdamag;
+            get => _critdamag = DamagM * (2 + Int * 0.15);
             set
             {
                 _critdamag = DamagM * (2 + Int * 0.15);
@@ -26,7 +26,7 @@ namespace Labs226_2021.Div
         }
         public double CritCgantM
         {
-            get => _critChanse;
+            get => _critChanse = 20 + Int * 0.1;
             set
             {
                 _critChanse = 20 + Int * 0.1;
@@ -34,7 +34,7 @@ namespace Labs226_2021.Div
         }
         public double CritCgantP
         {
-            get => _critChanse;
+            get => _critChanse = 20 + Dex * 0.3;
             set
             {
                 _critChanse = 20 + Dex * 0.3;
@@ -126,7 +126,7 @@ namespace Labs226_2021.Div
         }
         public double DamagM
         {
-            get => _damag;
+            get => _damag = Int * 0.2 + Int / 10;
             set
             {
                 value = Int * 0.2 + Int / 10;
@@ -136,7 +136,7 @@ namespace Labs226_2021.Div
         }
         public double DefenseM
         {
-            get => _def;
+            get => _def = Int * 0.3;
             set
             {
                 value = Int * 0.3;
@@ -155,7 +155,7 @@ namespace Labs226_2021.Div
         }
         public double DefenseP
         {
-            get => _def;
+            get => _def = Dex * 0.1 + Con * 0.2;
             set
             {
                 value = Dex * 0.1 + Con * 0.2;
@@ -193,7 +193,7 @@ namespace Labs226_2021.Div
         }
         public double Mana
         {
-            get => _mana;
+            get => _mana = Int * 2;
             set
             {
 
