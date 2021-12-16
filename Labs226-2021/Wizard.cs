@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Labs226_2021
 {
-    class Mage : Unit
+    class Wizard : Unit
     {
 
-        public Mage(string name, int str, int dex, int con, int intl)
+        public Wizard(string name, int str, int dex, int con, int intl)
         {
             Name = name;
             Str = str;

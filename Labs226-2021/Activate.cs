@@ -9,7 +9,7 @@ namespace Labs226_2021
         public static void Activ()
         {
             Warrior war = new Warrior("Орочимару", 35, 20, 25, 25);
-            Mage mag = new Mage("Лайт", 25, 10, 15, 30);
+            Wizard mag = new Wizard("Лайт", 25, 10, 15, 30);
             Ranger rog = new Ranger("Мастер Чиф", 30, 15, 25, 15);
 
             Unit[] array = new Unit[3] { war, mag, rog };
