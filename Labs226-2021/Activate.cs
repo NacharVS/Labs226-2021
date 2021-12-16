@@ -43,15 +43,6 @@ namespace Labs226_2021
 
 
 
-            // Создание классов
-            // Битва
-            Console.WriteLine(array[0].CurrencyHealth);
-            Console.WriteLine(array[1].PAttack);
-
-            Console.WriteLine(array[0].CurrencyHealth - array[1].PAttack);
-
-
-
 
 
 
