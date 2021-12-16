@@ -9,7 +9,7 @@ namespace rpg_pomoika
 
     class Program
     {
-        public class Charter
+        public class Character
         {
             public delegate void HPeffects(double HPBaffValue);
             public event HPeffects HPreg;
@@ -303,7 +303,7 @@ namespace rpg_pomoika
             }
         }
 
-        public class Warior : Charter
+        public class Warrior : Character
         {
             new public double Str
             {
@@ -352,7 +352,7 @@ namespace rpg_pomoika
             }
         }
 
-        public class Mage : Charter
+        public class Mage : Character
         {
             new public double Str
             {
@@ -401,7 +401,7 @@ namespace rpg_pomoika
             }
         }
 
-        public class Rogue : Charter
+        public class Rogue : Character
         {
             new public double Str
             {
@@ -454,7 +454,7 @@ namespace rpg_pomoika
 
         static void Main(string[] args)
         {
-            Warior warrior = new Warior();
+            Warrior warrior = new Warrior();
             Mage kukoldun = new Mage();
             Rogue rogue = new Rogue();
             warrior.HPreg += warrior.HPEventListener;
