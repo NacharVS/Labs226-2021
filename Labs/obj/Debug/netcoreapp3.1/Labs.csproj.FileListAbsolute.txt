@@ -1,0 +1,13 @@
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.csprojAssemblyReference.cache
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.csproj.CoreCompileInputs.cache
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.AssemblyInfoInputs.cache
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.AssemblyInfo.cs
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.exe
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.deps.json
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.runtimeconfig.json
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.runtimeconfig.dev.json
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.dll
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\bin\Debug\netcoreapp3.1\Labs.pdb
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.dll
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.pdb
+C:\Users\262010\Documents\GitHub\Labs226-2021\Labs\obj\Debug\netcoreapp3.1\Labs.genruntimeconfig.cache
