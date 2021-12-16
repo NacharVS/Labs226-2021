@@ -93,45 +93,23 @@ namespace Labs226_2021
         }
         public double PhysicDamage
         {
-            get => _physicdamage;
-            set
-            {
-                value = Str * 3 + Dex * 0.5;
-                _physicdamage = value;
-            }
-
+            get => _physicdamage = Str * 3 + Dex * 0.5; set => _physicdamage = value;
         }
         public double MagicDamage
         {
-            get => _magicdamage;
-            set
-            {
-                value = Int * 4;
-                _magicdamage = value;
-            }
-
+            get => _magicdamage = Str * 3 + Dex * 0.5; set => _magicdamage = value;
         }
         public double PhysicDefence
         {
-            get => _physicdefence;
-            set
-            {
-                value = Dex * 3 + Con * 0.5;
-                _physicdefence = value;
-            }
+            get => _physicdefence = Str * 3 + Dex * 0.5; set => _physicdefence = value;
         }
         public double MagicDefence
         {
-            get => _magicdefence;
-            set
-            {
-                value = Int * 2;
-                _magicdefence = value;
-            }
+            get => _magicdefence = Str * 3 + Dex * 0.5; set => _magicdefence = value;
         }
 
-        public double Health { get => _health; set => _health = 2 * Con + 0.5 * Str; }
-        public int Mana { get => _mana; set => _mana = Int * 3; }
+        public double Health { get => 2 * Con + 0.5 * Str; set => _health = value; }
+        public int Mana { get => Int * 3; set => _mana= value; }
 
         public  void Attack()
         {
