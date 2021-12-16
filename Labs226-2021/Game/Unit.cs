@@ -6,76 +6,104 @@ namespace Labs226_2021.Game
 {
     class Unit
     {
-        private double _str;
-        private double _dex;
-        private double _con;
-        private double _intl;
+        private int _str;
+        private int _dex;
+        private int _con;
+        private int _intl;
 
-        private double _attack;
-        private double _health;
-        private double _mana;
+        private int _mana;
+
+        private int _physicalAttack;
+        private int _physicalDefence;
+        private int _magicAttack;
+        private int _magicDefence;
+
+        private int _pCriticalChange;
+        private int _mCriticalChange;
+        private int _pCriticalDamage;
+        private int _mCriticalDamage;
 
 
-        public virtual double Str { get => _str; set => _str = value; }
-        public virtual double Dex { get => _dex; set => _dex = value; }
-        public virtual double Con { get => _con; set => _con = value; }
-        public virtual double Intl { get => _intl; set => _intl = value; }
+
+        private string _name;
+
+        public string Name { get => _name; set => _name = value; }
 
 
-        public double Attack
+        public virtual int Str
         {
-            get
-            {
-                return _attack;
-            }
+            get => _str;
+            set => _str = value;
+        }
+        public virtual int Dex { get => _dex; set => _dex = value; }
+        public virtual int Con { get => _con; set => _con = value; }
+        public virtual int Intl { get => _intl; set => _intl = value; }
 
+
+        public int Mana
+        {
+            get { return _mana; }
             set
             {
-                _attack = Str * 0.2 + Dex * 0.2;
+                _mana = _intl * 3;
             }
-
-
         }
 
 
-        public double Health
-        {
-            get
-            {
-                return _health;
-            }
+        //public virtual void ShowInfo()
+        //{
+        //    Console.WriteLine($"Имя - {_name}");
+        //    Console.WriteLine($"Сила - {_str}\nЛовкость - {_dex}\nТелосложение - {_con}\nИнтеллект - {_intl}\nHP - {_currencyHealth}\nMana - {_mana}");
+        //    Console.WriteLine();
+        //    Console.WriteLine($"Физическая Атака - {_physicalAttack}\nФизическая Защита - {_physicalDefence}");
+        //}
 
+        public int PAttack
+        {
+            get { return _physicalAttack; }
             set
             {
-                _health = 1.5 * Con + 0.5 * Str;
+                _physicalAttack = _str * 3 + (5 / 10) * _dex;
+
             }
-
-
         }
 
-
-        public double Mana
+        public int PDefence
         {
-            get
-            {
-                return _mana;
-            }
-
+            get { return _physicalDefence; }
             set
             {
-                _mana = 2 * Intl;
+                _physicalDefence = _con * (5 / 10) + _dex * 3;
             }
-
-
         }
 
-
-
-        public virtual void ShowInfo()
+        public int MAttack
         {
-            Console.WriteLine();
-            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nВыносливость - {Con}\nИнтелект - {Intl}");
+            get { return _magicAttack; }
+            set { _magicAttack = _intl * 4; }
         }
+
+
+        public int MDefence
+        {
+            get { return _magicDefence; }
+            set
+            {
+                _magicDefence = _intl * 2;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

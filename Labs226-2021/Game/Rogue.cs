@@ -4,27 +4,33 @@ using System.Text;
 
 namespace Labs226_2021.Game
 {
-    class Rogue : Unit
+    class Archer : Unit
     {
-        public Rogue(int str, int dex, int con, int intl)
-        {
-            base.Str = str;
-            base.Dex = dex;
-            base.Con = con;
-            base.Intl = intl;
-        }
+
+        private int _health;
+        private int _currentHealth;
 
 
-        public override double Str
+
+        public int Health
         {
             get
             {
-                return base.Str;
+                return _currentHealth = 2 * Con + (5 / 10 * Str);
             }
-
             set
             {
-                if (value < 55 & value > 20)
+                int OldHealth = _currentHealth;
+                _currentHealth = value;
+                HealthEvent?.Invoke(OldHealth, value);
+            }
+        }
+        public override int Str
+        {
+            get => base.Str;
+            set
+            {
+                if (value >= 20 & value <= 55)
                 {
                     base.Str = value;
                 }
@@ -32,25 +38,19 @@ namespace Labs226_2021.Game
                 {
                     base.Str = 20;
                 }
-                else
+                else if (value > 55)
                 {
                     base.Str = 55;
                 }
             }
-
-
         }
 
-        public override double Dex
+        public override int Dex
         {
-            get
-            {
-                return base.Dex;
-            }
-
+            get => base.Dex;
             set
             {
-                if (value < 250 & value > 30)
+                if (value >= 30 & value <= 250)
                 {
                     base.Dex = value;
                 }
@@ -58,51 +58,19 @@ namespace Labs226_2021.Game
                 {
                     base.Dex = 30;
                 }
-                else
+                else if (value > 250)
                 {
                     base.Dex = 250;
                 }
             }
-
-
         }
 
-        public override double Intl
+        public override int Con
         {
-            get
-            {
-                return base.Intl;
-            }
-
+            get => base.Con;
             set
             {
-                if (value < 50 & value > 15)
-                {
-                    base.Intl = value;
-                }
-                else if (value < 15)
-                {
-                    base.Intl = 15;
-                }
-                else
-                {
-                    base.Intl = 50;
-                }
-            }
-
-
-        }
-
-        public override double Con
-        {
-            get
-            {
-                return base.Con;
-            }
-
-            set
-            {
-                if (value < 100 & value > 20)
+                if (value >= 20 & value <= 70)
                 {
                     base.Con = value;
                 }
@@ -110,14 +78,46 @@ namespace Labs226_2021.Game
                 {
                     base.Con = 20;
                 }
-                else
+                else if (value > 70)
                 {
-                    base.Con = 100;
+                    base.Con = 70;
                 }
             }
-
-
         }
 
+        public override int Intl
+        {
+            get => base.Intl;
+            set
+            {
+                if (value >= 15 & value <= 70)
+                {
+                    base.Intl = value;
+                }
+                else if (value < 15)
+                {
+                    base.Intl = 15;
+                }
+                else if (value > 70)
+                {
+                    base.Intl = 70;
+                }
+            }
+        }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine($"Имя - {Name}");
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {Health}\nMana - {Mana}");
+            Console.WriteLine();
+            Console.WriteLine($"Физическая Атака - {PAttack}\nФизическая Защита - {PDefence}");
+        }
+
+        public delegate void HealthChange(int OldHealth, int NewHealth);
+        public event HealthChange HealthEvent;
     }
 }
+
+
+
+
