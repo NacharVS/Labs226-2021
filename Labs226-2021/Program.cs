@@ -10,34 +10,34 @@ namespace Labs226_2021
             Warior warior = new Warior();
             Mage mag = new Mage();
             Rogur rogor = new Rogur();
-            //warior.Con = 7100;
-            //warior.Dex = 80804;
-            //warior.Str = 5045;
-            //warior.Int = 20;
-            //warior.DamagP = 0;
-            //warior.Mana = 0;
-            //warior.Healing = 0;
-            //warior.DefenseP = 0;
-            //warior.Lvl = 0;
+            warior.Con = 7100;
+            warior.Dex = 80804;
+            warior.Str = 5045;
+            warior.Int = 20;
+            warior.DamagP = 0;
+            warior.Mana = 0;
+            warior.Healing = 0;
+            warior.DefenseP = 0;
+            warior.Lvl = 0;
 
-            //warior.ShowInfo();
-            //warior.AttackP();
-            //warior.Lvlup(10);
-            //warior.ShowInfo();
-            //warior.Lvlup(48);
-            //warior.ShowInfo();
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //mag.Con = 7100;
-            //mag.Dex = 80804;
-            //mag.Str = 5045;
-            //mag.Int = 1;
-            //mag.DamagM = 0;
-            //mag.Mana = 0;
-            //mag.Healing = 0;
-            //mag.DefenseM = 0;
-            //mag.Lvl = 0;
+            warior.ShowInfo();
+            warior.AttackP();
+            warior.Lvlup(10);
+            warior.ShowInfo();
+            warior.Lvlup(48);
+            warior.ShowInfo();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            mag.Con = 7100;
+            mag.Dex = 80804;
+            mag.Str = 5045;
+            mag.Int = 1;
+            mag.DamagM = 0;
+            mag.Mana = 0;
+            mag.Healing = 0;
+            mag.DefenseM = 0;
+            mag.Lvl = 0;
             rogor.Con = 7100;
             rogor.Dex = 80804;
             rogor.Str = 5045;
@@ -48,12 +48,12 @@ namespace Labs226_2021
             rogor.DefenseP = 0;
             rogor.Lvl = 0;
 
-            //mag.ShowInfo();
-            //mag.AttackP();
-            //mag.Lvlup(30);
-            //mag.ShowInfo();
-            //mag.Lvlup(78);
-            //mag.ShowInfo();
+            mag.ShowInfo();
+            mag.AttackP();
+            mag.Lvlup(30);
+            mag.ShowInfo();
+            mag.Lvlup(78);
+            mag.ShowInfo();
             Console.WriteLine();
             Console.WriteLine("___");
             Console.WriteLine();
@@ -65,7 +65,7 @@ namespace Labs226_2021
             rogor.Str = 1;
             rogor.Con = 1;
             rogor.Healing = 1;
-            //rogor.FallMan();
+            rogor.FallMan();
             rogor.FallHel();
             Console.WriteLine();
             Console.WriteLine("___");
@@ -78,24 +78,20 @@ namespace Labs226_2021
             Console.WriteLine(); Console.WriteLine();
             Console.WriteLine("___");
             Console.WriteLine();
-            rogor.HPreg += Regen;
-            //rogor.AttackP();
-            //rogor.Lvlup(5);
-            //rogor.ShowInfo();
-            //rogor.Lvlup(15);
-            //rogor.ShowInfo();
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //rogor.Int = 10;
-            //rogor.FallMan();
-            //rogor.ShowInfo();
+
+            rogor.AttackP();
+            rogor.Lvlup(5);
+            rogor.ShowInfo();
+            rogor.Lvlup(15);
+            rogor.ShowInfo();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            rogor.Int = 10;
+            rogor.FallMan();
+            rogor.ShowInfo();
 
         }
-           static void Regen(double Healing)
-            {
-                Healing += Healing * 0.1;
-                Console.WriteLine($"Charr has been regenerate. Current hp {Healing}");
-            }
+
     }
 }
