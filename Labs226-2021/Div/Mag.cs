@@ -190,6 +190,7 @@ namespace Labs226_2021.Div
                     }
                 }
             }
+     
             public double Mana
             {
                 get => _mana = Int * 2;
@@ -225,8 +226,14 @@ namespace Labs226_2021.Div
                     Console.WriteLine();
                 }
             }
-
-            public void AttackM()
+        public void Prihod()
+        {
+              
+           _int = _int  + _int * 0.1;
+            _healing = _healing - _healing * 0.05;
+        }
+    
+        public void AttackM()
             {
 
                 Console.WriteLine($"Юнит Mage  нанёс урон  по маникену {DamagM}");

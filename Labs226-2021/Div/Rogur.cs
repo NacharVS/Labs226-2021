@@ -226,7 +226,12 @@ namespace Labs226_2021.Div
                 Console.WriteLine();
             }
         }
+        public void Berserk()
+        {
 
+            _dex = _dex + _dex * 0.1;
+            _con = _con - _con * 0.5;
+        }
         public void AttackM()
         {
 

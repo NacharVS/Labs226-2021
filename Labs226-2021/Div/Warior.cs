@@ -226,7 +226,12 @@ namespace Labs226_2021.Div
                 Console.WriteLine();
             }
         }
+        public void Prihod()
+        {
 
+            _str = _str + _str * 0.26;
+            _def = _def - _def * 0.54;
+        }
 
         public void AttackM()
         {
