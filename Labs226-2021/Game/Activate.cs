@@ -19,7 +19,7 @@ namespace Labs226_2021.Game
             mag.Intl = 10;
 
             war.Name = "Кратос";
-            war.Str = 30;
+            war.Str = 50;
             war.Dex = 15;
             war.Con = 15;
             war.Intl = 10;
@@ -33,20 +33,21 @@ namespace Labs226_2021.Game
 
             Unit[] array = new Unit[3] { war, mag, rog };
 
+
             for (int i = 0; i < array.Length; i++)
             {
 
-                array[i].PAttack = 0;
-                array[i].MAttack = 0;
-                array[i].PDefence = 0;
-                array[i].MDefence = 0;
-                array[i].Mana = 0;
-                array[i].PAttack = 0;
+                _ = array[i].PAttack;
+                _ = array[i].MAttack;
+                _ = array[i].PDefence;
+                _ = array[i].MDefence;
+                _ = array[i].Mana;
+                _ = array[i].MAttack;
             }
 
-            mag.Health = 0;
-            war.Health = 0;
-            rog.Health = 0;
+            mag.MaxHealth = 0;
+            rog.MaxHealth = 0;
+            war.MaxHealth = 0;
 
             war.ShowInfo();
             Console.WriteLine("__________________");
@@ -57,8 +58,10 @@ namespace Labs226_2021.Game
             rog.ShowInfo();
             Console.WriteLine("__________________");
 
+            Battle.WarriorVsArcher(war, rog);
+
             Console.WriteLine();
-            Battle.Battle1(war, rog);
+
 
 
 

@@ -4,32 +4,8 @@ using System.Text;
 
 namespace Labs226_2021.Game
 {
-    class Mage: Unit
+    class Mage: Health
     {
-
-        
-        private int _currentHealth;
-
-
-
-
-        public int Health
-        {
-            get 
-            { 
-                return _currentHealth = 2 * Con + (5 / 10 * Str); 
-            }
-            set 
-            {
-                int OldHealth = _currentHealth;
-                _currentHealth = value;
-                HealthEvent?.Invoke(OldHealth, value);
-            }
-        }
-
-
-
-
 
         public override int Str
         {
@@ -114,13 +90,10 @@ namespace Labs226_2021.Game
         public void ShowInfo()
         {
             Console.WriteLine($"Имя - {Name}");
-            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {Health}\nMana - {Mana}");
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {MaxHealth} \nMana - {Mana}");
             Console.WriteLine();
             Console.WriteLine($"Физическая Атака - {PAttack}\nФизическая Защита - {PDefence}");
         }
-
-        public delegate void HealthChange(int OldHealth, int NewHealth);
-        public event HealthChange HealthEvent;
 
     }
 }

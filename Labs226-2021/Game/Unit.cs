@@ -42,39 +42,21 @@ namespace Labs226_2021.Game
 
         public int Mana
         {
-            get { return _mana; }
-            set
-            {
-                _mana = _intl * 3;
-            }
+            get { return Intl * 3; }
+
         }
 
 
-        //public virtual void ShowInfo()
-        //{
-        //    Console.WriteLine($"Имя - {_name}");
-        //    Console.WriteLine($"Сила - {_str}\nЛовкость - {_dex}\nТелосложение - {_con}\nИнтеллект - {_intl}\nHP - {_currencyHealth}\nMana - {_mana}");
-        //    Console.WriteLine();
-        //    Console.WriteLine($"Физическая Атака - {_physicalAttack}\nФизическая Защита - {_physicalDefence}");
-        //}
-
-        public int PAttack
+        public double PAttack
         {
-            get { return _physicalAttack; }
-            set
-            {
-                _physicalAttack = _str * 3 + (5 / 10) * _dex;
+            get { return Str * 3 + (0.15 * Dex);}
 
-            }
         }
 
-        public int PDefence
+        public double PDefence
         {
-            get { return _physicalDefence; }
-            set
-            {
-                _physicalDefence = _con * (5 / 10) + _dex * 3;
-            }
+            get { return (Con * 0.05) + Dex * 3; }
+
         }
 
         public int MAttack
@@ -92,23 +74,5 @@ namespace Labs226_2021.Game
                 _magicDefence = _intl * 2;
             }
         }
-
-
-       
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
