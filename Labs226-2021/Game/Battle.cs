@@ -4,12 +4,16 @@ using System.Text;
 
 namespace Labs226_2021.Game
 {
-    class Battle: Unit
+    class Battle: Health
     {
 
         public static void WarriorVsArcher(Warrior war, Archer rog)
         {
-            Console.WriteLine(war.PAttack);
+
+            war.CurrentHealth -= 30;
+
+            
+
         }
 
     }

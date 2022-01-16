@@ -6,10 +6,10 @@ namespace Labs226_2021.Game
 {
     class Unit
     {
-        private int _str;
-        private int _dex;
-        private int _con;
-        private int _intl;
+        private double _str;
+        private double _dex;
+        private double _con;
+        private double _intl;
 
         private int _mana;
 
@@ -30,17 +30,17 @@ namespace Labs226_2021.Game
         public string Name { get => _name; set => _name = value; }
 
 
-        public virtual int Str
+        public virtual double Str
         {
             get => _str;
             set => _str = value;
         }
-        public virtual int Dex { get => _dex; set => _dex = value; }
-        public virtual int Con { get => _con; set => _con = value; }
-        public virtual int Intl { get => _intl; set => _intl = value; }
+        public virtual double Dex { get => _dex; set => _dex = value; }
+        public virtual double Con { get => _con; set => _con = value; }
+        public virtual double Intl { get => _intl; set => _intl = value; }
 
 
-        public int Mana
+        public double Mana
         {
             get { return Intl * 3; }
 
@@ -59,20 +59,8 @@ namespace Labs226_2021.Game
 
         }
 
-        public int MAttack
-        {
-            get { return _magicAttack; }
-            set { _magicAttack = _intl * 4; }
-        }
 
 
-        public int MDefence
-        {
-            get { return _magicDefence; }
-            set
-            {
-                _magicDefence = _intl * 2;
-            }
-        }
+
     }
 }

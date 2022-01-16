@@ -8,7 +8,7 @@ namespace Labs226_2021.Game
     {
 
 
-        public override int Str
+        public override double Str
         {
             get => base.Str;
             set
@@ -28,7 +28,7 @@ namespace Labs226_2021.Game
             }
         }
 
-        public override int Dex
+        public override double Dex
         {
             get => base.Dex;
             set
@@ -48,7 +48,7 @@ namespace Labs226_2021.Game
             }
         }
 
-        public override int Con
+        public override double Con
         {
             get => base.Con;
             set
@@ -68,7 +68,7 @@ namespace Labs226_2021.Game
             }
         }
 
-        public override int Intl
+        public override double Intl
         {
             get => base.Intl;
             set
@@ -88,10 +88,10 @@ namespace Labs226_2021.Game
             }
         }
 
-        public virtual void ShowInfo()
+        public void ShowInfo()
         {
             Console.WriteLine($"Имя - {Name}");
-            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {MaxHealth}  \nMana - {Mana}");
+            Console.WriteLine($"Сила - {Str}\nЛовкость - {Dex}\nТелосложение - {Con}\nИнтеллект - {Intl}\nHP - {CurrentHealth}  \nMana - {Mana}");
             Console.WriteLine();
             Console.WriteLine($"Физическая Атака - {PAttack}\nФизическая Защита - {PDefence}");
         }

@@ -31,23 +31,23 @@ namespace Labs226_2021.Game
             rog.Intl = 10;
 
 
-            Unit[] array = new Unit[3] { war, mag, rog };
+            Health[] array = new Health[3] { war, mag, rog };
 
 
             for (int i = 0; i < array.Length; i++)
             {
 
                 _ = array[i].PAttack;
-                _ = array[i].MAttack;
                 _ = array[i].PDefence;
-                _ = array[i].MDefence;
                 _ = array[i].Mana;
-                _ = array[i].MAttack;
+                _ = array[i].MaxHealth;
+                _ = array[i].CurrentHealth;
+                
             }
 
-            mag.MaxHealth = 0;
-            rog.MaxHealth = 0;
-            war.MaxHealth = 0;
+
+
+
 
             war.ShowInfo();
             Console.WriteLine("__________________");
@@ -58,7 +58,15 @@ namespace Labs226_2021.Game
             rog.ShowInfo();
             Console.WriteLine("__________________");
 
+
+
             Battle.WarriorVsArcher(war, rog);
+
+
+
+            war.ShowInfo();
+
+
 
             Console.WriteLine();
 
