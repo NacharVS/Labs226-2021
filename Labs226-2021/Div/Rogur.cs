@@ -229,8 +229,9 @@ namespace Labs226_2021.Div
         public void Berserk()
         {
 
-            _dex = _dex + _dex * 0.1;
-            _con = _con - _con * 0.5;
+            _dex  += _dex * 0.1;
+            _con -= _con * 0.5;
+            Console.WriteLine("Berserk activated");
         }
         public void AttackM()
         {
@@ -244,8 +245,9 @@ namespace Labs226_2021.Div
         }
         public void ShowInfo()
         {
-            Console.WriteLine($" Str - {Str} Dex - {Dex} Con - {Con} Int - {Int} DamageM - {DamagM} DamageP - {DamagP} Health - {Healing} Mana - {Mana} DefM - {DefenseM} DefP - {DefenseP} Lvl - {Lvl} CritChanceM - {CritCgantM} CritChanceP - {CritCgantP} CritdamagM - {CritdamagM} CritdamagP - {CritdamagP}");
-
+            Console.WriteLine();
+            Console.WriteLine($"Str - {Str} \nDex - {Dex} \nCon - {Con} \nInt - {Int} \nDamageM - {DamagM} \nDamageP - {DamagP} \nHealth - {Healing} \nMana - {Mana} \nDefM - {DefenseM} \nDefP - {DefenseP} \nLvl - {Lvl} \nCritChanceM - {CritCgantM} \nCritChanceP - {CritCgantP} \nCritdamagM - {CritdamagM} \nCritdamagP - {CritdamagP}");
+            Console.WriteLine();
         }
 
     }
