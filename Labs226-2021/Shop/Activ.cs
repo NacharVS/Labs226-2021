@@ -11,6 +11,8 @@ namespace Labs226_2021.Shop
 
         public static void Magaz()
         {
+            Console.BackgroundColor = ConsoleColor.Magenta;
+            Console.Clear();
             Product putter = new Product("Putter", 800.99, 10, "Larsen", "Самокат");
             Product bread = new Product("Bread", 40, 180, "China", "Самокат");
             Product shampoo = new Product("Shampoo", 200, 100, "Vietnam", "Самокат");
@@ -35,13 +37,27 @@ namespace Labs226_2021.Shop
             products.Add(chakchak);
             products.Add(teate);
 
+            int i = 1;
+
             foreach (var item in products)
             {
                 
 
-                Console.WriteLine($"Name: {item.nameOfProduct}, Price:{item.price}, Count: {item.countOfProduct}, Manufacturer: {item.manufacturer}");
+                Console.WriteLine($"{i} Name: {item.nameOfProduct}, Price:{item.price}, Count: {item.countOfProduct}, Manufacturer: {item.manufacturer}");
+                i++;
             }
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Э, что вы хоteate купить?");
+            Console.ResetColor();
+            
+            int vibor = int.Parse(Console.ReadLine());
 
+
+
+
+
+           
 
         }
 
