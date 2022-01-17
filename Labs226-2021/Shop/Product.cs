@@ -13,12 +13,13 @@ namespace Labs226_2021.Shop
         public string manufacturer;
         public string counterparty;
 
-        public Product(string nameOfProduct, double price, int countOfProduct, string manufacturer)
+        public Product(string nameOfProduct, double price, int countOfProduct, string manufacturer, string conterparty)
         {
             this.nameOfProduct = nameOfProduct;
             this.price = price;
             this.countOfProduct = countOfProduct;
             this.manufacturer = manufacturer;
+            this.counterparty = counterparty;
         }
 
         
