@@ -1,14 +1,17 @@
-﻿
-using System;
-using System.Threading;
-
-namespace Labs226_2021
+﻿class Product
 {
-    class Program
+    public string name;
+    public int count;
+    public double price;
+    public string manufacturer;
+    public int articulus;
+
+    public Product(string name, int count, double price, string manufacturer, int articulus)
     {
-        static void Main(string[] args)
-        {
-            Account.TinkoffBank();
-        }
+        this.name = name;
+        this.count = count;
+        this.price = price;
+        this.manufacturer = manufacturer;
+        this.articulus = articulus;
     }
 }
