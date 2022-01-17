@@ -1,4 +1,5 @@
 ﻿using Labs226_2021.Strategy;
+using Labs226_2021.Shop;
 using System;
 using System.Threading;
 
@@ -8,7 +9,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Account.Sber();
+            Activ.Magaz();
         }
     }
 }
