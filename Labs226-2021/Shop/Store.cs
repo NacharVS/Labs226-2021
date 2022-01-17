@@ -56,7 +56,7 @@ namespace Labs226_2021.Shop
             ProductList(products);
             Console.WriteLine();
 
-            ProductSelection(YesNo, Yes, products, tovar, quantity ,basket);
+            ProductSelection(YesNo, Yes, products, tovar, quantity, basket);
 
 
 
@@ -69,6 +69,8 @@ namespace Labs226_2021.Shop
 
         public static void ProductSelection(int YesNo, int Yes, List<Product> products, int tovar, int quantity, List<Product> basket)
         {
+            List<int> quantitylist = new List<int>();
+
             while (YesNo == Yes)
             {
                 Console.Clear();
@@ -81,6 +83,7 @@ namespace Labs226_2021.Shop
                 quantity = int.Parse(Console.ReadLine());
                 if (quantity <= products[tovar].countOfProduct)
                 {
+                    quantitylist.Add(quantity);
                     basket.Add(products[tovar]);
                     products[tovar].countOfProduct -= quantity;
                 }
@@ -100,11 +103,26 @@ namespace Labs226_2021.Shop
                 Console.Clear();
             }
 
-            Console.WriteLine("Basket: ");
+            int num = 1;
+            
+
+
+
+
+
+            Console.WriteLine("Корзина: ");
+            Console.WriteLine("  Цена     Кол-во    Итог");
+            Console.WriteLine("============================");
             foreach (Product product in basket)
             {
-                Console.WriteLine(product.nameOfProduct);
+
+                int numQ = num - 1;
+                Console.WriteLine($"{num}. {product.nameOfProduct}");
+                Console.WriteLine($"  {product.price}       {quantitylist[numQ]}       {product.price * quantitylist[numQ]}");
+                num++;
+
             }
+
         }
 
         public static void ProductList(List<Product> products)
