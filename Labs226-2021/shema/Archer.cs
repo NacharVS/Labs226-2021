@@ -9,5 +9,9 @@ namespace Labs226_2021.shema
         public Archer() : base("Archer", 20, 7, 6)
         {
         }
+        public void Shooting()
+        {
+            Console.WriteLine($"Archer is shooting and delivery damage {damage} to someone ");
+        }
     }
 }

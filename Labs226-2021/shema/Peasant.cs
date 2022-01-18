@@ -11,6 +11,13 @@ namespace Labs226_2021.shema
         {
             carryWeight = 20;
         }
-
+        public void work()
+        {
+            Console.WriteLine($"Peasant is working..");
+            Console.WriteLine($"Peasant is working...");
+            Console.WriteLine($"Peasant is working.....");
+            Console.WriteLine($"Peasant is full");
+            carryWeight = 0;
+        }
     }
 }

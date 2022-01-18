@@ -10,5 +10,9 @@ namespace Labs226_2021.shema
         {
 
         }
+        public void spellcast()
+        {
+            Console.WriteLine($"Mage is casting spell and deal damage {damage} to something ");
+        }
     }
 }

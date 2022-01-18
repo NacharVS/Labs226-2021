@@ -8,7 +8,6 @@ namespace Labs226_2021.shema
     {
         public Warior() : base("Warior", 65, 3, 5)
         {
-            
 
         }
     }
