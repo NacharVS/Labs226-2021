@@ -36,7 +36,9 @@ namespace ConsoleApp25
             Product armchair = new Product("armchair", 1240, 8000, "China","Wildberies");
             Product sofa = new Product("sofa", 4000, 700, "China","Ozon");
             Product boots = new Product("boots", 4950, 1000, "China","Bershka");
-            Product backpack = new Product("backpack", 40000, 100, "China","Shein");
+           
+
+            
 
 
 
