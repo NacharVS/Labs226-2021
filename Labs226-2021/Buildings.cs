@@ -4,11 +4,10 @@ using System.Text;
 
 namespace ConsoleApp19
 {
-    class Program
+    class Buildings : Unit
     {
-        static void Main(string[] args) 
-        { 
-
+        public Buildings(string type, int health) : base(type, health)
+        {
 
         }
     }
