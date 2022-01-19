@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Healer: MovableUnits
+    class Barrack : Building
     {
-        public Healer() : base("Healer", 30, 4)
+        public Barrack(string type, int health) : base(type, health)
         {
-            
+
         }
     }
 }
