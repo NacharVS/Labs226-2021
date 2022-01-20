@@ -8,9 +8,9 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Archer ark = new Archer();
-            Peasant pes = new Peasant();
-            Mage mag = new Mage();
+            //Archer ark = new Archer();
+            //Peasant pes = new Peasant();
+            //Mage mag = new Mage();
 
             //Warior warior = new Warior();
             //Mage mag = new Mage();
