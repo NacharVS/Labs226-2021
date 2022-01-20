@@ -4,27 +4,17 @@ using System.Text;
 
 namespace Labs226_2021.Strategy
 {
-    class Healer: Unit
+    class Healer : Unit
     {
-        public Healer(string type, int mindamage, int maxdamage, int speed, int hp, int aspeed, string located)
+        public Healer(string type, int health) : base(type, health)
         {
-            base.typeUnit = type;
-            base.mindamage = mindamage;
-            base.maxdamage = maxdamage;
-            base.speed = speed;
-            base.health = hp;
-            base.attackSpeed = aspeed;
-            base.located = located;
+
         }
 
-        public void Produce()
+        public void Healing()
         {
-            Console.WriteLine($"Healer лечит себя...");
+            Console.WriteLine($"{type}"); 
         }
 
-        public void CancelAction()
-        {
-            Console.WriteLine($"Healer закончил себя лечить...");
-        }
     }
 }

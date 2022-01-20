@@ -9,7 +9,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Activ.Magaz();
+            Strategy.Activate.Activ();
         }
     }
 }

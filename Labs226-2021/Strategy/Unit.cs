@@ -6,41 +6,30 @@ namespace Labs226_2021.Strategy
 {
     class Unit
     {
-        public string typeUnit;
+        public string type;
         public int health;
-        public int mindamage;
-        public int maxdamage;
-        public int speed;
-        public int attackSpeed;
-        public string located;
+        public int maxHealth;
 
-
-
-
-        public void Attack()
+        public Unit(string type, int health)
         {
-            int hit = new Random().Next(mindamage, maxdamage);
-            Console.WriteLine($"{typeUnit} нанёс {hit} урона");
+            this.type = type;
+            this.health = health;
+            this.maxHealth = health;
         }
 
-        public void Moving()
+        public void Creation()
         {
-            int walking = speed;
-            Console.WriteLine($"{typeUnit} runs at a speed of {walking}");
+            System.Console.WriteLine($"{type} is created");
+        }
+        public void Termination()
+        {
+            System.Console.WriteLine($"{type} is terminated");
         }
 
-        public void HoldPositon()
+        public void UnitInfo()
         {
-            string position = located;
-            Console.WriteLine($"{typeUnit} stands on {position} ");
+            System.Console.WriteLine($"Unit: {type}. Health: {health}.");
         }
 
-        public void Death()
-        {
-            if (health == 0)
-            {
-                Console.WriteLine($"{typeUnit} died");
-            }
-        }
     }
 }
