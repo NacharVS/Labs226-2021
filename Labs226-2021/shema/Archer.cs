@@ -6,7 +6,7 @@ namespace Labs226_2021.shema
 {
     class Archer : Moveble
     {
-        public Archer() : base("Archer", 20, 7, 6)
+        public Archer() : base("Archer", 20, 7, 2)
         {
         }
         public void Shooting()

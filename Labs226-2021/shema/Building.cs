@@ -7,9 +7,13 @@ namespace Labs226_2021.shema
     class Building : Unit
     {
         public int PhysicalResist;
-        public Building(string type, int health , int  PhysicalResistParam) : base(type, health)
+        public int NowInBuilding;
+        public int Maxunits;
+        public Building(string type, int health , int  PhysicalResistParam, int NowInBuildingParam, int MaxunitsParam) : base(type, health)
         {
             PhysicalResist = PhysicalResistParam;
+            NowInBuilding = NowInBuildingParam;
+            Maxunits = MaxunitsParam;
         }
         public override void Info()
         {
