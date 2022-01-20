@@ -31,5 +31,9 @@ namespace Labs226_2021.shema
         {
             System.Console.WriteLine($"Unit: {type}. Health: {health}.");
         }
+        public virtual void Info()
+        {
+            Console.WriteLine($"type - {type}health - {health} maxHealth - {maxHealth}");
+        }
     }
 }

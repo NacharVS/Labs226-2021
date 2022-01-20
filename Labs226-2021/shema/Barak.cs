@@ -6,12 +6,12 @@ namespace Labs226_2021.shema
 {
     class Barak : Building
     {
-        public Barak(string type, int health) : base(type, health)
+        public Barak(string type, int health) : base("Barak", 75 , 50)
         {
         }
-        public void training()
+        public void training(string type)
         {
-
+            Console.WriteLine($"Barak is training {type}");
         }
     }
 }

@@ -21,5 +21,9 @@ namespace Labs226_2021.shema
         {
             Console.WriteLine($"{type} is moving");
         }
+        public override void Info()
+        {
+            Console.WriteLine($"type - {type}health - {health} maxHealth - {maxHealth} walkingSpeed - {walkingSpeed} damage - {damage} ");
+        }
     }
 }

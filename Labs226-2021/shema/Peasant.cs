@@ -19,5 +19,9 @@ namespace Labs226_2021.shema
             Console.WriteLine($"Peasant is full");
             carryWeight = 0;
         }
+        public override void Info()
+        {
+            Console.WriteLine($"type - {type}health - {health} maxHealth - {maxHealth} walkingSpeed - {walkingSpeed} damage - {damage} carryWeight - {carryWeight}");
+        }
     }
 }
