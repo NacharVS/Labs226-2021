@@ -12,7 +12,7 @@ namespace MadeInAntoshaa
             int[] basket = new int[10];
 
 
-            Product xn = new Product("xan", 1000, 64, "Ktits", 88001234);
+            Product xn = new Product("xn", 1000, 64, "Ktits", 88001234);
             Product banana = new Product("banana", 20, 600, "Africa", 11223344);
             Product cake = new Product("cake", 500, 10, "CakeWorld", 22334455);
             Product mouse = new Product("mouse", 5000, 100, "DNS", 00000001);
@@ -23,12 +23,12 @@ namespace MadeInAntoshaa
             Product knigga = new Product("knigga", 777, 666, "kNIGGASS", 22334400);
             Product sofa = new Product("sofa", 7800, 77, "furniture", 22334333);
             List<Product> products = new List<Product>();
-            products.Add(xanax);
+            products.Add(xn);
             products.Add(banana);
             products.Add(cake);
             products.Add(mouse);
             products.Add(apple);
-            products.Add(bigpenis);
+            products.Add(bigpen);
             products.Add(hleb);
             products.Add(bionicle);
             products.Add(knigga);
