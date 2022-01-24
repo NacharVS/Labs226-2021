@@ -12,12 +12,12 @@ namespace MadeInAntoshaa
             int[] basket = new int[10];
 
 
-            Product xanax = new Product("xanax", 1000, 64, "Ktits", 88001234);
+            Product xn = new Product("xan", 1000, 64, "Ktits", 88001234);
             Product banana = new Product("banana", 20, 600, "Africa", 11223344);
             Product cake = new Product("cake", 500, 10, "CakeWorld", 22334455);
             Product mouse = new Product("mouse", 5000, 100, "DNS", 00000001);
             Product apple = new Product("apple", 5, 600, "Marketplace", 00000002);
-            Product bigpenis = new Product("bigpenis", 700, 7, "AnalShops", 22334498);
+            Product bigpen = new Product("bigpen", 700, 7, "Anashop", 22334498);
             Product hleb = new Product("hleb", 5000, 1000, "hlebaa", 22334432);
             Product bionicle = new Product("bionicle", 400, 40, "lego", 22334476);
             Product knigga = new Product("knigga", 777, 666, "kNIGGASS", 22334400);
