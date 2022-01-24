@@ -9,10 +9,13 @@ namespace Labs226_2021
         static void Main(string[] args) 
         {
             Archer archer = new Archer();
-            archer.type = "ELF";
-            ArcherTower archerTower = new ArcherTower("archerTower", 100, 0);
-            archerTower.LoadArchers(archer);
-            archerTower.showinfo();
+            archer.type = "ELF ";
+            Archer archer1 = new Archer();
+            archer1.type = "Hem ";
+            //ArcherTower archerTower = new ArcherTower("archerTower", 100, 0);
+            //archerTower.LoadArchers(archer);
+            //archerTower.showinfo();
+            archer.Shooting(archer, archer1);
            
         }
        

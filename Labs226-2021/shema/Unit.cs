@@ -10,7 +10,7 @@ namespace Labs226_2021.shema
         public string type;
         public int health;
         public int maxHealth;
-
+       
         public Unit(string type, int health)
         {
             this.type = type;
