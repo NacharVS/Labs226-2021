@@ -13,8 +13,7 @@ namespace Labs226_2021
             ArcherTower archerTower = new ArcherTower("archerTower", 100, 0);
             archerTower.LoadArchers(archer);
             archerTower.showinfo();
-            archerTower.LoadArchers(archer);
-            archerTower.showinfo();
+           
         }
        
         

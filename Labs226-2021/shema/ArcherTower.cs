@@ -7,9 +7,10 @@ namespace Labs226_2021.shema
     class ArcherTower : Building
     {
 
-        public ArcherTower(string type, int health, int NowInTowerParam) : base("ArcherTower", 100, 75, 0, 5)
+        public ArcherTower(string type, int health, int NowInTowerParam ) : base("ArcherTower", 100, 75, 0, 5)
         {
             NowInBuilding = NowInTowerParam;
+           
         }
         public void showinfo()
         {
@@ -34,7 +35,7 @@ namespace Labs226_2021.shema
             string f = "f";
             if (archer.type != a && archer.type != b && archer.type != c && archer.type != d && archer.type != d && archer.type != f)
             {
-
+                
 
                 if (a == "a")
                 {
@@ -102,7 +103,6 @@ namespace Labs226_2021.shema
                     }
 
                 }
-
                 else
                 {
                     Console.WriteLine("Этот арчер уже в башне");

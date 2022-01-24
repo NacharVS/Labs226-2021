@@ -6,6 +6,7 @@ namespace Labs226_2021.shema
 {
     class Building : Unit
     {
+      
         public int PhysicalResist;
         public int NowInBuilding;
         public int Maxunits;
