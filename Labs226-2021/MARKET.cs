@@ -26,10 +26,10 @@ namespace Labs226_2021
 
                 Console.WriteLine($"Name: {item.name}, Price:{item.price}, Count: {item.number}, Manufacturer: {item.nameCreator}");
             }
-            putter.SubNum( );
-            bread.SubNum();
-            shampoo.SubNum();
-            iphone.SubNum();
+            putter.Bucket();
+            bread.Bucket();
+            shampoo.Bucket();
+            iphone.Bucket();
 
 
             foreach (var item in products)

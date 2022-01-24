@@ -21,15 +21,32 @@ namespace Labs226_2021.Shop
 
         }
 
-       public void SubNum()
-        {
-            int storage = int.Parse(Console.ReadLine());
-            number -= storage;
 
-        }
+
+        //public void SubNum()
+        //{
+        //    int storage =buck ;
+        //    number -= storage;
+
+        //}
         public void ShowInfo()
         {
            
+        }
+        public void Bucket()
+        {
+            int buck = int.Parse(Console.ReadLine());
+           
+                double stack = price * buck;
+                Console.WriteLine($"{buck } {name} цена {stack}");
+                Console.WriteLine("Продолжить покупки?Ввод 1");
+                int a = int.Parse(Console.ReadLine());
+                if (a == 1)
+                {
+                    int storage = buck;
+                    number -= storage;
+                }
+            
         }
     }
 }
