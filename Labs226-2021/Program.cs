@@ -8,10 +8,15 @@ namespace Labs226_2021
     {
         static void Main(string[] args) 
         {
+            Archer archer = new Archer();
+            archer.type = "ELF";
             ArcherTower archerTower = new ArcherTower("archerTower", 100, 0);
-            archerTower.LoadArchers(5);
+            archerTower.LoadArchers(archer);
+            archerTower.showinfo();
+            archerTower.LoadArchers(archer);
             archerTower.showinfo();
         }
+       
         
 
     }

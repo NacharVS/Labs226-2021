@@ -8,10 +8,12 @@ namespace Labs226_2021.shema
     {
         public int walkingSpeed;
         public int damage;
-        public Moveble (string type, int health, int walkingSpeedParam , int damageParam) : base(type, health)
+       
+        public Moveble (string type,  int health, int walkingSpeedParam , int damageParam) : base(type, health)
         {
             walkingSpeed = walkingSpeedParam;
             damage = damageParam;
+         
         }
         public void Atack()
         {
