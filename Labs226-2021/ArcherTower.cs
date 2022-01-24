@@ -9,6 +9,6 @@ namespace ConsoleApp19
         public ArcherTower(string type, int health) : base(type, health)
         {
 
-        }
+        }    
     }
 }
