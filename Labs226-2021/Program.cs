@@ -1,5 +1,4 @@
 ﻿using Labs226_2021.Interfaces;
-
 using Labs226_2021.Strategy;
 using System;
 using System.Collections.Generic;
