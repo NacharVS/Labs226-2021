@@ -12,9 +12,10 @@ namespace Labs226_2021.Interfaces
         public IMleeWeapon _warriosWeapon;
         public IRangeWeapon _warriorsRangeWeapon;
 
-        public Warrior(IMleeWeapon warriosWeapon)
+        public Warrior(IMleeWeapon warriosWeapon, IRangeWeapon warriorsRangeWeapon)
         {
             _warriosWeapon = warriosWeapon;
+            _warriorsRangeWeapon = warriorsRangeWeapon;
         }
 
         public void ChangeWeapon(IMleeWeapon newWeapon)
@@ -30,7 +31,7 @@ namespace Labs226_2021.Interfaces
             }
             else
             {
-                Console.WriteLine("перешел на ближный бой...");
+                Console.WriteLine("начинают атаку в ближнем бою...");
                 _warriosWeapon.Hit();
             }
 

@@ -13,7 +13,7 @@ namespace Labs226_2021.Interfaces
 
         public void Hit()
         {
-            Console.WriteLine($"Меч делает 'вжух-вжух' и наносит {Damage} со скоростью {AttackSpeed} ");
+            Console.WriteLine($"Меч делает 'вжух-вжух' и наносит {Damage} урона со скоростью {AttackSpeed} ");
         }
     }
 }

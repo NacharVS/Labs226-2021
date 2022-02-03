@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Labs226_2021.Interfaces
 {
-    interface Blacksmith
+    class Blacksmith
     {
         public void RepairItem(IRepairible item)
         {
