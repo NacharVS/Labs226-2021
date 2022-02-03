@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Labs226_2021.Interfaces
 {
-    interface IRangeWeapon 
+    interface IRangeWeapon
     {
         int Damage { get; set; }
-        int AttackSpeed { get; set; }
+        int Arrow { get; set; }
 
         void Hit();
     }

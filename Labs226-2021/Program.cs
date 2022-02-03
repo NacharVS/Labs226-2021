@@ -10,7 +10,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Warrior Andrey = new Warrior(new Club());
+            Warrior Andrey = new Warrior(new Club(), new ShortBow());
             Blacksmith Kuzma = new Blacksmith();
             Andrey.Attack();
             var weapon2 = Kuzma.CraftStoneAxe();

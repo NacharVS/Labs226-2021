@@ -13,7 +13,8 @@ namespace Labs226_2021.Interfaces
 
         public void Hit()
         {
-            Console.WriteLine($"StoneAxe makes 'chop-chop' with {Damage} and {AttackSpeed} ");
+            
+            Console.WriteLine($"StoneAxe makes 'chop-chop' with {Damage} and  {AttackSpeed} ");
         }
     }
 }
