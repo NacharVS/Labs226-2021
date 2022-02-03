@@ -1,4 +1,5 @@
 ﻿using Labs226_2021.Interfaces;
+
 using Labs226_2021.Strategy;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,9 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Warrior Andrey = new Warrior(new Club());
+            Warrior Andrey = new Warrior(new Club(), new ShortBow());
             Blacksmith Kuzma = new Blacksmith();
+
             Andrey.Attack();
             var weapon2 = Kuzma.CraftStoneAxe();
             Andrey.ChangeWeapon(weapon2);
@@ -32,9 +34,6 @@ namespace Labs226_2021
 
         }
 
-        //static void ShowMessage(double balance, double old, double diff)
-        //{
-        //    Console.WriteLine($"Balance has changed! Old Balance {old} Current balance {balance}. Difference {diff}");
-        //}
+       
     }
 }
