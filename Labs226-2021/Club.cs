@@ -11,9 +11,6 @@ namespace Labs226_2021.Interfaces
         public int AttackSpeed { get => 4; set => throw new NotImplementedException(); }
         int IRepairible.durability { get => durability; set => durability = value; }
 
-        public void Hit()
-        {
-            Console.WriteLine($"Club makes 'tuk-tuk' with {Damage} and {AttackSpeed} ");
-        }
+        public void Hit() => Console.WriteLine($"Club makes 'tuk-tuk' with {Damage} and {AttackSpeed} ");
     }
 }

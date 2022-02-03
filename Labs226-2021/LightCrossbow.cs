@@ -12,7 +12,7 @@ namespace Labs226_2021.Interfaces
         public void Hit()
         {
             HaveArrow -= 1;
-            Console.WriteLine($"Bow makes 'dthin' with {Damage} and have {HaveArrow} ");
+            Console.WriteLine($"Bow makes 'fiu' with {Damage} and have {HaveArrow} ");
         }
     }
 }
