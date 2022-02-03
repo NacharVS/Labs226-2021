@@ -13,7 +13,7 @@ namespace Labs226_2021.Interfaces
 
         public void Hit()
         {
-            Console.WriteLine($"Club makes 'tuk-tuk' with {Damage} and {AttackSpeed} ");
+            Console.WriteLine($"Дубинка делает 'тук-тук' нанося {Damage} урона сос коростью {AttackSpeed} ");
         }
     }
 }

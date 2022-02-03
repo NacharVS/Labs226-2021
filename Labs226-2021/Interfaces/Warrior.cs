@@ -24,7 +24,16 @@ namespace Labs226_2021.Interfaces
 
         public void Attack()
         {
-            _warriosWeapon.Hit();
+            if (_warriorsRangeWeapon.Arrow > 0)
+            {
+                _warriorsRangeWeapon.Hit();
+            }
+            else
+            {
+                Console.WriteLine("перешел на ближный бой...");
+                _warriosWeapon.Hit();
+            }
+
         }
     }
 }
