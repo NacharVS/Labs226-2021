@@ -15,6 +15,10 @@ namespace Labs226_2021.Interfaces
         {
             return new IronSword();
         }
+        public LightCrossbow CraftLightCrossbow()
+        {
+            return new LightCrossbow();
+        }
 
         public void RepairItem(IRepairible item)
         {
