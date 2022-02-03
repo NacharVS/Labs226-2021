@@ -12,9 +12,10 @@ namespace Labs226_2021.Interfaces
         public IMleeWeapon _warriosWeapon;
         public IRangeWeapon _warriorsRangeWeapon;
 
-        public Warrior(IMleeWeapon warriosWeapon)
+        public Warrior(IMleeWeapon warriosWeapon, IRangeWeapon warriorsRangeWeapon)
         {
             _warriosWeapon = warriosWeapon;
+            _warriorsRangeWeapon = warriorsRangeWeapon;
         }
 
         public void ChangeWeapon(IMleeWeapon newWeapon)
@@ -24,7 +25,14 @@ namespace Labs226_2021.Interfaces
 
         public void Attack()
         {
-            _warriosWeapon.Hit();
+            if (_warriorsRangeWeapon.Arrows > 0)
+            {
+                _warriorsRangeWeapon.Hit();
+            }
+            else
+            {
+                _warriosWeapon.Hit();
+            }
         }
     }
 }
