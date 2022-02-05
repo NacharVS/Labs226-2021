@@ -8,6 +8,7 @@ namespace Labs226_2021.Interfaces
     {
 
         private int _durability = 50;
+        
         public int Damage { get => 9; set => throw new NotImplementedException(); }
         public int AttackSpeed { get => 8; set => throw new NotImplementedException(); }
         public int durability 

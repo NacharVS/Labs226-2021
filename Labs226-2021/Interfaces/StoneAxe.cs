@@ -11,8 +11,8 @@ namespace Labs226_2021.Interfaces
 
         public int Damage { get => 8; set => throw new NotImplementedException(); }
         public int AttackSpeed { get => 4; set => throw new NotImplementedException(); }
-        public int durability
-        {
+         public int durability 
+        { 
             get => _durability;
             set
             {
@@ -23,7 +23,7 @@ namespace Labs226_2021.Interfaces
                 else
                     _durability = value;
             }
-
+            
         }
 
         public void Hit()
