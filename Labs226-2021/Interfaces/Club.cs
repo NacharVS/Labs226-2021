@@ -6,10 +6,10 @@ namespace Labs226_2021.Interfaces
 {
     class Club : IMleeWeapon, IRepairible
     {
-        public int durability;
+        public int _durability;
         public int Damage { get => 6; set => throw new NotImplementedException(); }
         public int AttackSpeed { get => 4; set => throw new NotImplementedException(); }
-        int IRepairible.durability { get => durability; set => durability = value; }
+        public int durability { get => _durability; set => _durability = value; }
 
         public void Hit()
         {

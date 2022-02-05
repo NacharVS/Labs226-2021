@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Labs226_2021.Interfaces
 {
-    interface IMleeWeapon
+    interface IMleeWeapon: IRepairible
     {
         int Damage { get; set; }
         int AttackSpeed { get; set; }

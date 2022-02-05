@@ -1,4 +1,5 @@
 ﻿using System;
+using Labs226_2021.Interfaces;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,19 +13,36 @@ namespace Labs226_2021.Interfaces
         public IMleeWeapon _warriosWeapon;
         public IRangeWeapon _warriorsRangeWeapon;
 
-        public Warrior(IMleeWeapon warriosWeapon)
+        public Warrior(IMleeWeapon warriosWeapon, IRangeWeapon warriorsRangeWeapon)
         {
             _warriosWeapon = warriosWeapon;
+            _warriorsRangeWeapon = warriorsRangeWeapon;
         }
 
-        public void ChangeWeapon(IMleeWeapon newWeapon)
+        public void ChangeMleeWeapon(IMleeWeapon newWeapon)
         {
             _warriosWeapon = newWeapon;
+
+        }
+
+        public void ChangeRangeWeapon(IRangeWeapon newWeapon)
+        {
+            _warriorsRangeWeapon = newWeapon;
         }
 
         public void Attack()
         {
-            _warriosWeapon.Hit();
+            if (_warriorsRangeWeapon.Arrows > 0)
+            {
+                _warriorsRangeWeapon.Hit();
+            }
+            else
+            {
+                
+                _warriosWeapon.Hit();
+                _warriosWeapon.durability = _warriosWeapon.durability - 10;
+                
+            }
         }
     }
 }
