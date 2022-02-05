@@ -7,12 +7,13 @@ namespace Labs226_2021.Interfaces
     class IronSword : IMleeWeapon, IRepairible
     {
 
-        private int _durability = 50;
-        
+        private static int _maxDurability = 50;
+        private int _durability = _maxDurability;
+
         public int Damage { get => 9; set => throw new NotImplementedException(); }
         public int AttackSpeed { get => 8; set => throw new NotImplementedException(); }
         public int durability 
-        { 
+        {
             get => _durability;
             set
             {
@@ -20,10 +21,15 @@ namespace Labs226_2021.Interfaces
                 {
                     _durability = 0;
                 }
+                else if (value >= _maxDurability)
+                {
+                    _durability = _maxDurability;
+
+                }
                 else
                     _durability = value;
             }
-            
+
         }
 
         public void Hit()

@@ -7,11 +7,13 @@ namespace Labs226_2021.Interfaces
     class StoneAxe : IMleeWeapon, IRepairible
     {
 
-        private int _durability = 50;
+        private static int _maxDurability = 50;
+        private int _durability = _maxDurability;
+
 
         public int Damage { get => 8; set => throw new NotImplementedException(); }
         public int AttackSpeed { get => 4; set => throw new NotImplementedException(); }
-         public int durability 
+        public int durability 
         { 
             get => _durability;
             set
@@ -19,6 +21,11 @@ namespace Labs226_2021.Interfaces
                 if (_durability < 0)
                 {
                     _durability = 0;
+                }
+                else if (value >= _maxDurability)
+                {
+                    _durability = _maxDurability;
+
                 }
                 else
                     _durability = value;
