@@ -1,4 +1,5 @@
 ﻿using Labs226_2021.Interfaces;
+using Labs226_2021.MongoExamples;
 using Labs226_2021.Shop;
 using Labs226_2021.Strategy;
 using System;
@@ -11,7 +12,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Interfaces.Activate.Activ();
+            MongoExtensions.AddToDataBase(new User("Ivan", 50));
         }
 
     }
