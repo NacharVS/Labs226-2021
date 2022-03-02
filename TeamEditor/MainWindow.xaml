@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <GroupBox HorizontalAlignment="Left" Height="207" Header="Users" Margin="20,10,0,0" VerticalAlignment="Top" Width="159">
+            <Grid Height="178">
+                <ListBox x:Name="listUsers" HorizontalAlignment="Left" Height="164" VerticalAlignment="Top" Width="143" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="0,0,0,0" ClipToBounds="True" Loaded="listUsers_Loaded"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox HorizontalAlignment="Left" Height="170" Header="Registrations" Margin="20,238,0,0" VerticalAlignment="Top" Width="159" BorderThickness="2,2,2,2">
+            <Grid>
+                <Button x:Name="bttSaveUser" Content="Save" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="127" Click="bttSaveUser_Click"/>
+                <TextBox x:Name="txtNameUser" HorizontalAlignment="Center" Height="22" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" UndoLimit="20"/>
+                <TextBox x:Name="txtSurnameUser" HorizontalAlignment="Center" Height="23" Margin="0,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" UndoLimit="20"/>
+                <TextBox x:Name="txtPatronymicuUser" HorizontalAlignment="Center" Height="22" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" UndoLimit="9"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GroupBoxTeam" HorizontalAlignment="Left" Height="207" Header="Team" Margin="209,10,0,0" VerticalAlignment="Top" Width="252">
+            <Grid Height="178">
+                <ListBox x:Name="listOneTeam" HorizontalAlignment="Left" Height="164" VerticalAlignment="Top" Width="230" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="0,0,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox HorizontalAlignment="Left" Height="170" Header="Button" Margin="209,238,0,0" VerticalAlignment="Top" Width="159" BorderThickness="2,2,2,2">
+            <Grid Margin="0,0,-2,0" Height="125">
+                <Button x:Name="bttAddToTeam" Content="Add" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="129" Height="27" Click="bttAddToTeam_Click"/>
+                <Button x:Name="bttRandomAddToTeam" Content="Random" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="129" Height="28" Click="bttRandomAddToTeam_Click"/>
+                <Button Content="Button" HorizontalAlignment="Center" Margin="0,79,0,0" VerticalAlignment="Top" Width="129" Height="27"/>
+            </Grid>
+        </GroupBox>
+
+
 
     </Grid>
 </Window>
