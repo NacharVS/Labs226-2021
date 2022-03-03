@@ -112,8 +112,6 @@ namespace TeamEditor
                     array[k] = p;
                     k++;
                 }
-
-
             }
 
             bttRandomAddToTeam.Content = $"{array[0]}{array[1]}{array[2]}{array[3]}{array[4]}";
@@ -135,6 +133,11 @@ namespace TeamEditor
             }
 
 
+        }
+
+        private void bttClearTeam_Click(object sender, RoutedEventArgs e)
+        {
+            listOneTeam.Items.Clear();
         }
     }
 }

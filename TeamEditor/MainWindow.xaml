@@ -26,11 +26,11 @@
                 <ListBox x:Name="listOneTeam" HorizontalAlignment="Left" Height="164" VerticalAlignment="Top" Width="230"  BorderThickness="0,0,0,0"/>
             </Grid>
         </GroupBox>
-        <GroupBox HorizontalAlignment="Left" Height="170" Header="Button" Margin="209,238,0,0" VerticalAlignment="Top" Width="159" BorderThickness="2,2,2,2">
+        <GroupBox HorizontalAlignment="Left" Height="149" Header="Button" Margin="209,238,0,0" VerticalAlignment="Top" Width="159" BorderThickness="2,2,2,2">
             <Grid Margin="0,0,-2,0" Height="125">
                 <Button x:Name="bttAddToTeam" Content="Add" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="129" Height="27" Click="bttAddToTeam_Click"/>
                 <Button x:Name="bttRandomAddToTeam" Content="Random" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="129" Height="28" Click="bttRandomAddToTeam_Click"/>
-                <Button Content="Button" HorizontalAlignment="Center" Margin="0,79,0,0" VerticalAlignment="Top" Width="129" Height="27"/>
+                <Button x:Name="bttClearTeam" Content="Clear" HorizontalAlignment="Center" Margin="0,79,0,0" VerticalAlignment="Top" Width="129" Height="27" Click="bttClearTeam_Click"/>
             </Grid>
         </GroupBox>
     </Grid>
