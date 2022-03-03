@@ -6,6 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "TeamEditor/1.0.0": {
+        "dependencies": {
+          "MongoDB.Bson": "2.14.1",
+          "MongoDB.Driver": "2.14.1"
+        },
+        "runtime": {
+          "TeamEditor.dll": {}
+        }
+      },
       "DnsClient/1.4.0": {
         "runtime": {
           "lib/netstandard2.1/DnsClient.dll": {
@@ -135,6 +144,11 @@
     }
   },
   "libraries": {
+    "TeamEditor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "DnsClient/1.4.0": {
       "type": "package",
       "serviceable": true,
