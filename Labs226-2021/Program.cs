@@ -12,7 +12,7 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            MongoExtensions.AddToDataBase(new Admin("Dinar", 17));
+            Console.WriteLine("DSDS");
         }
 
     }
