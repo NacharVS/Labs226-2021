@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MongoDB.Driver;
 
 namespace TeamEditor
 {
@@ -40,8 +41,37 @@ namespace TeamEditor
             txtSurnameUser.Clear();
             txtPatronymicuUser.Clear();
 
-            RefreshList();
+            RefreshListUser();
         }
+
+        private void bttSaveTeamToTeams_Click(object sender, RoutedEventArgs e)
+        {
+            if (listOneTeam.Items.Count < 5)
+                MessageBox.Show("Your team has no players!");
+            else
+            {
+                string teamName = txtTeamName.Text;
+                string player1 = listOneTeam.Items[0].ToString();
+                string player2 = listOneTeam.Items[1].ToString();
+                string player3 = listOneTeam.Items[2].ToString();
+                string player4 = listOneTeam.Items[3].ToString();
+                string player5 = listOneTeam.Items[4].ToString();
+
+                MongoExtensions.AddToDataBaseTeam(new Team(teamName, player1, player2, player3, player4, player5));
+
+                txtNameUser.Clear();
+                listOneTeam.Items.Clear();
+
+                List<string> listbuf = new List<string>();
+                foreach (Team Item in MongoExtensions.GetListTeam())
+                {
+                    listbuf.Add($"{Item.TeamName}");
+                }
+
+                listTeams.ItemsSource = listbuf;
+            } 
+        }
+
 
 
         private void bttAddToTeam_Click(object sender, RoutedEventArgs e)
@@ -69,10 +99,11 @@ namespace TeamEditor
 
         private void listUsers_Loaded(object sender, RoutedEventArgs e)
         {
-            RefreshList();
+            RefreshListUser();
+            RefreshListTeams();
         }
 
-        private void RefreshList()
+        private void RefreshListUser()
         {
 
             List<string> listbuf = new List<string>();
@@ -82,6 +113,16 @@ namespace TeamEditor
             }
 
             listUsers.ItemsSource = listbuf;
+        }
+        private void RefreshListTeams()
+        {
+            List<string> listbuf = new List<string>();
+            foreach (Team Item in MongoExtensions.GetListTeam())
+            {
+                listbuf.Add($"{Item.TeamName}");
+            }
+
+            listTeams.ItemsSource = listbuf;
         }
 
         private void bttRandomAddToTeam_Click(object sender, RoutedEventArgs e)
@@ -94,7 +135,7 @@ namespace TeamEditor
             int k = 0;
             int p = 0;
 
-            while (k < listUsers.Items.Count)
+            while (k < 5)
             {
                 p = randomUser.Next(listUsers.Items.Count);
                 bool b = true;
@@ -114,7 +155,7 @@ namespace TeamEditor
                 }
             }
 
-            bttRandomAddToTeam.Content = $"{array[0]}{array[1]}{array[2]}{array[3]}{array[4]}";
+            
 
             List<string> user = new List<string>();
             user.Clear();
@@ -139,5 +180,40 @@ namespace TeamEditor
         {
             listOneTeam.Items.Clear();
         }
+
+        private void listTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Match");
+            var collection = database.GetCollection<Team>("Teams");
+
+            string teamName = listTeams.SelectedItem.ToString();
+            Team selectTeam;
+            selectTeam = collection.Find(x => x.TeamName == teamName).FirstOrDefault();
+            txtNameUser.Text = selectTeam.TeamName.ToString();
+            //List<string> user = new List<string>();
+            //user.Clear();
+            //user.Add(selectTeam.player1.ToString());
+
+            //foreach (var item in user)
+            //{
+            //    listOneTeam.Items.Add(user);
+            //}
+        }
+
+        private void listUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Match");
+            var collection = database.GetCollection<User>("Users");
+
+            string teamName = listUsers.SelectedItem.ToString();
+            User selectTeam;
+            selectTeam = collection.Find(x => x.name == teamName).FirstOrDefault();
+
+            txtNameUser.Text = selectTeam.name.ToString();
+        }
+
+        
     }
 }

@@ -17,12 +17,36 @@ namespace TeamEditor
             collection.InsertOne(user);
         }
 
+        public static void AddToDataBaseTeam(Team team)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Match");
+            var collection = database.GetCollection<Team>("Teams");
+            collection.InsertOne(team);
+        }
+
         public static List<User> GetListUser()
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Match");
             var collection = database.GetCollection<User>("Users");
             return collection.Find(x => true).ToList();
+        }
+
+        public static List<Team> GetListTeam()
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Match");
+            var collection = database.GetCollection<Team>("Teams");
+            return collection.Find(x => true).ToList();
+        }
+
+        public static Team GetTeam(string select)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Match");
+            var collection = database.GetCollection<Team>("Teams");
+            return collection.Find(x => x.TeamName == select).FirstOrDefault();
         }
     }
 }
