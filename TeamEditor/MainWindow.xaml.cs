@@ -16,9 +16,6 @@ using MongoDB.Driver;
 
 namespace TeamEditor
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,7 +24,6 @@ namespace TeamEditor
         }
 
         public List<string> bufferTeam = new List<string>();
-
 
         private void bttSaveUser_Click(object sender, RoutedEventArgs e)
         {
@@ -40,7 +36,7 @@ namespace TeamEditor
             txtNameUser.Clear();
             txtSurnameUser.Clear();
             txtPatronymicuUser.Clear();
-
+            
             RefreshListUser();
         }
 
@@ -50,50 +46,69 @@ namespace TeamEditor
                 MessageBox.Show("Your team has no players!");
             else
             {
-                string teamName = txtTeamName.Text;
-                string player1 = listOneTeam.Items[0].ToString();
-                string player2 = listOneTeam.Items[1].ToString();
-                string player3 = listOneTeam.Items[2].ToString();
-                string player4 = listOneTeam.Items[3].ToString();
-                string player5 = listOneTeam.Items[4].ToString();
-
-                MongoExtensions.AddToDataBaseTeam(new Team(teamName, player1, player2, player3, player4, player5));
-
-                txtNameUser.Clear();
-                listOneTeam.Items.Clear();
-
-                List<string> listbuf = new List<string>();
-                foreach (Team Item in MongoExtensions.GetListTeam())
+                if (txtTeamName.Text != "Team name")
                 {
-                    listbuf.Add($"{Item.TeamName}");
-                }
+                    Team TeamNameCheck = MongoExtensions.GetTeam(txtTeamName.Text);
 
-                listTeams.ItemsSource = listbuf;
+                    if (TeamNameCheck == null)
+                    {
+                        string teamName = txtTeamName.Text;
+                        string player1 = listOneTeam.Items[0].ToString();
+                        string player2 = listOneTeam.Items[1].ToString();
+                        string player3 = listOneTeam.Items[2].ToString();
+                        string player4 = listOneTeam.Items[3].ToString();
+                        string player5 = listOneTeam.Items[4].ToString();
+
+                        MongoExtensions.AddToDataBaseTeam(new Team(teamName, player1, player2, player3, player4, player5));
+
+                        txtNameUser.Clear();
+                        listOneTeam.Items.Clear();
+
+                        List<string> listbuf = new List<string>();
+                        foreach (Team Item in MongoExtensions.GetListTeam())
+                        {
+                            listbuf.Add($"{Item.TeamName}");
+                        }
+
+                        listTeams.ItemsSource = listbuf;
+                        txtTeamName.Clear();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("A team with this name already exists!");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Enter the name of the team");
+                }  
             } 
         }
 
-
-
         private void bttAddToTeam_Click(object sender, RoutedEventArgs e)
         {
-           
-
-            bool userBool = true;
-            var selectUser = listUsers.SelectedItem.ToString();
-            if (listOneTeam.Items.Count <= 5)
+            if (this.listUsers.SelectedItems.Count == 0)
+                 MessageBox.Show("Choose a player!"); 
+            else 
             {
-                if (listOneTeam.Items.Count > 0)
+                bool userBool = true;
+                var selectUser = listUsers.SelectedItem.ToString();
+                if (listOneTeam.Items.Count <= 5)
                 {
-                    foreach (var item in listOneTeam.Items)
+                    if (listOneTeam.Items.Count > 0)
                     {
-                        if (item == selectUser)
-                            userBool = false;
+                        foreach (var item in listOneTeam.Items)
+                        {
+                            if (item == selectUser)
+                                userBool = false;
+                        }
+                        if (userBool == true)
+                            listOneTeam.Items.Add(selectUser);
                     }
-                    if (userBool == true)
+                    else
                         listOneTeam.Items.Add(selectUser);
                 }
-                else
-                    listOneTeam.Items.Add(selectUser);
             }
         }
 
@@ -114,6 +129,7 @@ namespace TeamEditor
 
             listUsers.ItemsSource = listbuf;
         }
+
         private void RefreshListTeams()
         {
             List<string> listbuf = new List<string>();
@@ -141,21 +157,11 @@ namespace TeamEditor
                 bool b = true;
                 for (int i = 0; i < k; i++)
                 {
-                    if (p == array[i])
-                    {
-                        b = false;
-                        break;
-                    }
+                    if (p == array[i]) {b = false; break;}
                 }
 
-                if (b)
-                {
-                    array[k] = p;
-                    k++;
-                }
+                if (b) {array[k] = p;  k++; }
             }
-
-            
 
             List<string> user = new List<string>();
             user.Clear();
@@ -165,55 +171,42 @@ namespace TeamEditor
             user.Add(listUsers.Items[array[3]].ToString());
             user.Add(listUsers.Items[array[4]].ToString());
 
-
-
-
             foreach (var Item in user)
             {
                 listOneTeam.Items.Add(Item.ToString());
             }
-
-
         }
 
         private void bttClearTeam_Click(object sender, RoutedEventArgs e)
         {
             listOneTeam.Items.Clear();
+            txtTeamName.Clear();
+            listUsers.SelectedIndex = -1;
         }
 
         private void listTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Match");
-            var collection = database.GetCollection<Team>("Teams");
+            listOneTeam.Items.Clear();
 
             string teamName = listTeams.SelectedItem.ToString();
-            Team selectTeam;
-            selectTeam = collection.Find(x => x.TeamName == teamName).FirstOrDefault();
-            txtNameUser.Text = selectTeam.TeamName.ToString();
-            //List<string> user = new List<string>();
-            //user.Clear();
-            //user.Add(selectTeam.player1.ToString());
 
-            //foreach (var item in user)
-            //{
-            //    listOneTeam.Items.Add(user);
-            //}
+            Team selectTeam = MongoExtensions.GetTeam(teamName);
+            
+            if (selectTeam != null)
+            {
+                txtTeamName.Text = selectTeam.TeamName.ToString();
+                listOneTeam.Items.Add(selectTeam.player1.ToString());
+                listOneTeam.Items.Add(selectTeam.player2.ToString());
+                listOneTeam.Items.Add(selectTeam.player3.ToString());
+                listOneTeam.Items.Add(selectTeam.player4.ToString());
+                listOneTeam.Items.Add(selectTeam.player5.ToString());
+            }
+
         }
 
-        private void listUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void bttChangeTeam_Click(object sender, RoutedEventArgs e)
         {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Match");
-            var collection = database.GetCollection<User>("Users");
-
-            string teamName = listUsers.SelectedItem.ToString();
-            User selectTeam;
-            selectTeam = collection.Find(x => x.name == teamName).FirstOrDefault();
-
-            txtNameUser.Text = selectTeam.name.ToString();
+            MessageBox.Show("The 'Change' button is not available");
         }
-
-        
     }
 }

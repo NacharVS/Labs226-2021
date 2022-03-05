@@ -41,12 +41,13 @@ namespace TeamEditor
             return collection.Find(x => true).ToList();
         }
 
-        public static Team GetTeam(string select)
+        public static Team GetTeam(string team)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Match");
             var collection = database.GetCollection<Team>("Teams");
-            return collection.Find(x => x.TeamName == select).FirstOrDefault();
+            return collection.Find(x => x.TeamName == team).FirstOrDefault();
+
         }
     }
 }
