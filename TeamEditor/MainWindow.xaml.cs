@@ -94,7 +94,7 @@ namespace TeamEditor
             {
                 bool userBool = true;
                 var selectUser = listUsers.SelectedItem.ToString();
-                if (listOneTeam.Items.Count <= 5)
+                if (listOneTeam.Items.Count < 5)
                 {
                     if (listOneTeam.Items.Count > 0)
                     {
@@ -165,11 +165,10 @@ namespace TeamEditor
 
             List<string> user = new List<string>();
             user.Clear();
-            user.Add(listUsers.Items[array[0]].ToString());
-            user.Add(listUsers.Items[array[1]].ToString());
-            user.Add(listUsers.Items[array[2]].ToString());
-            user.Add(listUsers.Items[array[3]].ToString());
-            user.Add(listUsers.Items[array[4]].ToString());
+            for (int i = 0; i <= 4; i++)
+            {
+                user.Add(listUsers.Items[array[i]].ToString());
+            }
 
             foreach (var Item in user)
             {
@@ -186,27 +185,39 @@ namespace TeamEditor
 
         private void listTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            listOneTeam.Items.Clear();
+            listTeamComposition.Items.Clear();
 
             string teamName = listTeams.SelectedItem.ToString();
 
             Team selectTeam = MongoExtensions.GetTeam(teamName);
-            
+
             if (selectTeam != null)
             {
-                txtTeamName.Text = selectTeam.TeamName.ToString();
-                listOneTeam.Items.Add(selectTeam.player1.ToString());
-                listOneTeam.Items.Add(selectTeam.player2.ToString());
-                listOneTeam.Items.Add(selectTeam.player3.ToString());
-                listOneTeam.Items.Add(selectTeam.player4.ToString());
-                listOneTeam.Items.Add(selectTeam.player5.ToString());
+                string teamNameBuffer = selectTeam.TeamName.ToString();
+                gbTeamName.Header = $"Team {teamNameBuffer}";
+                listTeamComposition.Items.Add(selectTeam.player1.ToString());
+                listTeamComposition.Items.Add(selectTeam.player2.ToString());
+                listTeamComposition.Items.Add(selectTeam.player3.ToString());
+                listTeamComposition.Items.Add(selectTeam.player4.ToString());
+                listTeamComposition.Items.Add(selectTeam.player5.ToString());
             }
+
 
         }
 
         private void bttChangeTeam_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The 'Change' button is not available");
+
+
+            MessageBox.Show("The 'Change' button is not available", "Warning", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void listOneTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listOneTeam.SelectedIndex > -1)
+            {
+                MessageBox.Show("Проверка");
+            }
         }
     }
 }
