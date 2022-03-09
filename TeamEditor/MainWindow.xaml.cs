@@ -43,7 +43,9 @@ namespace TeamEditor
         private void bttSaveTeamToTeams_Click(object sender, RoutedEventArgs e)
         {
             if (listOneTeam.Items.Count < 5)
-                MessageBox.Show("Your team has no players!");
+                MessageBox.Show("В вашей команде нет игроков!", "Предупреждение",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
             else
             {
                 if (txtTeamName.Text != "Team name")
@@ -75,13 +77,17 @@ namespace TeamEditor
                     }
                     else 
                     {
-                        MessageBox.Show("A team with this name already exists!");
+                        MessageBox.Show($"Команда с таким названием ({TeamNameCheck.TeamName}) уже существует!", "Предупреждение",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Enter the name of the team");
+                    MessageBox.Show("Введите название команды", "Подсказка",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Information);
                 }  
             } 
         }
@@ -89,7 +95,9 @@ namespace TeamEditor
         private void bttAddToTeam_Click(object sender, RoutedEventArgs e)
         {
             if (this.listUsers.SelectedItems.Count == 0)
-                 MessageBox.Show("Choose a player!"); 
+                 MessageBox.Show("Выберите игрока!", "Подсказка",
+                     MessageBoxButton.OK,
+                     MessageBoxImage.Information); 
             else 
             {
                 bool userBool = true;
@@ -147,7 +155,6 @@ namespace TeamEditor
 
             var randomUser = new Random();
             int[] array = new int[5];
-            bool proverka = true;
             int k = 0;
             int p = 0;
 
@@ -207,17 +214,43 @@ namespace TeamEditor
 
         private void bttChangeTeam_Click(object sender, RoutedEventArgs e)
         {
+            int oldUser;
+            string newUser;
 
+            if (listOneTeam.SelectedIndex != -1 && listUsers.SelectedIndex != -1)
+            {
+                oldUser = listOneTeam.SelectedIndex;
+                newUser = listUsers.SelectedItem.ToString();
+                foreach (var item in listOneTeam.Items)
+                {
+                    if (newUser == item)
+                    {
+                        MessageBox.Show("Игрока, которого вы выбрали, уже есть в команде", "Предупреждение",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Warning);
+                        return;
+                    }
+                }
 
-            MessageBox.Show("The 'Change' button is not available", "Warning", MessageBoxButton.OK, MessageBoxImage.Information);
+                listOneTeam.Items.RemoveAt(oldUser);
+                listOneTeam.Items.Insert(oldUser, newUser);
+            }
+            else 
+            { 
+                MessageBox.Show("Вы не выбрали игрока", "Предупреждение",
+                MessageBoxButton.OK,
+                MessageBoxImage.Warning); 
+            }
+
+            
+
+           
+            
         }
 
         private void listOneTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (listOneTeam.SelectedIndex > -1)
-            {
-                MessageBox.Show("Проверка");
-            }
+           
         }
     }
 }

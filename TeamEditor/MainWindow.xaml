@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeamEditor"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="450" Width="761" ResizeMode="NoResize">
+        Title="TeamEditor" Height="450" Width="761" ResizeMode="NoResize">
 
     <Grid Margin="0,0,0,-6">
 
@@ -15,7 +15,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="475*"/>
+            <ColumnDefinition Width="286*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="GroupBoxUsers" Height="207" Header="Users" Margin="20,10,0,0" Width="159" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -52,7 +53,7 @@
                 <TextBox x:Name="txtTeamName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="27,3,0,0" TextWrapping="Wrap" Text="Team name" VerticalAlignment="Top" Width="187" Height="26"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="GroupBoxTeams" Header="Teams" Margin="490,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="398" Width="229">
+        <GroupBox x:Name="GroupBoxTeams" Header="Teams" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="398" Width="228" Grid.Column="1">
             <Grid>
                 <ListBox x:Name="listTeams" HorizontalAlignment="Center" Height="198" VerticalAlignment="Top" Width="197" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="0,0,0,0" SelectionChanged="listTeams_SelectionChanged" Margin="0,10,0,0" FontSize="14" SelectedIndex="0">
 
@@ -63,5 +64,7 @@
 
             </Grid>
         </GroupBox>
+
+
     </Grid>
 </Window>
