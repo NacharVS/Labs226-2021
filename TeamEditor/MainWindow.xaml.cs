@@ -74,6 +74,8 @@ namespace TeamEditor
 
                         listTeams.ItemsSource = listbuf;
                         txtTeamName.Clear();
+
+                        listTeams.SelectedIndex = 0;
                     }
                     else 
                     {
@@ -90,6 +92,8 @@ namespace TeamEditor
                         MessageBoxImage.Information);
                 }  
             } 
+
+
         }
 
         private void bttAddToTeam_Click(object sender, RoutedEventArgs e)
@@ -195,7 +199,6 @@ namespace TeamEditor
             listTeamComposition.Items.Clear();
 
             string teamName = listTeams.SelectedItem.ToString();
-
             Team selectTeam = MongoExtensions.GetTeam(teamName);
 
             if (selectTeam != null)
@@ -208,8 +211,6 @@ namespace TeamEditor
                 listTeamComposition.Items.Add(selectTeam.player4.ToString());
                 listTeamComposition.Items.Add(selectTeam.player5.ToString());
             }
-
-
         }
 
         private void bttChangeTeam_Click(object sender, RoutedEventArgs e)
@@ -241,16 +242,19 @@ namespace TeamEditor
                 MessageBoxButton.OK,
                 MessageBoxImage.Warning); 
             }
-
-            
-
-           
-            
         }
 
         private void listOneTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
+        }
+
+        private void listTeams_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (listTeams.Items.Count > 0)
+            {
+                listTeams.SelectedIndex = 0;
+            }
         }
     }
 }
