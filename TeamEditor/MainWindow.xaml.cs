@@ -38,6 +38,7 @@ namespace TeamEditor
             txtPatronymicuUser.Clear();
             
             RefreshListUser();
+            CheckingQuantity();
         }
 
         private void bttSaveTeamToTeams_Click(object sender, RoutedEventArgs e)
@@ -97,7 +98,7 @@ namespace TeamEditor
         }
 
         private void bttAddToTeam_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             if (this.listUsers.SelectedItems.Count == 0)
                  MessageBox.Show("Выберите игрока!", "Подсказка",
                      MessageBoxButton.OK,
@@ -128,6 +129,7 @@ namespace TeamEditor
         {
             RefreshListUser();
             RefreshListTeams();
+            CheckingQuantity();
         }
 
         private void RefreshListUser()
@@ -136,7 +138,7 @@ namespace TeamEditor
             List<string> listbuf = new List<string>();
             foreach (User Item in MongoExtensions.GetListUser())
             {
-                listbuf.Add($"{Item.name} {Item.surname}");
+                listbuf.Add($"{Item.surname} {Item.name}");
             }
 
             listUsers.ItemsSource = listbuf;
@@ -199,6 +201,7 @@ namespace TeamEditor
             listTeamComposition.Items.Clear();
 
             string teamName = listTeams.SelectedItem.ToString();
+            listTeams.SelectedIndex = 0;
             Team selectTeam = MongoExtensions.GetTeam(teamName);
 
             if (selectTeam != null)
@@ -244,10 +247,6 @@ namespace TeamEditor
             }
         }
 
-        private void listOneTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-           
-        }
 
         private void listTeams_Loaded(object sender, RoutedEventArgs e)
         {
@@ -255,6 +254,27 @@ namespace TeamEditor
             {
                 listTeams.SelectedIndex = 0;
             }
+        }
+
+        private void CheckingQuantity()
+        {
+            if (listUsers.Items.Count < 5)
+            {
+                bttSaveTeamToTeams.IsEnabled = false;
+                bttRandomAddToTeam.IsEnabled = false;
+            }
+            else
+            {
+                bttSaveTeamToTeams.IsEnabled=true;
+                bttRandomAddToTeam.IsEnabled=true;
+            }
+        }
+
+        private void ClearTeam(object sender, RoutedEventArgs e)
+        {
+            string teamName = listTeams.SelectedItem.ToString();
+            MongoExtensions.DeletingTeam(teamName);
+            RefreshListTeams();
         }
     }
 }
