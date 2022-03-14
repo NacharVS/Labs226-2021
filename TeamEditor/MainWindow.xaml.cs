@@ -201,18 +201,20 @@ namespace TeamEditor
             listTeamComposition.Items.Clear();
 
             string teamName = listTeams.SelectedItem.ToString();
-            listTeams.SelectedIndex = 0;
-            Team selectTeam = MongoExtensions.GetTeam(teamName);
-
-            if (selectTeam != null)
+            if (teamName != null)
             {
-                string teamNameBuffer = selectTeam.TeamName.ToString();
-                gbTeamName.Header = $"Team {teamNameBuffer}";
-                listTeamComposition.Items.Add(selectTeam.player1.ToString());
-                listTeamComposition.Items.Add(selectTeam.player2.ToString());
-                listTeamComposition.Items.Add(selectTeam.player3.ToString());
-                listTeamComposition.Items.Add(selectTeam.player4.ToString());
-                listTeamComposition.Items.Add(selectTeam.player5.ToString());
+                Team selectTeam = MongoExtensions.GetTeam(teamName);
+
+                if (selectTeam != null)
+                {
+                    string teamNameBuffer = selectTeam.TeamName.ToString();
+                    gbTeamName.Header = $"Team {teamNameBuffer}";
+                    listTeamComposition.Items.Add(selectTeam.player1.ToString());
+                    listTeamComposition.Items.Add(selectTeam.player2.ToString());
+                    listTeamComposition.Items.Add(selectTeam.player3.ToString());
+                    listTeamComposition.Items.Add(selectTeam.player4.ToString());
+                    listTeamComposition.Items.Add(selectTeam.player5.ToString());
+                }
             }
         }
 
@@ -272,9 +274,11 @@ namespace TeamEditor
 
         private void ClearTeam(object sender, RoutedEventArgs e)
         {
-            string teamName = listTeams.SelectedItem.ToString();
-            MongoExtensions.DeletingTeam(teamName);
-            RefreshListTeams();
+            MessageBox.Show("Кнопка 'Delete' работает некорректно");
+
+            //string teamName = listTeams.SelectedItem.ToString();
+            //MongoExtensions.DeletingTeam(teamName);
+            //RefreshListTeams();
         }
     }
 }
