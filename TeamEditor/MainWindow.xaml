@@ -48,7 +48,7 @@
         </GroupBox>
         <GroupBox x:Name="GroupBoxTeams" Header="Teams" Margin="471,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="398" Width="228">
             <Grid>
-                <ListBox x:Name="listTeams" HorizontalAlignment="Center" Height="198" VerticalAlignment="Top" Width="197" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="0,0,0,0" SelectionChanged="listTeams_SelectionChanged" Margin="0,10,0,0" FontSize="14" Loaded="listTeams_Loaded">
+                <ListBox x:Name="listTeams" HorizontalAlignment="Center" Height="198" VerticalAlignment="Top" Width="197" BorderThickness="0,0,0,0" SelectionChanged="listTeams_SelectionChanged" Margin="0,10,0,0" FontSize="14" Loaded="listTeams_Loaded">
                     <ListBox.ContextMenu>
                         <ContextMenu>
                             <MenuItem Header="Delete" Click="ClearTeam"/>
@@ -56,7 +56,7 @@
                     </ListBox.ContextMenu>
                 </ListBox>
                 <GroupBox x:Name="gbTeamName" Header="Team name" Margin="0,213,0,0">
-                    <ListBox x:Name="listTeamComposition" d:ItemsSource="{d:SampleData ItemCount=5}" BorderThickness="0,0,0,0" Height="122"/>
+                    <ListBox x:Name="listTeamComposition"  BorderThickness="0,0,0,0" Height="122"/>
                 </GroupBox>
 
             </Grid>
