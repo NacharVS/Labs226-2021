@@ -49,7 +49,8 @@ namespace TeamEditor
                     MessageBoxImage.Warning);
             else
             {
-                if (txtTeamName.Text != "Team name")
+                string TeamNameBuffer = txtTeamName.Text.Trim(new char[] { ' ', ' ' });
+                if (TeamNameBuffer != "Team name" && TeamNameBuffer != "")
                 {
                     Team TeamNameCheck = MongoExtensions.GetTeam(txtTeamName.Text);
 
