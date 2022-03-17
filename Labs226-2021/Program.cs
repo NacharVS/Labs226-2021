@@ -13,7 +13,7 @@ namespace Labs226_2021
         {
             Warrior Andrey = new Warrior(new Club(), new ShortBow());
             Blacksmith Kuzma = new Blacksmith();
-
+            
             Andrey.Attack();
             var weapon2 = Kuzma.CraftStoneAxe();
             Andrey.ChangeWeapon(weapon2);
@@ -28,7 +28,7 @@ namespace Labs226_2021
             Console.WriteLine(weapon3.durability);
             Kuzma.RepairItem(weapon2);
             Console.WriteLine(weapon2.durability);
-
+            Andrey.Attack();
 
 
 

@@ -24,5 +24,6 @@ namespace Labs226_2021.Interfaces
         {
             item.durability += 10;
         }
+        
     }
 }

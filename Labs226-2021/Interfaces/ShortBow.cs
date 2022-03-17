@@ -11,7 +11,7 @@ namespace Labs226_2021.Interfaces
         public int Damage { get => 5; set => throw new NotImplementedException(); }
         public int Arrow { get => HaveArrow; set => throw new NotImplementedException(); }
 
-        public int HaveArrow = 1;
+        public int HaveArrow = 2;
 
         public void Hit()
         {
