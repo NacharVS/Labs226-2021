@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj": {}
+    "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\CharacterEditor\\CharacterEditor.csproj": {}
   },
   "projects": {
-    "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj": {
+    "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\CharacterEditor\\CharacterEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
-        "projectName": "TeamEditor",
-        "projectPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
+        "projectUniqueName": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\CharacterEditor\\CharacterEditor.csproj",
+        "projectName": "CharacterEditor",
+        "projectPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\CharacterEditor\\CharacterEditor.csproj",
         "packagesPath": "C:\\Users\\262023\\.nuget\\packages\\",
-        "outputPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\obj\\",
+        "outputPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\CharacterEditor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,16 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "MongoDB.Bson": {
-              "target": "Package",
-              "version": "[2.15.0, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.15.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
