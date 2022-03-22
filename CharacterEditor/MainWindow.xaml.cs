@@ -24,5 +24,10 @@ namespace CharacterEditor
         {
             InitializeComponent();
         }
+
+        private void RectangleGeometry_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+
+        }
     }
 }

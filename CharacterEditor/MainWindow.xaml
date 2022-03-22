@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Image x:Name="CharacterName" Source="Resources/imgArcher2.jpg" Margin="57,66,616,164"/>
+        <Border BorderThickness="2, 2, 2, 2" BorderBrush="Black" Margin="57,66,616,164"/>
     </Grid>
 </Window>
