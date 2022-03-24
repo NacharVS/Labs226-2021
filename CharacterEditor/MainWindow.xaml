@@ -31,10 +31,10 @@
             <Image x:Name="classWizard" Source="Resources/imgWizard2.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
             <Border x:Name="borderWizard" BorderThickness="2, 2, 2, 2" BorderBrush="Black" Grid.ColumnSpan="2" />
         </Grid>
-        <Label Content="Archer" HorizontalAlignment="Left" Margin="59,310,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Warrior" HorizontalAlignment="Left" Margin="226,310,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Label Content="Wizard" HorizontalAlignment="Left" Margin="400,310,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="585,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184"/>
+        <Label Content="Archer" HorizontalAlignment="Left" Margin="59,310,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Warrior" HorizontalAlignment="Left" Margin="226,310,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Wizard" HorizontalAlignment="Left" Margin="400,310,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="txtCharacterName" HorizontalAlignment="Left" Height="25" Margin="576,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184"/>
 
     </Grid>
 
