@@ -37,3 +37,5 @@ C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\o
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.AssemblyInfo.cs
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.dll
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.pdb
+C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.g.cs
+C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.baml

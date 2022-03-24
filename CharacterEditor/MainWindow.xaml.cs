@@ -46,5 +46,17 @@ namespace CharacterEditor
             borderWarrior.BorderBrush = Brushes.Green;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Вы уверены, что хотите продолжить?",
+                "Сообщение",
+                MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK)
+            {
+                Window1 taskWindow = new Window1();
+                taskWindow.Show();
+                this.Close();
+            } 
+        }
     }
 }

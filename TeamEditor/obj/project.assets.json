@@ -625,25 +625,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\262023\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\dinar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
+      "projectUniqueName": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
       "projectName": "TeamEditor",
-      "projectPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
-      "packagesPath": "C:\\Users\\262023\\.nuget\\packages\\",
-      "outputPath": "\\\\nas36d451\\user-domain$\\stud\\262023\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\obj\\",
+      "projectPath": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
+      "packagesPath": "C:\\Users\\dinar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "\\\\nas36d451\\user-domain$\\stud\\262023\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\dinar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -654,6 +649,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -665,6 +661,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MongoDB.Bson": {
             "target": "Package",
@@ -693,7 +690,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,13 +13,15 @@ using System.Windows.Shapes;
 namespace CharacterEditor
 {
     /// <summary>
-    /// Логика взаимодействия для Test.xaml
+    /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Test : Window
+    public partial class Window1 : Window
     {
-        public Test()
+        public Window1()
         {
             InitializeComponent();
         }
+
+       
     }
 }
