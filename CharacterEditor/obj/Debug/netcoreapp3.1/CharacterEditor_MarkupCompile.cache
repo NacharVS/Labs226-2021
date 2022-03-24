@@ -1,5 +1,5 @@
 ﻿CharacterEditor
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\App.xaml
-2408110957
+11407045341
 
-6-2076620113
+3-1233169557
 192-1533232326
-MainWindow.xaml;Test.xaml;
+MainWindow.xaml;
 
 False
 

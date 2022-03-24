@@ -25,9 +25,26 @@ namespace CharacterEditor
             InitializeComponent();
         }
 
-        private void RectangleGeometry_SourceUpdated(object sender, DataTransferEventArgs e)
+        private void gridSelectWizard_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            borderWarrior.BorderBrush = Brushes.Black;
+            borderArcher.BorderBrush = Brushes.Black;
+            borderWizard.BorderBrush = Brushes.Green;
         }
+
+        private void gridSelectArcher_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            borderWarrior.BorderBrush = Brushes.Black;
+            borderWizard.BorderBrush = Brushes.Black;
+            borderArcher.BorderBrush = Brushes.Green;
+        }
+
+        private void gridSelectWarrior_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            borderWizard.BorderBrush = Brushes.Black;
+            borderArcher.BorderBrush = Brushes.Black;
+            borderWarrior.BorderBrush = Brushes.Green;
+        }
+
     }
 }
