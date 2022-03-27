@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="imgWarrior2.jpg" />
+    <None Remove="Resources\background.jpg" />
     <None Remove="Resources\imgArcher.jpg" />
     <None Remove="Resources\imgWarrior2.jpg" />
     <None Remove="Resources\imgWizard2.jpg" />
@@ -15,6 +16,9 @@
 
   <ItemGroup>
     <Resource Include="imgWarrior2.jpg" />
+    <Resource Include="Resources\background.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\imgArcher.jpg" />
     <Resource Include="Resources\imgWarrior2.jpg" />
     <Resource Include="Resources\imgWizard2.jpg" />

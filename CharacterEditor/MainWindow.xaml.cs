@@ -27,23 +27,35 @@ namespace CharacterEditor
 
         private void gridSelectWizard_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            borderWarrior.BorderBrush = Brushes.Black;
-            borderArcher.BorderBrush = Brushes.Black;
+            DefaultSizeColorBorder();
             borderWizard.BorderBrush = Brushes.Green;
+            borderWizard.BorderThickness = new Thickness(5);
+
         }
 
         private void gridSelectArcher_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            borderWarrior.BorderBrush = Brushes.Black;
-            borderWizard.BorderBrush = Brushes.Black;
+            DefaultSizeColorBorder();
             borderArcher.BorderBrush = Brushes.Green;
+            borderArcher.BorderThickness = new Thickness(5);
         }
 
         private void gridSelectWarrior_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            DefaultSizeColorBorder();
+            borderWarrior.BorderBrush = Brushes.Green;
+            borderWarrior.BorderThickness = new Thickness(5);
+        }
+
+        private void DefaultSizeColorBorder()
+        {
             borderWizard.BorderBrush = Brushes.Black;
             borderArcher.BorderBrush = Brushes.Black;
-            borderWarrior.BorderBrush = Brushes.Green;
+            borderWarrior.BorderBrush = Brushes.Black;
+
+            borderWizard.BorderThickness = new Thickness(2, 2, 2, 2);
+            borderArcher.BorderThickness = new Thickness(2, 2, 2, 2);
+            borderWarrior.BorderThickness = new Thickness(2, 2, 2, 2);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

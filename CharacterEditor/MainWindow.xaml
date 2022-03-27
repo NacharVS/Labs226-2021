@@ -11,6 +11,7 @@
             <ColumnDefinition Width="107*"/>
             <ColumnDefinition Width="53*"/>
         </Grid.ColumnDefinitions>
+        <Image Source="\Resources\background.jpg" Grid.ColumnSpan="2" Margin="-47,-15,-47,-28"/>
         <Grid x:Name="gridSelectArcher" Margin="39,62,342,124" Visibility="Visible" MouseDown="gridSelectArcher_MouseDown">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="122*"/>
@@ -39,8 +40,8 @@
         <Label Content="Warrior" HorizontalAlignment="Left" Margin="226,310,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Wizard" HorizontalAlignment="Left" Margin="400,310,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Yu Gothic UI Semibold"/>
         <TextBox x:Name="txtCharacterName" HorizontalAlignment="Center" Height="25" Margin="0,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Grid.Column="1"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="102,136,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Label Grid.Column="1" Content="Character name" HorizontalAlignment="Left" Margin="22,68,0,0" VerticalAlignment="Top" FontStyle="Normal" FontWeight="Normal" FontFamily="Bahnschrift Light Condensed" Opacity="0.5" Height="27" Width="111" FontSize="17"/>
+        <Button Grid.Column="1" Content="Save" HorizontalAlignment="Left" Margin="102,136,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Grid.Column="1" Content="Character name" HorizontalAlignment="Left" Margin="22,68,0,0" VerticalAlignment="Top" FontStyle="Normal" FontWeight="Normal" FontFamily="Bahnschrift Light Condensed" Opacity="0.5" Height="27" Width="111" FontSize="17" Background="{x:Null}"/>
     </Grid>
 
 </Window>

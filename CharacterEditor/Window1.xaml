@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,10,0,0">
-        <Grid x:Name="gridSelectWarrior" Margin="280,37,280,10" Visibility="Visible">
+        <Image Source="\Resources\background.jpg" Margin="-57,-26,-57,0" RenderTransformOrigin="0.533,0.5"/>
+        <Grid x:Name="gridSelectWarrior" Margin="38,24,522,23" Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="122*"/>
                 <ColumnDefinition Width="33*"/>
@@ -15,5 +16,55 @@
             <Image x:Name="classWarrior" Source="Resources/imgArcher.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
             <Border x:Name="borderWarrior" BorderThickness="4, 4, 4, 4" BorderBrush="Black" Grid.ColumnSpan="2" />
         </Grid>
+        <GroupBox Header="Параметры" Margin="311,17,255,23" BorderThickness="0" BorderBrush="{x:Null}" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="{x:Null}">
+            <GroupBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.6" SpreadMethod="Repeat" MappingMode="RelativeToBoundingBox">
+                    <GradientStop Color="#FF2D241D" Offset="0.092"/>
+                    <GradientStop Color="#FF645C4F" Offset="0.908"/>
+                    <GradientStop Color="#FF4A433B" Offset="0.625"/>
+                </LinearGradientBrush>
+            </GroupBox.Background>
+            <Grid>
+                <Label Content="Сила" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
+                <Label Content="Ловкость" HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
+                <Label Content=" Интеллект" HorizontalAlignment="Left" Margin="-7,112,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
+                <Label Content="Выносливость" HorizontalAlignment="Left" Margin="0,155,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
+
+                <Grid Margin="135,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Height="36">
+                    <Label x:Name="lblStr" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="19,4,0,0" MouseDown="lblStr_MouseDown">
+                        <Label.Background>
+                            <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+                <Grid Margin="135,71,-42,203">
+                    <Label x:Name="lblDex" Content="250" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="19,4,0,0" MouseDown="lblDex_MouseDown">
+                        <Label.Background>
+                            <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+                <Grid Margin="135,114,-78,147">
+                    <Label x:Name="lblInt" Content="250" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="19,4,0,0" MouseDown="lblInt_MouseDown">
+                        <Label.Background>
+                            <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+                <Grid Margin="135,157,-42,104">
+                    <Label x:Name="lblCon" Content="250" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="19,4,0,0" MouseDown="lblCon_MouseDown">
+                        <Label.Background>
+                            <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+                <Canvas x:Name="bttAddReduce" Margin="135, 30, 2, 302">
+                    <Button x:Name="bttReduce" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttReduce_Click"/>
+                    <Button x:Name="bttAdd" Content="&gt;" HorizontalAlignment="Left" Margin="58,0,0,0" VerticalAlignment="Top" Width="17" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttAdd_Click"/>
+                </Canvas>
+
+            </Grid>
+
+        </GroupBox>
     </Grid>
 </Window>
