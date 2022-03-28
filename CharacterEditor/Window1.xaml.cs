@@ -22,6 +22,15 @@ namespace CharacterEditor
             InitializeComponent();
         }
 
+        public int numberClass = 2;
+
+        List<string> className = new List<string>
+        {
+            "gridSelectArcher",
+            "gridSelectWizard",
+            "gridSelectWarrior"
+        };
+
         List<string> parametersList = new List<string> 
         {
                 "135,30,2,302",
@@ -29,6 +38,7 @@ namespace CharacterEditor
                 "135,114,2,218",
                 "135,157,2,175" 
         };
+
 
         bool AddReduceBool = true;
 
@@ -62,7 +72,6 @@ namespace CharacterEditor
             {
                 label.Content = int.Parse(label.Content.ToString()) - 1;
             }
-
         }
 
         private void bttAdd_Click(object sender, RoutedEventArgs e)
@@ -85,6 +94,51 @@ namespace CharacterEditor
             else if (buffMargin == parametersList[3]) { AddReduceOperation(lblCon); return; };
         }
 
-        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ParametersClass();
+        }
+        private void ParametersClass()
+        {
+            if (numberClass == 1) //Wizard
+            {
+                Wizard unit = new Wizard();
+                unit.Str = 0;
+                unit.Dex = 0;
+                unit.Intl = 0;
+                unit.Con = 0;
+                lblStr.Content = unit.Str;
+                lblDex.Content = unit.Dex;
+                lblInt.Content = unit.Intl;
+                lblCon.Content = unit.Con;
+            }
+            else if (numberClass == 2) //Archer
+            {
+                Archer unit = new Archer();
+                unit.Str = 20;
+                unit.Dex = 30;
+                unit.Intl = 15;
+                unit.Con = 20;
+                lblStr.Content = unit.Str;
+                lblDex.Content = unit.Dex;
+                lblInt.Content = unit.Intl;
+                lblCon.Content = unit.Con;
+            }
+            else if (numberClass == 3)
+            {
+                Warrior unit = new Warrior(); //Warrior
+                unit.Str = 0;
+                unit.Dex = 0;
+                unit.Intl = 0;
+                unit.Con = 0;
+                lblStr.Content = unit.Str;
+                lblDex.Content = unit.Dex;
+                lblInt.Content = unit.Intl;
+                lblCon.Content = unit.Con;
+            }
+        }
+
+
+
     }
 }

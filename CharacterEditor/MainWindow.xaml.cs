@@ -30,6 +30,8 @@ namespace CharacterEditor
             DefaultSizeColorBorder();
             borderWizard.BorderBrush = Brushes.Green;
             borderWizard.BorderThickness = new Thickness(5);
+            Window1 task = new Window1();
+            task.numberClass = 1;
 
         }
 
@@ -38,6 +40,8 @@ namespace CharacterEditor
             DefaultSizeColorBorder();
             borderArcher.BorderBrush = Brushes.Green;
             borderArcher.BorderThickness = new Thickness(5);
+            Window1 task = new Window1();
+            task.numberClass = 2;
         }
 
         private void gridSelectWarrior_MouseDown(object sender, MouseButtonEventArgs e)
@@ -45,6 +49,8 @@ namespace CharacterEditor
             DefaultSizeColorBorder();
             borderWarrior.BorderBrush = Brushes.Green;
             borderWarrior.BorderThickness = new Thickness(5);
+            Window1 task = new Window1();
+            task.numberClass = 3;
         }
 
         private void DefaultSizeColorBorder()
@@ -70,5 +76,6 @@ namespace CharacterEditor
                 this.Close();
             } 
         }
+
     }
 }

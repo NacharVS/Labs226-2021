@@ -26,12 +26,10 @@ C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\o
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\bin\Debug\netcoreapp3.1\CharacterEditor.pdb
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.csprojAssemblyReference.cache
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-\\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Test.g.cs
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\App.g.cs
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor_MarkupCompile.cache
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor_MarkupCompile.lref
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\MainWindow.baml
-\\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Test.baml
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.g.resources
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.AssemblyInfoInputs.cache
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.AssemblyInfo.cs
@@ -39,3 +37,5 @@ C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\o
 \\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.pdb
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.g.cs
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.baml
+\\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.g.cs
+\\nas36d451\user-domain$\stud\262023\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.baml
