@@ -15,6 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.15.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="imgWarrior2.jpg" />
     <Resource Include="Resources\background.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

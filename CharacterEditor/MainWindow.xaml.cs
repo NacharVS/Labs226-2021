@@ -24,14 +24,16 @@ namespace CharacterEditor
         {
             InitializeComponent();
         }
-
+        Window1 task = new Window1();
+        Warrior warrior = new Warrior(0, 0, 0, 0);
+        Archer archer = new Archer(0, 0, 0, 0);
+        Wizard wizard = new Wizard(0, 0, 0, 0);
         private void gridSelectWizard_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DefaultSizeColorBorder();
             borderWizard.BorderBrush = Brushes.Green;
             borderWizard.BorderThickness = new Thickness(5);
-            Window1 task = new Window1();
-            task.numberClass = 1;
+            task.nameClassBuffer = "Wizard";
 
         }
 
@@ -40,8 +42,7 @@ namespace CharacterEditor
             DefaultSizeColorBorder();
             borderArcher.BorderBrush = Brushes.Green;
             borderArcher.BorderThickness = new Thickness(5);
-            Window1 task = new Window1();
-            task.numberClass = 2;
+            task.nameClassBuffer = "Archer";
         }
 
         private void gridSelectWarrior_MouseDown(object sender, MouseButtonEventArgs e)
@@ -49,8 +50,7 @@ namespace CharacterEditor
             DefaultSizeColorBorder();
             borderWarrior.BorderBrush = Brushes.Green;
             borderWarrior.BorderThickness = new Thickness(5);
-            Window1 task = new Window1();
-            task.numberClass = 3;
+            task.nameClassBuffer = "Warrior";
         }
 
         private void DefaultSizeColorBorder()
@@ -66,16 +66,54 @@ namespace CharacterEditor
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("Вы уверены, что хотите продолжить?",
+            string NameBuffer = txtCharacterName.Text.Trim(new char[] { ' ', ' ' });
+            if (NameBuffer != "" && task.nameClassBuffer != null)
+            {
+                var result = MessageBox.Show("Вы уверены, что хотите продолжить?",
                 "Сообщение",
                 MessageBoxButton.OKCancel);
-            if (result == MessageBoxResult.OK)
-            {
-                Window1 taskWindow = new Window1();
-                taskWindow.Show();
-                this.Close();
-            } 
+
+                if (result == MessageBoxResult.OK)
+                {
+                    string nameCharacter = txtCharacterName.Text.ToString();
+                    string nameClass = task.nameClassBuffer.ToString();
+
+                    double strBuf = 0;
+                    double dexBuf = 0;
+                    double intlBuf = 0;
+                    double conBuf = 0;
+
+                    switch (task.nameClassBuffer)
+                    {
+                        case "Warrior":
+                            strBuf = warrior.Str;
+                            dexBuf = warrior.Dex;
+                            intlBuf = warrior.Intl;
+                            conBuf = warrior.Con;
+                            break;
+                        case "Archer":
+                            strBuf = archer.Str;
+                            dexBuf = archer.Dex;
+                            intlBuf = archer.Intl;
+                            conBuf = archer.Con;
+                            break;
+                        case "Wizard":
+                            strBuf = wizard.Str;
+                            dexBuf = wizard.Dex;
+                            intlBuf = wizard.Intl;
+                            conBuf = wizard.Con;
+                            break;
+                    }
+
+                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf));
+                    task.lblExp.Content = 10;
+                    task.Show();
+                    this.Close();
+                }
+            }   
         }
+
+        
 
     }
 }

@@ -6,6 +6,14 @@ namespace CharacterEditor
 {
     class Wizard: Unit
     {
+        public Wizard(double str, double dex, double con, double intl)
+        {
+            Str = str;
+            Dex = dex;
+            Con = con;
+            Intl = intl;
+        }
+
         public override double Str
         {
             get => base.Str;
@@ -84,6 +92,79 @@ namespace CharacterEditor
                     base.Intl = 250;
                 }
             }
+        }
+
+        public double PDamage
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 1;
+                buffer += Dex * 1;
+
+                return buffer;
+            }
+
+        }
+
+        public double PDefence
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 1;
+                buffer += Dex * 1;
+                buffer += Intl * 1;
+                buffer += Con * 2;
+                return buffer;
+            }
+
+        }
+
+        public double MDamage
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Intl * 7;
+                return buffer;
+            }
+
+        }
+
+        public double MDefence
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Intl * 5;
+                buffer += Con * 1;
+                return buffer;
+            }
+
+        }
+
+        public double Health
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 1;
+                buffer += Con * 3;
+                return buffer;
+            }
+
+        }
+
+        public double Magic
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Con * 2;
+                return buffer;
+            }
+
         }
     }
 }

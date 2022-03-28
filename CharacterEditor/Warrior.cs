@@ -6,6 +6,14 @@ namespace CharacterEditor
 {
     class Warrior: Unit
     {
+        public Warrior(double str, double dex, double con, double intl)
+        {
+            Str = str;
+            Dex = dex;
+            Con = con;
+            Intl = intl;
+        }
+
         public override double Str
         {
             get => base.Str;
@@ -85,5 +93,81 @@ namespace CharacterEditor
                 }
             }
         }
+
+        public double PDamage
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 7;
+                buffer += Dex * 2;
+
+                return buffer;
+            }
+
+        }
+
+        public double PDefence
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 2;
+                buffer += Dex * 3;
+                buffer += Con * 3;
+                return buffer;
+            }
+
+        }
+
+        public double MDamage
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Intl * 1;
+                return buffer;
+            }
+
+        }
+
+        public double MDefence
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 1;
+                buffer += Intl * 2;
+                buffer += Con * 1;
+                return buffer;
+            }
+
+        }
+
+        public double Health
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Str * 5;
+                buffer += Con * 10;
+                return buffer;
+            }
+
+        }
+
+        public double Magic
+        {
+            get
+            {
+                double buffer = 0;
+                buffer += Intl * 1;
+                return buffer;
+            }
+
+        }
+
+
+
     }
 }

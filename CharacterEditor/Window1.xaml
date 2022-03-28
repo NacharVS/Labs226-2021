@@ -13,7 +13,7 @@
                 <ColumnDefinition Width="122*"/>
                 <ColumnDefinition Width="33*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="classWarrior" Source="Resources/imgArcher.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
+            <Image x:Name="classCharacterImage" Source="Resources/imgArcher.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
             <Border x:Name="borderWarrior" BorderThickness="4, 4, 4, 4" BorderBrush="Black" Grid.ColumnSpan="2" />
         </Grid>
         <GroupBox Header="Параметры" Margin="311,17,255,23" BorderThickness="0" BorderBrush="{x:Null}" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="{x:Null}">
@@ -37,6 +37,7 @@
                         </Label.Background>
                     </Label>
                 </Grid>
+
                 <Grid Margin="135,71,-42,203">
                     <Label x:Name="lblDex" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="19,4,0,0" MouseDown="lblDex_MouseDown">
                         <Label.Background>
@@ -63,9 +64,13 @@
                     <Button x:Name="bttAdd" Content="&gt;" HorizontalAlignment="Left" Margin="58,0,0,0" VerticalAlignment="Top" Width="17" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttAdd_Click"/>
                 </Canvas>
 
+
             </Grid>
 
         </GroupBox>
+        <Label Content="Уровень" HorizontalAlignment="Left" Margin="326,346,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontSize="15" FontWeight="Normal" FontStyle="Italic" Height="40"/>
+        <Label x:Name="lblLvl" Content="0" HorizontalAlignment="Left" Margin="396,349,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontWeight="Normal" FontStyle="Italic" Width="55" Height="35"/>
+        <Label x:Name="lblLvlExp" Content="0" HorizontalAlignment="Left" Margin="435,349,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontWeight="Normal" FontStyle="Italic" Width="55" Height="35"/>
         <GroupBox Header="Параметры" Margin="556,17,10,23" BorderThickness="0" BorderBrush="{x:Null}" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="{x:Null}">
             <GroupBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.6" SpreadMethod="Repeat" MappingMode="RelativeToBoundingBox">
@@ -81,37 +86,53 @@
                 <Label Content="Маг.Защита" HorizontalAlignment="Left" Margin="0,155,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
                 <Label Content="Жизнь" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
                 <Label Content="Магия" HorizontalAlignment="Left" Margin="0,231,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFEDD992" FontSize="17" FontWeight="Normal"/>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,30,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblPDamage" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,30,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,75,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblPDefence" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,75,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,121,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblMDamage" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,121,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,164,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblMDefence" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,164,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,204,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblHealth" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,204,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Label Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,240,0,0" MouseDown="lblStr_MouseDown">
+                <Label x:Name="lblMagic" Content="0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Height="25" Width="41" Foreground="#FFE0D9C5" Margin="152,240,0,0" MouseDown="lblStr_MouseDown" FontSize="10">
                     <Label.Background>
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
+                <Button x:Name="bttRefresh" Content="refresh" HorizontalAlignment="Left" Margin="172,0,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Click="bttRefresh_Click">
+                    <Button.Foreground>
+                        <SolidColorBrush Color="#FFC3C3C3" Opacity="0.62"/>
+                    </Button.Foreground>
+                </Button>
+
             </Grid>
+
         </GroupBox>
+        <Label x:Name="lblExp" Content="Label" HorizontalAlignment="Left" Margin="392,29,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="bttCheat" Content="Cheat" HorizontalAlignment="Left" Margin="711,366,0,0" VerticalAlignment="Top" Click="bttCheat_Click"/>
+        <Grid x:Name="gridCheat" Margin="581,327,34,0" Visibility="Hidden">
+            <Button x:Name="bttGetOneTh" Content="1000" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Center" Click="bttGetOneTh_Click"/>
+            <Button x:Name="bttGetThreeTh" Content="3000" HorizontalAlignment="Left" Margin="51,0,0,0" VerticalAlignment="Center" Click="bttGetThreeTh_Click"/>
+            <Button x:Name="bttGetFiveTh" Content="5000" HorizontalAlignment="Left" Margin="89,0,0,0" VerticalAlignment="Center" Click="bttGetFiveTh_Click"/>
+
+        </Grid>
+
     </Grid>
 </Window>

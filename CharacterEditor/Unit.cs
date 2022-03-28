@@ -23,12 +23,7 @@ namespace CharacterEditor
         private int _pCriticalDamage;
         private int _mCriticalDamage;
 
-
-
-        private string _name;
-
-        public string Name { get => _name; set => _name = value; }
-
+        
 
         public virtual double Str
         {
@@ -40,23 +35,8 @@ namespace CharacterEditor
         public virtual double Intl { get => _intl; set => _intl = value; }
 
 
-        public double Mana
-        {
-            get { return Intl * 3; }
-
-        }
+        
 
 
-        public double PAttack
-        {
-            get { return Str * 3 + (0.15 * Dex); }
-
-        }
-
-        public double PDefence
-        {
-            get { return (Con * 0.05) + Dex * 3; }
-
-        }
     }
 }
