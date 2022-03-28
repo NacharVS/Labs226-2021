@@ -293,5 +293,15 @@ namespace CharacterEditor
         {
             СharacterCharacteristics();
         }
+
+        private void bttSaveParameters_Click(object sender, RoutedEventArgs e)
+        {
+            double strbuf = double.Parse(lblStr.Content.ToString());
+            double dexbuf = double.Parse(lblDex.Content.ToString());
+            double intlbuf = double.Parse(lblDex.Content.ToString());
+            double conbuf = double.Parse(lblDex.Content.ToString());
+            string nameBuffer = lblNameChar.Content.ToString();
+            MongoExtensions.UpdateBase(nameBuffer, new Character(nameBuffer, nameClassBuffer, strbuf, dexbuf, intlbuf, conbuf));
+        }
     }
 }

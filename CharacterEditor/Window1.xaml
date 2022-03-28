@@ -63,6 +63,9 @@
                     <Button x:Name="bttReduce" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttReduce_Click"/>
                     <Button x:Name="bttAdd" Content="&gt;" HorizontalAlignment="Left" Margin="58,0,0,0" VerticalAlignment="Top" Width="17" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttAdd_Click"/>
                 </Canvas>
+                <Button x:Name="bttSaveParameters" Content="Save" HorizontalAlignment="Left" Margin="166,323,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" Height="37" Width="54" Click="bttSaveParameters_Click"/>
+                <Label x:Name="lblNameChar" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       Content="Label" HorizontalAlignment="Left" Margin="-187,268,0,0" VerticalAlignment="Top" Height="92" Width="141" Background="{x:Null}" Foreground="White"/>
 
 
             </Grid>
@@ -116,7 +119,7 @@
                         <SolidColorBrush Color="#FF6B594A" Opacity="0.3"/>
                     </Label.Background>
                 </Label>
-                <Button x:Name="bttRefresh" Content="refresh" HorizontalAlignment="Left" Margin="172,0,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Click="bttRefresh_Click">
+                <Button x:Name="bttRefresh" Content="refresh" HorizontalAlignment="Left" Margin="141,-5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Click="bttRefresh_Click" Height="37" Width="81">
                     <Button.Foreground>
                         <SolidColorBrush Color="#FFC3C3C3" Opacity="0.62"/>
                     </Button.Foreground>
