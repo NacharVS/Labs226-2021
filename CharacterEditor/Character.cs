@@ -14,12 +14,12 @@ namespace CharacterEditor
         {
             this.nameCharacter = nameCharacter;
             this.classCharacter = classCharacter;
-            this.lvlCharacter = lvl;
-            this.expCharacter = exp;
             base.Str = str;
             base.Dex = dex;
             base.Intl = intl;
             base.Con = con;
+            this.lvlCharacter = lvl;
+            this.expCharacter = exp;
             
         }
 

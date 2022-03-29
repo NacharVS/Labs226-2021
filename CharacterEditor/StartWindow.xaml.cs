@@ -63,6 +63,12 @@ namespace CharacterEditor
             {
                 Window1 task = new Window1();
                 task.Show();
+                string buffer;
+                Character character = MongoExtensions.GetDataBase(listUser.SelectedItem.ToString());
+                if (character != null)
+                {
+                    task.LoadingCharacter(character.classCharacter, character.nameCharacter);
+                }
                 this.Close();
             }
         }

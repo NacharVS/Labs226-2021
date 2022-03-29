@@ -123,34 +123,66 @@ namespace CharacterEditor
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            switch (nameClassBuffer)
+            //LoadingCharacter();
+        }
+
+        public bool newChatacter = false;
+        public void LoadingCharacter(string ClassName, string NameCharacter)
+        {
+            if (newChatacter == false)
             {
-                case "Warrior":
-                    classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWarrior2.jpg", UriKind.Relative));
-                    break;
-                case "Archer":
-                    classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgArcher.jpg", UriKind.Relative));
-                    break;
-                case "Wizard":
-                    classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWizard2.jpg", UriKind.Relative));
-                    break;
+                switch (ClassName)
+                {
+                    case "Warrior":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWarrior2.jpg", UriKind.Relative));
+                        break;
+                    case "Archer":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgArcher.jpg", UriKind.Relative));
+                        break;
+                    case "Wizard":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWizard2.jpg", UriKind.Relative));
+                        break;
+
+                }
+
+                Character character = MongoExtensions.GetDataBase(NameCharacter);
+                if (character != null)
+                {
+                    lblStr.Content = character.Str.ToString();
+                    lblDex.Content = character.Dex.ToString();
+                    lblInt.Content = character.Intl.ToString();
+                    lblCon.Content = character.Con.ToString();
+                }
+                nameClassBuffer = character.classCharacter.ToString();
+                lblExp.Content = character.expCharacter.ToString();
 
             }
+            else if (newChatacter == true)
+            {
+                switch (nameClassBuffer)
+                {
+                    case "Warrior":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWarrior2.jpg", UriKind.Relative));
+                        break;
+                    case "Archer":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgArcher.jpg", UriKind.Relative));
+                        break;
+                    case "Wizard":
+                        classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWizard2.jpg", UriKind.Relative));
+                        break;
 
-            MaxExpBuffer(int.Parse(lblExp.Content.ToString()));
+                }
+                MaxExpBuffer(int.Parse(lblExp.Content.ToString()));
+            }
+
             ParametersClass();
-            СharacterCharacteristics();
+            СharacterCharacteristics(nameClassBuffer);
 
         }
 
-        private void LoadingCharacter()
+        private void СharacterCharacteristics(string nameClass)
         {
-            
-        }
-
-        private void СharacterCharacteristics()
-        {
-            if (nameClassBuffer == "Wizard")
+            if (nameClass == "Wizard")
             {
                 lblPDamage.Content = wizard.PDamage;
                 lblPDefence.Content = wizard.PDefence;
@@ -160,7 +192,7 @@ namespace CharacterEditor
                 lblMagic.Content = wizard.Magic;
 
             }
-            else if (nameClassBuffer == "Archer")
+            else if (nameClass == "Archer")
             {
                 lblPDamage.Content = archer.PDamage;
                 lblPDefence.Content = archer.PDefence;
@@ -169,7 +201,7 @@ namespace CharacterEditor
                 lblHealth.Content = archer.Health;
                 lblMagic.Content = archer.Magic;
             }
-            else if (nameClassBuffer == "Warrior")
+            else if (nameClass == "Warrior")
             {
                 lblPDamage.Content = warrior.PDamage;
                 lblPDefence.Content = warrior.PDefence;
@@ -297,7 +329,7 @@ namespace CharacterEditor
 
         private void bttRefresh_Click(object sender, RoutedEventArgs e)
         {
-            СharacterCharacteristics();
+            СharacterCharacteristics(nameClassBuffer);
         }
 
         private void bttSaveParameters_Click(object sender, RoutedEventArgs e)

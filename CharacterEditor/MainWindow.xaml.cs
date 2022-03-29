@@ -82,6 +82,8 @@ namespace CharacterEditor
                     double dexBuf = 0;
                     double intlBuf = 0;
                     double conBuf = 0;
+                    int lvlbuf = 0;
+                    int expBuf = 0;
 
                     switch (task.nameClassBuffer)
                     {
@@ -105,10 +107,11 @@ namespace CharacterEditor
                             break;
                     }
 
-                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf, 0, 0));
+                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf, lvlbuf, expBuf));
                     task.lblNameChar.Content = nameCharacter.ToString();
-                    task.lblExp.Content = 10;
                     task.Show();
+                    task.LoadingCharacter(nameClass, nameCharacter);
+                    task.lblExp.Content = 10;
                     this.Close();
                 }
             }   

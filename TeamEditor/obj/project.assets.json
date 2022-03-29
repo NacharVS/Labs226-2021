@@ -620,30 +620,26 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DnsClient >= 1.6.0",
       "MongoDB.Bson >= 2.15.0",
       "MongoDB.Driver >= 2.15.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\262021\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\dinar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\262021\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
+      "projectUniqueName": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
       "projectName": "TeamEditor",
-      "projectPath": "C:\\Users\\262021\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
-      "packagesPath": "C:\\Users\\262021\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\262021\\Documents\\GitHub\\Labs226-2021\\TeamEditor\\obj\\",
+      "projectPath": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\TeamEditor.csproj",
+      "packagesPath": "C:\\Users\\dinar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dinar\\OneDrive\\Документы\\GitHub\\Labs226-2021\\TeamEditor\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "\\\\nas36d451\\user-domain$\\stud\\262021\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\dinar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -654,6 +650,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -665,7 +662,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "DnsClient": {
+            "target": "Package",
+            "version": "[1.6.0, )"
+          },
           "MongoDB.Bson": {
             "target": "Package",
             "version": "[2.15.0, )"
@@ -693,7 +695,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
