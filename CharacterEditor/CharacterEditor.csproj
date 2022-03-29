@@ -12,6 +12,7 @@
     <None Remove="Resources\imgArcher.jpg" />
     <None Remove="Resources\imgWarrior2.jpg" />
     <None Remove="Resources\imgWizard2.jpg" />
+    <None Remove="Resources\swordLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,9 @@
     <Resource Include="Resources\imgArcher.jpg" />
     <Resource Include="Resources\imgWarrior2.jpg" />
     <Resource Include="Resources\imgWizard2.jpg" />
+    <Resource Include="Resources\swordLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 

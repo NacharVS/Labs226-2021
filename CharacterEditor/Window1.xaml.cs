@@ -136,10 +136,16 @@ namespace CharacterEditor
                     break;
 
             }
+
             MaxExpBuffer(int.Parse(lblExp.Content.ToString()));
             ParametersClass();
             СharacterCharacteristics();
 
+        }
+
+        private void LoadingCharacter()
+        {
+            
         }
 
         private void СharacterCharacteristics()
@@ -301,7 +307,9 @@ namespace CharacterEditor
             double intlbuf = double.Parse(lblDex.Content.ToString());
             double conbuf = double.Parse(lblDex.Content.ToString());
             string nameBuffer = lblNameChar.Content.ToString();
-            MongoExtensions.UpdateBase(nameBuffer, new Character(nameBuffer, nameClassBuffer, strbuf, dexbuf, intlbuf, conbuf));
+            int lvl = int.Parse(lblLvl.Content.ToString());
+            int exp = int.Parse(lblLvlExp.Content.ToString());
+            MongoExtensions.UpdateBase(nameBuffer, new Character(nameBuffer, nameClassBuffer, strbuf, dexbuf, intlbuf, conbuf, lvl, exp));
         }
     }
 }

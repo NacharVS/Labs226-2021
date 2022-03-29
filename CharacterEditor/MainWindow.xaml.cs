@@ -105,7 +105,7 @@ namespace CharacterEditor
                             break;
                     }
 
-                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf));
+                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf, 0, 0));
                     task.lblNameChar.Content = nameCharacter.ToString();
                     task.lblExp.Content = 10;
                     task.Show();

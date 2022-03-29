@@ -30,5 +30,19 @@ namespace CharacterEditor
             var collection = database.GetCollection<Character>("Character");
             collection.ReplaceOne(x => x.nameCharacter == name, character);
         }
+        public static List<Character> GetListUser()
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("CharacterEditor");
+            var collection = database.GetCollection<Character>("Character");
+            return collection.Find(x => true).ToList();
+        }
+        public static Character GetParametesUser(string name)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("CharacterEditor");
+            var collection = database.GetCollection<Character>("Character");
+            return collection.Find(x => x.nameCharacter == name).FirstOrDefault();
+        }
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\
 CharacterEditor
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\App.xaml
-21940794329
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\App.xaml
+3-789790097
 
-11-1120228125
-1981383019648
-MainWindow.xaml;Window1.xaml;
+121388885239
+198350953362
+MainWindow.xaml;StartWindow.xaml;Window1.xaml;
 
 False
 

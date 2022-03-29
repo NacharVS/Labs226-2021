@@ -63,7 +63,7 @@
                     <Button x:Name="bttReduce" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttReduce_Click"/>
                     <Button x:Name="bttAdd" Content="&gt;" HorizontalAlignment="Left" Margin="58,0,0,0" VerticalAlignment="Top" Width="17" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Click="bttAdd_Click"/>
                 </Canvas>
-                <Button x:Name="bttSaveParameters" Content="Save" HorizontalAlignment="Left" Margin="166,323,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" Height="37" Width="54" Click="bttSaveParameters_Click"/>
+
                 <Label x:Name="lblNameChar" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        Content="Label" HorizontalAlignment="Left" Margin="-187,268,0,0" VerticalAlignment="Top" Height="92" Width="141" Background="{x:Null}" Foreground="White"/>
 
@@ -71,6 +71,7 @@
             </Grid>
 
         </GroupBox>
+        <Button x:Name="bttSaveParameters" Content="Save" HorizontalAlignment="Left" Margin="479,346,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" Height="30" Width="43" Click="bttSaveParameters_Click"/>
         <Label Content="Уровень" HorizontalAlignment="Left" Margin="326,346,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontSize="15" FontWeight="Normal" FontStyle="Italic" Height="40"/>
         <Label x:Name="lblLvl" Content="0" HorizontalAlignment="Left" Margin="396,349,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontWeight="Normal" FontStyle="Italic" Width="55" Height="35"/>
         <Label x:Name="lblLvlExp" Content="0" HorizontalAlignment="Left" Margin="435,349,0,0" VerticalAlignment="Top" Foreground="#FFEDD992" FontWeight="Normal" FontStyle="Italic" Width="55" Height="35"/>
