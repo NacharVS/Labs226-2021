@@ -1,0 +1,88 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1450" Width="1800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="598*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="User" HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="493" Grid.RowSpan="2" />
+        <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="38" Margin="10,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="38" Margin="10,511,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <TextBox x:Name="txtSername" HorizontalAlignment="Left" Height="38" Margin="10,561,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <TextBox x:Name="txtMail" HorizontalAlignment="Left" Height="38" Margin="10,627,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <Button x:Name="btRgistr" Content="Регисрация пользователя" HorizontalAlignment="Left" Height="48" Margin="10,700,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click" Grid.Row="1"/>
+        <Button x:Name="btList" Content="Список" HorizontalAlignment="Left" Height="54" Margin="314,425,0,0" VerticalAlignment="Top" Width="179" Click="btList_Click" Grid.Row="1"/>
+        <TextBox x:Name="first" HorizontalAlignment="Left" Height="44" Margin="628,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="second" HorizontalAlignment="Left" Height="44" Margin="628,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="272"/>
+        <TextBox x:Name="third" HorizontalAlignment="Left" Height="54" Margin="628,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="fourth" HorizontalAlignment="Left" Height="54" Margin="628,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Grid.Row="1"/>
+        <TextBox x:Name="fivth" HorizontalAlignment="Left" Height="54" Margin="628,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Grid.Row="1"/>
+        <Label x:Name="_5" Content="5" HorizontalAlignment="Left" Height="30" Margin="571,137,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.962,-0.129" Grid.Row="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.474"/>
+                    <TranslateTransform X="-1.306" Y="-1.08"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="Play" Content="4" HorizontalAlignment="Left" Height="30" Margin="571,41,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.962,-0.129" Grid.Row="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.174"/>
+                    <TranslateTransform X="-1.306" Y="-1.08"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="_5_Copy" Content="3" HorizontalAlignment="Left" Height="30" Margin="571,183,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.962,-0.129">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.608"/>
+                    <TranslateTransform X="-1.306" Y="-1.08"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="_5_Copy2" Content="2" HorizontalAlignment="Left" Height="30" Margin="571,0,0,0" VerticalAlignment="Center" Width="31" RenderTransformOrigin="0.962,-0.129">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.902"/>
+                    <TranslateTransform X="-1.306" Y="-1.08"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="_5_Copy3" Content="1" HorizontalAlignment="Left" Height="30" Margin="571,39,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.962,-0.129">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.182"/>
+                    <TranslateTransform X="-1.306" Y="-1.08"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="TeamName" HorizontalAlignment="Left" Height="47" Margin="628,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Grid.Row="1"/>
+        <Button x:Name="addcustom" Content="Добавить " HorizontalAlignment="Left" Height="31" Margin="933,345,0,0" VerticalAlignment="Top" Width="260" Click="addcustom_Click" Grid.Row="1"/>
+        <Button x:Name="addRundom" Content="Случайно" HorizontalAlignment="Left" Height="32" Margin="933,402,0,0" VerticalAlignment="Top" Width="260" Grid.Row="1" Click="addRundom_Click"/>
+        <Button x:Name="Clear" Content="Очистить список" HorizontalAlignment="Left" Height="46" Margin="933,465,0,0" VerticalAlignment="Top" Width="260" Grid.Row="1" Click="Clear_Click"/>
+        <Button x:Name="SaveTeam" Content="Сохранить" HorizontalAlignment="Left" Height="38" Margin="933,542,0,0" VerticalAlignment="Top" Width="260" Grid.Row="1" Click="SaveTeam_Click"/>
+        <Button x:Name="Load" Content="Загрузить" HorizontalAlignment="Left" Height="34" Margin="933,612,0,0" VerticalAlignment="Top" Width="260" Grid.Row="1" Click="Load_Click"/>
+        <ListBox x:Name="Team" HorizontalAlignment="Left" Height="1026" Margin="1214,0,0,0" VerticalAlignment="Top" Width="586" Grid.RowSpan="2"/>
+        <TextBox x:Name="userToaddd" HorizontalAlignment="Left" Height="31" Margin="714,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Grid.Row="1"/>
+        <Button x:Name="ListTeam" Content="Команда" HorizontalAlignment="Left" Height="76" Margin="1045,672,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Click="ListTeam_Click"/>
+        <TextBox x:Name="Teamtxt" HorizontalAlignment="Left" Height="34" Margin="740,612,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+
+    </Grid>
+</Window>
