@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace CharacterEditor
 {
@@ -121,10 +116,6 @@ namespace CharacterEditor
             else if (buffMargin == parametersList[3]) { AddReduceOperation(lblCon); oldExp = int.Parse(lblCon.Content.ToString()); return; };
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            //LoadingCharacter();
-        }
 
         public bool newChatacter = false;
         public void LoadingCharacter(string ClassName, string NameCharacter)
@@ -142,7 +133,6 @@ namespace CharacterEditor
                     case "Wizard":
                         classCharacterImage.Source = new BitmapImage(new Uri(@"Resources\imgWizard2.jpg", UriKind.Relative));
                         break;
-
                 }
 
                 Character character = MongoExtensions.GetDataBase(NameCharacter);
@@ -152,9 +142,13 @@ namespace CharacterEditor
                     lblDex.Content = character.Dex.ToString();
                     lblInt.Content = character.Intl.ToString();
                     lblCon.Content = character.Con.ToString();
+                    nameClassBuffer = character.classCharacter.ToString();
+                    lblExp.Content = character.expForCharact.ToString();
+                    lblNameChar.Content = character.nameCharacter.ToString();
+                    lblLvl.Content = character.lvlCharacter.ToString();
+                    lblLvlExp.Content = character.expCharacter.ToString();
                 }
-                nameClassBuffer = character.classCharacter.ToString();
-                lblExp.Content = character.expCharacter.ToString();
+                
 
             }
             else if (newChatacter == true)
@@ -172,12 +166,11 @@ namespace CharacterEditor
                         break;
 
                 }
-                MaxExpBuffer(int.Parse(lblExp.Content.ToString()));
+                Character character = MongoExtensions.GetDataBase(NameCharacter);
+                MaxExpBuffer(character.expForCharact);
             }
-
             ParametersClass();
             СharacterCharacteristics(nameClassBuffer);
-
         }
 
         private void СharacterCharacteristics(string nameClass)
@@ -240,7 +233,6 @@ namespace CharacterEditor
             }
             else if (nameClassBuffer == "Warrior")
             {
-
                 warrior.Str = int.Parse(lblStr.Content.ToString());
                 warrior.Dex = int.Parse(lblDex.Content.ToString());
                 warrior.Intl = int.Parse(lblInt.Content.ToString());
@@ -250,7 +242,6 @@ namespace CharacterEditor
                 lblDex.Content = warrior.Dex;
                 lblInt.Content = warrior.Intl;
                 lblCon.Content = warrior.Con;
-                
             }
         }
 
@@ -267,7 +258,6 @@ namespace CharacterEditor
                 gridCheat.Visibility = Visibility.Hidden;
                 cheatBool = false;
             }
-            
         }
 
         private void bttGetFiveTh_Click(object sender, RoutedEventArgs e)
@@ -334,14 +324,25 @@ namespace CharacterEditor
 
         private void bttSaveParameters_Click(object sender, RoutedEventArgs e)
         {
+            SaveParameters();
+        }
+
+        private void SaveParameters()
+        {
             double strbuf = double.Parse(lblStr.Content.ToString());
             double dexbuf = double.Parse(lblDex.Content.ToString());
-            double intlbuf = double.Parse(lblDex.Content.ToString());
-            double conbuf = double.Parse(lblDex.Content.ToString());
+            double intlbuf = double.Parse(lblInt.Content.ToString());
+            double conbuf = double.Parse(lblCon.Content.ToString());
             string nameBuffer = lblNameChar.Content.ToString();
             int lvl = int.Parse(lblLvl.Content.ToString());
             int exp = int.Parse(lblLvlExp.Content.ToString());
-            MongoExtensions.UpdateBase(nameBuffer, new Character(nameBuffer, nameClassBuffer, strbuf, dexbuf, intlbuf, conbuf, lvl, exp));
+            int lvlexp = int.Parse(lblExp.Content.ToString());
+            MongoExtensions.UpdateBase(nameBuffer, new Character(nameBuffer, nameClassBuffer, strbuf, dexbuf, intlbuf, conbuf, lvl, exp, lvlexp));
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            SaveParameters();
         }
     }
 }

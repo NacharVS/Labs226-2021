@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="122*"/>
                 <ColumnDefinition Width="33*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="classWarrior" Source="/imgWarrior2.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
+            <Image x:Name="classWarrior" Source="Resources/imgWarrior2.jpg" Margin="-1,0,0,0" Grid.ColumnSpan="2" />
             <Border x:Name="borderWarrior" BorderThickness="2, 2, 2, 2" BorderBrush="Black" Grid.ColumnSpan="2" />
         </Grid>
         <Grid x:Name="gridSelectWizard" Margin="383,62,263,124" Visibility="Visible" MouseDown="gridSelectWizard_MouseDown" Grid.ColumnSpan="2">

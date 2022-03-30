@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CharacterEditor"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="CharacteristicWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
     <Grid Margin="0,10,0,0">
         <Image Source="\Resources\background.jpg" Margin="-57,-26,-57,0" RenderTransformOrigin="0.533,0.5"/>
         <Grid x:Name="gridSelectWarrior" Margin="38,24,522,23" Visibility="Visible">

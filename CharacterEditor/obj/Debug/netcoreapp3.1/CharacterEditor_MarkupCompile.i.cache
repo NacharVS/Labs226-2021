@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\App.xaml
-3-616146737
+3651299639
 
-14272984675
+141175773189
 1981383019648
-MainWindow.xaml;StartWindow.xaml;Window1.xaml;
+CharacteristicWindow.xaml;MainWindow.xaml;StartWindow.xaml;
 
-False
+True
 

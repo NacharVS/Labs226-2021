@@ -1,23 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CharacterEditor
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -34,7 +20,6 @@ namespace CharacterEditor
             borderWizard.BorderBrush = Brushes.Green;
             borderWizard.BorderThickness = new Thickness(5);
             task.nameClassBuffer = "Wizard";
-
         }
 
         private void gridSelectArcher_MouseDown(object sender, MouseButtonEventArgs e)
@@ -67,57 +52,64 @@ namespace CharacterEditor
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string NameBuffer = txtCharacterName.Text.Trim(new char[] { ' ', ' ' });
-            if (NameBuffer != "" && task.nameClassBuffer != null)
+            Character characterCheck = MongoExtensions.GetDataBase(NameBuffer);
+            if (characterCheck == null)
             {
-                var result = MessageBox.Show("Вы уверены, что хотите продолжить?",
-                "Сообщение",
-                MessageBoxButton.OKCancel);
-
-                if (result == MessageBoxResult.OK)
+                if (NameBuffer != "" && task.nameClassBuffer != null)
                 {
-                    string nameCharacter = txtCharacterName.Text.ToString();
-                    string nameClass = task.nameClassBuffer.ToString();
+                    var result = MessageBox.Show("Вы уверены, что хотите продолжить?",
+                    "Сообщение",
+                    MessageBoxButton.OKCancel);
 
-                    double strBuf = 0;
-                    double dexBuf = 0;
-                    double intlBuf = 0;
-                    double conBuf = 0;
-                    int lvlbuf = 0;
-                    int expBuf = 0;
-
-                    switch (task.nameClassBuffer)
+                    if (result == MessageBoxResult.OK)
                     {
-                        case "Warrior":
-                            strBuf = warrior.Str;
-                            dexBuf = warrior.Dex;
-                            intlBuf = warrior.Intl;
-                            conBuf = warrior.Con;
-                            break;
-                        case "Archer":
-                            strBuf = archer.Str;
-                            dexBuf = archer.Dex;
-                            intlBuf = archer.Intl;
-                            conBuf = archer.Con;
-                            break;
-                        case "Wizard":
-                            strBuf = wizard.Str;
-                            dexBuf = wizard.Dex;
-                            intlBuf = wizard.Intl;
-                            conBuf = wizard.Con;
-                            break;
+                        string nameCharacter = txtCharacterName.Text.ToString();
+                        string nameClass = task.nameClassBuffer.ToString();
+
+                        double strBuf = 0;
+                        double dexBuf = 0;
+                        double intlBuf = 0;
+                        double conBuf = 0;
+                        int lvlbuf = 0;
+                        int expBuf = 0;
+                        int lvlexpbuf = 10;
+
+                        switch (task.nameClassBuffer)
+                        {
+                            case "Warrior":
+                                strBuf = warrior.Str;
+                                dexBuf = warrior.Dex;
+                                intlBuf = warrior.Intl;
+                                conBuf = warrior.Con;
+                                break;
+                            case "Archer":
+                                strBuf = archer.Str;
+                                dexBuf = archer.Dex;
+                                intlBuf = archer.Intl;
+                                conBuf = archer.Con;
+                                break;
+                            case "Wizard":
+                                strBuf = wizard.Str;
+                                dexBuf = wizard.Dex;
+                                intlBuf = wizard.Intl;
+                                conBuf = wizard.Con;
+                                break;
+                        }
+                        MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf, lvlbuf, expBuf, lvlexpbuf));
+                        task.lblNameChar.Content = nameCharacter.ToString();
+                        task.Show();
+                        task.LoadingCharacter(nameClass, nameCharacter);
+                        task.lblExp.Content = lvlexpbuf;
+                        this.Close();
                     }
-
-                    MongoExtensions.AddToDataBase(new Character(nameCharacter, nameClass, strBuf, dexBuf, intlBuf, conBuf, lvlbuf, expBuf));
-                    task.lblNameChar.Content = nameCharacter.ToString();
-                    task.Show();
-                    task.LoadingCharacter(nameClass, nameCharacter);
-                    task.lblExp.Content = 10;
-                    this.Close();
                 }
-            }   
+            }
+            else
+            {
+                MessageBox.Show($"Персонаж с таким именем ({characterCheck.nameCharacter}) уже существует!", "Предупреждение",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Warning);
+            }
         }
-
-        
-
     }
 }

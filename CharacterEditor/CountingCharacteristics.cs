@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CharacterEditor
+﻿namespace CharacterEditor
 {
     class CountingCharacteristics
     {
         private static int _minBonus = 0;
         private int _startedBonus;
     
-
         public int StartedBonus
         {
             get => _startedBonus;
@@ -22,8 +17,5 @@ namespace CharacterEditor
                     _startedBonus = value;
             }
         }
-
-
-
     }
 }

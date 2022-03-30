@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace CharacterEditor
 {
-    /// <summary>
-    /// Логика взаимодействия для Window2.xaml
-    /// </summary>
     public partial class Window2 : Window
     {
         public Window2()
@@ -29,7 +19,6 @@ namespace CharacterEditor
             {
                 listbuf.Add($"{Item.nameCharacter}");
             }
-
             listUser.ItemsSource = listbuf;
         }
 
@@ -63,7 +52,6 @@ namespace CharacterEditor
             {
                 Window1 task = new Window1();
                 task.Show();
-                string buffer;
                 Character character = MongoExtensions.GetDataBase(listUser.SelectedItem.ToString());
                 if (character != null)
                 {

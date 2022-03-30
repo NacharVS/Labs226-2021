@@ -21,12 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="imgWarrior2.jpg" />
     <Resource Include="Resources\background.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\imgArcher.jpg" />
-    <Resource Include="Resources\imgWarrior2.jpg" />
+    <Resource Include="Resources\imgWarrior2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\imgWizard2.jpg" />
     <Resource Include="Resources\swordLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
