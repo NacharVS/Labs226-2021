@@ -1,19 +1,19 @@
 ﻿CharacterEditor
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\
 CharacterEditor
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\App.xaml
-3651299639
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\App.xaml
+3-531114645
 
-141175773189
-1981383019648
+13-1626778744
+198350953362
 CharacteristicWindow.xaml;MainWindow.xaml;StartWindow.xaml;
 
 False
