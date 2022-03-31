@@ -1,6 +1,6 @@
 ﻿namespace Labs226_2021.MongoExamples
 {
-    class User
+   public  class User
     {
         public User(string name, int age)
         {
