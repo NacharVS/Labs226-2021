@@ -42,5 +42,12 @@ namespace CharacterEditor
             var collection = database.GetCollection<Character>("Character");
             return collection.Find(x => x.nameCharacter == name).FirstOrDefault();
         }
+        public static void DeletingCharacter(string name)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("CharacterEditor");
+            var collection = database.GetCollection<Character>("Character");
+            collection.DeleteOne(x => x.nameCharacter == name);
+        }
     }
 }

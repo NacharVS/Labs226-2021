@@ -12,7 +12,14 @@ namespace CharacterEditor
             InitializeComponent();
         }
 
+        bool activate = true;
+
         private void listUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            listUserRefresh();
+        }
+
+        private void listUserRefresh()
         {
             List<string> listbuf = new List<string>();
             foreach (Character Item in MongoExtensions.GetListUser())
@@ -24,7 +31,10 @@ namespace CharacterEditor
 
         private void listUser_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CharacterParameters();
+            if (activate == true)
+            {
+                CharacterParameters();
+            }
         }
 
         private void CharacterParameters()
@@ -38,10 +48,10 @@ namespace CharacterEditor
 
                 if (selectTeam != null)
                 {
-                    listParameters.Items.Add(selectTeam.Str.ToString());
-                    listParameters.Items.Add(selectTeam.Dex.ToString());
-                    listParameters.Items.Add(selectTeam.Intl.ToString());
-                    listParameters.Items.Add(selectTeam.Con.ToString());
+                    listParameters.Items.Add($"Сила - {selectTeam.Str}");
+                    listParameters.Items.Add($"Ловкость - {selectTeam.Dex}");
+                    listParameters.Items.Add($"Интеллект - {selectTeam.Intl}");
+                    listParameters.Items.Add($"Выносливость - {selectTeam.Con}");
                 }
             }
         }
@@ -66,6 +76,18 @@ namespace CharacterEditor
             MainWindow task = new MainWindow();
             task.Show();
             this.Close();
+        }
+
+        private void bttDeleteCharacter_Click(object sender, RoutedEventArgs e)
+        {
+            activate = false;
+            string name = listUser.SelectedItem.ToString();
+            listUser.SelectedIndex = -1;
+            MongoExtensions.DeletingCharacter(name);    
+            listUserRefresh();
+            listParameters.Items.Clear();
+            activate = true;
+
         }
     }
 }

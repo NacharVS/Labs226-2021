@@ -8,7 +8,7 @@
         Title="StartWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Image Source="\Resources\background.jpg" Margin="-66,-26,-66,-9" RenderTransformOrigin="0.533,0.5"/>
-        <Image Source="Resources/swordLogo.png" Margin="-21,110,508,153"/>
+        <Image Source="Resources/swordLogo.png" Margin="38,90,572,150"/>
         <GroupBox Header="" Margin="239,24,305,37" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0">
             <GroupBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -26,10 +26,15 @@
                     <GradientStop Color="#FF5D4A3C" Offset="1"/>
                 </LinearGradientBrush>
             </GroupBox.Background>
-            <ListBox x:Name="listParameters"  BorderBrush="{x:Null}" Background="#FF5D4A3D" Loaded="listUser_Loaded" FontFamily="Comic Sans MS" FontSize="18" SelectionChanged="listUser_SelectionChanged"/>
+            <ListBox x:Name="listParameters"  BorderBrush="{x:Null}" Background="#FF5D4A3D" Loaded="listUser_Loaded" FontFamily="Comic Sans MS" FontSize="18" />
         </GroupBox>
-        <Button x:Name="startGame" Content="Play" HorizontalAlignment="Left" Margin="78,311,0,0" VerticalAlignment="Top" Height="49" Width="97" FontSize="36" Background="{x:Null}" FontFamily="Cooper Black" Click="startGame_Click"/>
-        <Button x:Name="newCharacter" Content="new character" HorizontalAlignment="Left" Margin="66,365,0,0" VerticalAlignment="Top" Background="{x:Null}" FontFamily="Britannic Bold" FontSize="20" Click="newCharacter_Click"/>
+        <Button x:Name="startGame" Content="PLAY" HorizontalAlignment="Left" Margin="58,287,0,0" VerticalAlignment="Top" Height="56" Width="110" FontSize="36" Background="{x:Null}" FontFamily="Segoe UI Semibold" Click="startGame_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="newCharacter" Content="NEW CHARACTER" HorizontalAlignment="Left" Margin="28,347,0,0" VerticalAlignment="Top" Background="{x:Null}" FontFamily="Britannic Bold" FontSize="20" Click="newCharacter_Click" Height="32" Width="170" BorderBrush="{x:Null}"/>
+        <Button x:Name="bttDeleteCharacter" Content="DeleteCharacter" HorizontalAlignment="Left" Margin="308,356,0,0" VerticalAlignment="Top" Height="23" Width="118" Background="{x:Null}" FontFamily="Comic Sans MS" FontSize="14" BorderBrush="{x:Null}" Click="bttDeleteCharacter_Click">
+            <Button.Foreground>
+                <SolidColorBrush Color="Red" Opacity="0.375"/>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Window>
