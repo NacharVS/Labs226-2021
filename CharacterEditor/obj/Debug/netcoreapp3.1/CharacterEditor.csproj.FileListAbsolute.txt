@@ -94,12 +94,10 @@ C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\bin\Debug\netcorea
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.csprojAssemblyReference.cache
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.g.cs
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor_MarkupCompile.cache
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor_MarkupCompile.lref
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\Window1.baml
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.g.resources
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.AssemblyInfoInputs.cache
 C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacterEditor.AssemblyInfo.cs
@@ -112,3 +110,5 @@ C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\o
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\StartWindow.baml
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacteristicWindow.g.cs
 C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacteristicWindow.baml
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacteristicWindow.g.cs
+C:\Users\262021\Documents\GitHub\Labs226-2021\CharacterEditor\obj\Debug\netcoreapp3.1\CharacteristicWindow.baml
