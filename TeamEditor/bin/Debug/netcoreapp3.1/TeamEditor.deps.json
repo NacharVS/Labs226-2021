@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "TeamEditor/1.0.0": {
         "dependencies": {
+          "DnsClient": "1.6.0",
           "MongoDB.Bson": "2.15.0",
           "MongoDB.Driver": "2.15.0"
         },
