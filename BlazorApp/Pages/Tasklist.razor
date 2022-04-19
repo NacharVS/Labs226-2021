@@ -1,0 +1,62 @@
+﻿@page "/tasklist"
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2 class="test-center">TaskList. Count of tasks:@_tasks.Count(x => !x.IsDone)</h2>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Mission</th>
+                        <th>In Progress</th>
+                        <th>Is Done</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                @foreach (var item in _tasks)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Name</td>
+                            <td><input type="checkbox" @bind-value="item.InProgress" /></td>
+                            <td><input type="checkbox" @bind-value="item.IsDone" /></td>
+                            <td><button class="btn btn-danger" @oneclick="(() => DeleteTask(item))">Delete Task</button></td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" placeholder="Input new tsk here" @bind-value="_newTask" />
+                </div>
+                <div class="col col-auto">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+private List<Task> _tasks = new List<Task>();
+
+private string _newTask;
+private void AddNewTaskToList()
+{
+    if (!string.IsNullOrEmpty(_newTask))
+    {
+        _tasks.Add(new Task(_newTask));
+        _newTask = "";
+    }
+}
+private void DeleteTask(Tasklist item)
+{
+    _tasks.Remove(item);
+}
+private void AddToDB()
+{
+    TaskListDB.AddItem(new TaskListDB(_tasks), "Monday");
+}
