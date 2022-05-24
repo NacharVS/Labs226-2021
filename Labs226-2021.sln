@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labs226-2021", "Labs226-2021\Labs226-2021.csproj", "{8945C62F-6D79-4719-9E95-A11556CF6379}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{FFAF3EA5-EF04-470F-9428-8C3E1B4BA0BD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration", "Registration\Registration.csproj", "{514A7238-ABF0-4956-8497-9042CE87D453}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{FFAF3EA5-EF04-470F-9428-8C3E1B4BA0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFAF3EA5-EF04-470F-9428-8C3E1B4BA0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFAF3EA5-EF04-470F-9428-8C3E1B4BA0BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{514A7238-ABF0-4956-8497-9042CE87D453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{514A7238-ABF0-4956-8497-9042CE87D453}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{514A7238-ABF0-4956-8497-9042CE87D453}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{514A7238-ABF0-4956-8497-9042CE87D453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
