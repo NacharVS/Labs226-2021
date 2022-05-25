@@ -76,14 +76,14 @@ using BlazorApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\FetchData.razor"
+#line 2 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Account.razor"
 using BlazorApp.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/acc")]
+    public partial class Account : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,19 +91,14 @@ using BlazorApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\FetchData.razor"
+#line 31 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Account.razor"
        
-    private WeatherForecast[] forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
+    User user = new User();
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UserService userservice { get; set; }
     }
 }
 #pragma warning restore 1591

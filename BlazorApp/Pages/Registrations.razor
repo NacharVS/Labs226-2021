@@ -1,0 +1,44 @@
+﻿@page "/regist"
+@using BlazorApp.Data
+@inject Data.UserService UserService
+@inject NavigationManager NavigationManager
+
+<h1 class="h1Font">Registrations</h1><br/>
+
+<EditForm Model="user" class="form-bottom">
+    <div class="Auth1">
+        <label>
+        E-mail
+        <InputText class="inputText1" @bind-Value="UserService.Login"></InputText>
+    </label>
+    <br/>
+    <label>
+        Login
+        <InputText class="inputText1" @bind-Value="UserService.Email"></InputText>
+    </label>
+    <br/>
+     <label>
+        Pass
+        <InputText class="inputText1" @bind-Value="user.Pass"></InputText>
+    </label>
+    <br/>
+    <label>
+        Pass
+        <InputText class="inputText1" @bind-Value="user.Pass"></InputText>
+    </label>
+    <button class="btn btn-primary" @onclick="NextPage"> Next </button>
+    </div>
+</EditForm>
+
+
+
+
+
+@code {
+	User user = new User();
+
+      private void NextPage() 
+    { 
+       NavigationManager.NavigateTo("acc");
+    } 
+}

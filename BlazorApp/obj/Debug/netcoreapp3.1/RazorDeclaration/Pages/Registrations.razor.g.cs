@@ -76,14 +76,14 @@ using BlazorApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\FetchData.razor"
+#line 2 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Registrations.razor"
 using BlazorApp.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/regist")]
+    public partial class Registrations : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,19 +91,20 @@ using BlazorApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\FetchData.razor"
+#line 37 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Registrations.razor"
        
-    private WeatherForecast[] forecasts;
+	User user = new User();
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
+      private void NextPage() 
+    { 
+       NavigationManager.NavigateTo("acc");
+    } 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Data.UserService UserService { get; set; }
     }
 }
 #pragma warning restore 1591

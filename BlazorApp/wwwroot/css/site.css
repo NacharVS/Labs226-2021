@@ -8,6 +8,21 @@ a, .btn-link {
     color: #0366d6;
 }
 
+.h1Font {
+    font-family: Andale Mono, monospace;
+    font-size: 30px;
+}
+
+.Auth1 {
+    width: 10%;
+    font-family: FreeMono, monospace;
+}
+
+.inputText1 {
+    border-radius: 7px;
+    border: 2px ridge rgba(0,0,0,0.26);
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;

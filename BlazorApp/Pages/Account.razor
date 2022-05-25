@@ -1,0 +1,33 @@
+﻿@page "/acc"
+@using BlazorApp.Data
+@inject UserService userservice
+
+<h1 class="h1Font">Account</h1><br/>
+<EditForm Model="user" class="form-bottom">
+    <div class="Auth1">
+        <label>
+        Login
+        <InputText class="inputText1" @bind-Value="userservice.Login"></InputText>
+    </label>
+    <br/>
+    <label>
+        Name
+        <InputText class="inputText1" @bind-Value="user.Name"></InputText>
+    </label>
+    <br/>
+     <label>
+        Surname
+        <InputText class="inputText1" @bind-Value="user.Surname"></InputText>
+    </label>
+    <br/>
+    <label>
+        E-mail
+        <InputText class="inputText1" @bind-Value="userservice.Email"></InputText>
+    </label>
+    <br/>
+    </div>
+</EditForm>
+
+@code {
+    User user = new User();
+}
