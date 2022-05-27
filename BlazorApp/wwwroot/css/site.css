@@ -23,6 +23,12 @@ a, .btn-link {
     border: 2px ridge rgba(0,0,0,0.26);
 }
 
+.inputText1::placeholder {
+    opacity: 30%;
+    padding: 10px;
+}
+
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
