@@ -93,6 +93,8 @@ using BlazorApp.Data;
 #nullable restore
 #line 37 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Registrations.razor"
        
+    public string bufPass;
+
 	User user = new User();
 
       private void NextPage() 
