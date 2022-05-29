@@ -91,7 +91,7 @@ using BlazorApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Registrations.razor"
+#line 38 "C:\Users\dinar\OneDrive\Документы\GitHub\Labs226-2021\BlazorApp\Pages\Registrations.razor"
        
     public string bufPass;
 

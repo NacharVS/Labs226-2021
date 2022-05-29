@@ -10,6 +10,7 @@
         <label>
         Login
         <InputText class="inputText1" placeholder="Login" @bind-Value="UserService.Login"></InputText>
+        <ValidationMessage For="()=>UserService.Login" />
     </label>
     <br/>
     <label>
@@ -19,12 +20,12 @@
     <br/>
      <label>
         Pass
-        <InputText class="inputText1" placeholder="Pass" @bind-Value="bufPass"></InputText>
+        <InputText class="inputText1" type="password" placeholder="Pass" @bind-Value="user.Pass"></InputText>
     </label>
     <br/>
     <label>
         Pass
-        <InputText class="inputText1" placeholder="Pass" @bind-Value="bufPass"></InputText>
+        <InputText class="inputText1" type="password" placeholder="Pass" @bind-Value="bufPass"></InputText>
     </label>
     <button class="btn btn-primary" @onclick="NextPage"> Next </button>
     </div>
