@@ -34,9 +34,6 @@
                 <div class="col col-auto">
                     <button class="btn btn-outline-dark" @onclick="AddNewTaskToList">Add new Task</button>
                 </div>
-                @*<div class="col col-auto">
-                    <button class="btn btn-primary" @onclick="AddToDB">Save Task List</button>
-                </div>*@
             </div>
         </div>
     </div>
@@ -60,8 +57,4 @@
     {
         _tasks.Remove(item);
     }
-    //private void AddToDB()
-    //{
-    //    MongoExtensions.AddItem(_tasks, "Monday");
-    //}
 }
