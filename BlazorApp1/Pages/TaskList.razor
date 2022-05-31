@@ -1,0 +1,67 @@
+﻿@page "/tasklist"
+@using BlazorApp1.Data;
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2 class="test-center">TaskList. Count of tasks:@_tasks.Count(x => !x.IsDone)</h2>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Mission</th>
+                        <th>In Progress</th>
+                        <th>Is Done</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                @foreach (var item in _tasks)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Name</td>
+                            <td><input type="checkbox" @bind-value="item.InProgress" /></td>
+                            <td><input type="checkbox" @bind-value="item.IsDone" /></td>
+                            <td><button class="btn btn-danger" @onclick="(() => DeleteTask(item))">Delete Task</button></td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" placeholder="Input new tsk here" @bind-value="_newTask" />
+                </div>
+                <div class="col col-auto">
+                    <button class="btn btn-outline-dark" @onclick="AddNewTaskToList">Add new Task</button>
+                </div>
+                @*<div class="col col-auto">
+                        <button class="btn btn-primary" @onclick="AddToDB">Save Task List</button>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    private List<TaskListItem> _tasks = new List<TaskListItem>();
+
+    private string _newTask;
+    private void AddNewTaskToList()
+    {
+        if (!string.IsNullOrEmpty(_newTask))
+        {
+            _tasks.Add(new TaskListItem(_newTask));
+            _newTask = "";
+        }
+    }
+    private void DeleteTask(TaskListItem item)
+    {
+        _tasks.Remove(item);
+    }
+    //private void AddToDB()
+    //{
+    //    MongoExtensions.AddItem(_tasks, "Monday");
+    //}
+}
