@@ -1,4 +1,4 @@
-﻿namespace BlazorApр.Data
+﻿namespace BlazorApp.Data
 {
     public class User
     {
