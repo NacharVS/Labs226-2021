@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp2 { }
+namespace Labs226_2021 { }
 class Program
 {
     static void PereborCombo(int sum)

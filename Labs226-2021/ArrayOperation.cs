@@ -1,17 +1,19 @@
 ﻿using System;
+using Labs226_2021;
 
-namespace ConsoleApp4
+namespace Labs226_2021
 {
-    class ArrayOperation
+   public  class ArrayOperation
     {
-        static void MaxMinNumber(int[] array)
+      public static void MaxMinNumber(int[] array)
         {
             Random rnd = new Random();
             int max = 0;
-            int min = 0;
+            int min = 1000;
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = rnd.Next(10, 100);
+                Console.Write($"  {array[i]}");
             }
             for (int i = 0; i < array.Length; i++)
             {
@@ -24,10 +26,11 @@ namespace ConsoleApp4
                     max = array[i];
                 }
             }
-            Console.WriteLine($" max");
-            Console.WriteLine($" min");
+            Console.WriteLine("") ;
+            Console.WriteLine($"max {max}");
+            Console.WriteLine($"min {min}");
         }
-        static void SummArray(int[] array, int[] array2)
+        public static void SummArray(int[] array, int[] array2)
         {
            
             Random rnd = new Random();
@@ -123,7 +126,7 @@ namespace ConsoleApp4
         }
           public  static void ArrayMaxin2D(int[,] array)
             {
-            int max = 0;
+            int max = -100;
 
             for (int i = 0; i < 10; i++)
                 {
@@ -135,11 +138,13 @@ namespace ConsoleApp4
                         if (j == 0 || max < array[i, j]) max = array[i, j];
 
                     }
-                    Console.WriteLine();
-                    Console.WriteLine($"{max}");
-                }
+                   
+                    Console.Write($"   max  {max}");
+                Console.WriteLine();
+                max = -12;
             }
-        static void ArraySummdiagonalOsnandPob(int[,] array)
+            }
+       public static void ArraySummdiagonalOsnandPob(int[,] array)
         {
             
             int sumOsn = 0;

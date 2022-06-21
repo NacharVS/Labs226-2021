@@ -4,6 +4,7 @@ using Labs226_2021.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Labs226_2021;
 
 namespace Labs226_2021
 {
@@ -11,24 +12,30 @@ namespace Labs226_2021
     {
         static void Main(string[] args)
         {
-            Warrior Andrey = new Warrior(new Club(), new ShortBow());
-            Blacksmith Kuzma = new Blacksmith();
+            int[,] one = new int[10,10];
+         
+
+            ArrayOperation.ArrayMaxin2D(one);
+
+
+            //Warrior Andrey = new Warrior(new Club(), new ShortBow());
+            //Blacksmith Kuzma = new Blacksmith();
             
-            Andrey.Attack();
-            var weapon2 = Kuzma.CraftStoneAxe();
-            Andrey.ChangeWeapon(weapon2);
-            Andrey.Attack();
-            var weapon3 = Kuzma.CraftIronSword();
-            Andrey.ChangeWeapon(weapon3);
-            Andrey.Attack();
-            Console.WriteLine(weapon3.durability);
-            Kuzma.RepairItem(weapon3);
-            Console.WriteLine(weapon3.durability);
-            Kuzma.RepairItem(weapon3);
-            Console.WriteLine(weapon3.durability);
-            Kuzma.RepairItem(weapon2);
-            Console.WriteLine(weapon2.durability);
-            Andrey.Attack();
+            //Andrey.Attack();
+            //var weapon2 = Kuzma.CraftStoneAxe();
+            //Andrey.ChangeWeapon(weapon2);
+            //Andrey.Attack();
+            //var weapon3 = Kuzma.CraftIronSword();
+            //Andrey.ChangeWeapon(weapon3);
+            //Andrey.Attack();
+            //Console.WriteLine(weapon3.durability);
+            //Kuzma.RepairItem(weapon3);
+            //Console.WriteLine(weapon3.durability);
+            //Kuzma.RepairItem(weapon3);
+            //Console.WriteLine(weapon3.durability);
+            //Kuzma.RepairItem(weapon2);
+            //Console.WriteLine(weapon2.durability);
+            //Andrey.Attack();
 
 
 
